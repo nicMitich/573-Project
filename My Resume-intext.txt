@@ -1,0 +1,150 @@
+Sarva Gupta
+
+
+sarva.gupta.3@gmail.com
+602-223-1850
+Phoenix, AZ, United States
+https://www.linkedin.com/in/sarva-gupta-42826b256
+
+
+
+------------------------
+Computer Science student with a strong foundation in software development, algorithms, artificial intelligence, and data-driven systems, built through undergraduate and graduate coursework. Experienced in delivering technical, data-oriented, and full-stack projects, collaborating across teams, and communicating complex ideas effectively.
+
+
+Education
+------------------------
+Master of Science in Computer Science
+Arizona State University
+01/2025 - 05/2026
+Tempe, AZ
+Courses
+
+
+Bachelor of Science in Computer Science
+ASU (Barrett, the Honors College)
+08/2021 - 12/2024
+Tempe, AZ, 3.50
+Courses
+
+
+High School (with Honors)
+BASIS Phoenix
+08/2017 - 05/2021
+Phoenix, AZ, 3.83
+Courses
+
+
+
+
+
+Work Experience
+------------------------
+Undergraduate Teaching Assistant - Intro to Informatics
+Ira A. Fulton Schools of Engineering, ASU
+08/2024 - 12/2024
+Tempe, AZ
+Supported undergraduate coursework by reinforcing core computing concepts, assisting students with problem-solving, and contributing to a collaborative learning environment.
+Achievements/Tasks
+-  Supported 200+ students in Python-based coursework covering basics of Informatics, including data structures, algorithms, and problem-solving  
+-  Led office hours and exam review sessions, clarifying algorithmic thinking and debugging strategies  
+
+
+
+SWE Capstone – Full Stack Developer
+Ira A. Fulton Schools of Engineering, ASU
+01/2024 - 12/2024
+Tempe, AZ
+A year-long, team-based software engineering project with real-world stakeholders
+Achievements/Tasks
+- Developed a web app using the PERN stack (PostgreSQL, Express, React, Node.js) to support mental-health peer communities 
+- Collaborated in an Agile team environment, coordinating with designers, peer leaders, and a startup founder 
+
+
+
+Student Success Office Assistant
+Ira A. Fulton Schools of Engineering, ASU
+10/2024 - 12/2025
+Tempe, AZ
+Provided front-line academic and event support, assisting students and staff in navigating programs, resources, and activities.
+Achievements/Tasks
+- Supported planning, setup, and execution of academic and student-focused events hosted by the Fulton Schools of Engineering 
+- Assisted students by providing directions and guidance to campus resources, offices, and locations 
+
+
+
+
+
+
+Skills
+------------------------
+-Python
+-Java
+-C#
+-JavaScript
+-SQL
+-ASP .NET
+-Rest APIs
+-HTML
+-CSS
+-Git
+-Visual Studio
+-Firebase
+-Linux
+-Figma
+-React
+-Taiga
+-Agile
+-UI/UX Design
+
+
+
+Projects
+------------------------
+Honors Thesis: UX Research & Data-Driven Web Redesign
+07/2024 - 12/2024
+- Conducted UX research to evaluate accessibility and discoverability of mental-health resources on the ASU website 
+- Designed and proposed a data-driven redesign to improve navigation efficiency and applied user-centered design principles and usability testing, 
+
+
+Interactive Scrollytelling Data Visualization Website
+01/2025 - 05/2025
+- Designed and developed an interactive scrollytelling website using D3.js, JavaScript, HTML, and CSS to explore the evolution of the internet 
+- Collaborated in a team to architect the site from scratch, integrating multiple visual components into a cohesive user experience 
+
+
+Machine Learning & Data Mining Analysis
+08/2025 - 12/2025
+- Evaluated and compared model performance using accuracy and other metrics to identify optimal approaches 
+- Collaborated with a team to preprocess data from a real-world dataset, engineer features, and interpret results 
+
+
+Integrated Mobile, Web App, and AI Development Projects
+01/2024 - Present
+- Implemented heuristic search, planning, and reinforcement learning algorithms (GBFS, UCS, A*, Q-learning, SARSA) to optimize agent behavior in simulated environments. 
+- Developed a cross-platform mobile application using Xamarin to consume asynchronous RESTful services with secure encryption and decryption via a graphical user interface. 
+- Built and deployed RESTful services using ASP.NET and IIS, implementing URI template–based endpoints and integrating with an HTML5 web application. 
+- Applied LINQ queries in a C# console application to process and analyze course data from CSV files using the .NET framework. 
+
+
+
+
+
+Achievements
+------------------------
+Grand Challenges Scholar
+01/2022 - 12/2024
+ Explored world themes : Joy of Living, Sustainability, Health, and Security through interdisciplinary projects, courses, and research 
+
+
+
+
+
+Languages
+------------------------
+-English- (100/100)
+-Hindi- (100/100)
+-French- (60/100)
+
+
+
