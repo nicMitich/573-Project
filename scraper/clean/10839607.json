@@ -1,0 +1,83 @@
+{
+  "jobs": {
+    "job_id": 10839607,
+    "company_id": null,
+    "title": "Agentic AI Engineer",
+    "description": "About the Role\nWe are seeking a motivated and technically strong early-career professional with advanced Python skills and hands-on experience in machine learning projects and AI-focused internships during undergraduate or master’s studies. The ideal candidate is passionate about applying machine learning and agentic AI techniques to real-world problems, thrives in collaborative environments, and has the curiosity to explore new AI methods and tools.\nKey Responsibilities\n• Contribute to the design, build, deployment, and optimization of AI/GenAI/Agentic AI solutions for customers as well as internal TCS AI and Data business platforms.\n• Design, train, and optimize machine learning models for classification, regression, NLP, or computer vision tasks.\n• Write clean, efficient, and well-documented Python code for data preprocessing, model training, and deployment.\n• Work with large datasets: clean, transform, and analyze structured and unstructured data.\n• Collaborate with cross-functional teams (data engineers, researchers, and product managers) to integrate AI/ML solutions into applications and workflows.\n• Conduct experiments, evaluate model performance, and present findings with clear metrics and visualizations.\n• Stay updated on emerging AI/ML and Agentic AI research and contribute innovative ideas to improve products and processes.\nRequired Qualifications\n• Bachelor’s or Master’s degree in Computer Science, Data Science, Electrical Engineering, Applied Math, or related field.\n• Strong Python programming skills (experience with libraries such as NumPy, Pandas, scikit-learn, TensorFlow, or PyTorch).\n• Academic or internship experience in machine learning, AI, or data-driven projects.\n• Solid understanding of algorithms, data structures, and machine learning concepts.\n• Experience with data preprocessing, feature engineering, and model evaluation.\n• Familiarity with version control (Git) and Jupyter/VS Code workflows.\nPreferred Qualifications\n• Experience with deep learning (CNNs, RNNs, Transformers) or natural language processing.\n• Exposure to cloud platforms (AWS, GCP, Azure) or MLOps tools (Docker, MLflow, Kubernetes).\n• Contributions to open-source projects or published research in AI/ML.\n• Strong analytical and problem-solving skills with attention to detail.\nWhat We Offer\n• Opportunity to work on impactful AI/ML and Agentic AI projects.\n• Mentorship from experienced AI scientists and engineers.\n• A collaborative and inclusive culture that values innovation and curiosity.\n• Growth pathways into specialized AI/ML engineering, research, or applied data science roles.Job Title: AI/ML Engineer – Entry Level",
+    "max_salary": 88000,
+    "med_salary": 79500,
+    "min_salary": 71000,
+    "pay_period": "YEARLY",
+    "formatted_work_type": "Full-time",
+    "location": "Troy, MI",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10839607",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 10, 2026 at 8:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "2 days ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:37:35.032Z"
+  },
+  "companies": {
+    "name": "Tata Consultancy Services",
+    "description": "#ExperienceTCS, one of the most valuable IT services and consulting organizations globally, with market capitalization of $144+ B. We have more than 450,000 of the best IT professionals, trained to guide enterprises through their Business 4.0™ growth and digital transformation journeys – helping them to become agile, intelligent, automated, and on the cloud. Our U.S. clients include one-third of the Fortune 500 across all major industries.",
+    "company_size": null,
+    "country": "US",
+    "state": "NJ",
+    "city": "Edison",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 88000,
+    "med_salary": 79500,
+    "min_salary": 71000,
+    "pay_period": "YEARLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Medical Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Dental Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Vision Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Bonus"
+    },
+    {
+      "inferred": 0,
+      "type": "Paid Time Off"
+    },
+    {
+      "inferred": 0,
+      "type": "401(k)"
+    }
+  ],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {}
+}

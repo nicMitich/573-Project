@@ -1,0 +1,62 @@
+{
+  "jobs": {
+    "job_id": 10813429,
+    "company_id": null,
+    "title": "Junior Java Backend developer",
+    "description": "We are looking for a motivated Junior Backend Engineer to join our engineering team. You will help build, test, and maintain reliable server-side applications and APIs while learning best practices for software development in a production environment. You will collaborate with cross-functional teams including frontend, product, DevOps, and QA to deliver robust backend services that power our web and mobile applications.\nRequired Qualifications\nMaster's degree in Computer Science, Software Engineering, Information Technology, or related field.\n0–2 years of professional backend development experience (internships included).\nBasic understanding of at least one backend language: Python / Java / JavaScript (Node.js) / Go / C#.\nFamiliarity with REST APIs and web service concepts.\nBasic knowledge of SQL and relational databases (MySQL, PostgreSQL, etc.).\nFamiliar with Spring\\SpringMVC framework and understand the principles of IOC and AOP.\nFamiliar with persistence layer frameworks such as Hibernate\\MyBaits.",
+    "max_salary": 30,
+    "med_salary": 25,
+    "min_salary": 20,
+    "pay_period": "HOURLY",
+    "formatted_work_type": "Full-time",
+    "location": "or onsite, based in New York, NY",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10813429",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 4, 2026 at 8:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "1 week ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:38:41.358Z"
+  },
+  "companies": {
+    "name": "Clinpharma Clinical Research, LLC",
+    "description": "CLINPHARMA Clinical Research LLC provides unparalleled service in contract staffing/consulting and providing high level technical project support for IT, Finance, Pharmaceutical, Biotechnology, Healthcare, CRO and other Life Science companies.  Whether you are looking for a way to accomplish more with your budget while lowering risk through our competitively priced project rates and quality guarantees or need to hire a highly qualified and experienced consultant with little or no notice, CLINPHARMA Clinical Research is always here to support your goals and help you tackle the most difficult challenges.",
+    "company_size": 2,
+    "country": "US",
+    "state": "DE",
+    "city": "Wilmington",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 30,
+    "med_salary": 25,
+    "min_salary": 20,
+    "pay_period": "HOURLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {
+    "employee_count": 75,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 10692388,
+    "company_id": null,
+    "title": "Backend Developer (Internship)",
+    "description": "Company Overview\nWorld Salon is a rapidly growing startup operating at the intersection of technology, professional development, and media. Originally founded as a student organization at Columbia University, we now connect professionals across the finance, technology, and ESG sectors, fostering collaboration through curated seminars, digital events, and AI-driven content. Our mission is to ignite bold conversations, empower thought leaders, and inspire innovation through dynamic and inclusive platforms.\nWe are seeking a Backend Developer Intern who is eager to help build, maintain, and scale our platform’s backend systems while supporting our mission.\nWhat We Offer\nImpactful Work – Contribute to a fast-growing platform that connects global professionals.\nInnovative Environment – Work with cutting-edge tools in Node.js, Express, AWS, and database management.\nMentorship & Growth – Gain hands-on experience and guidance from senior engineers.\nRemote Flexibility – Work from anywhere while collaborating with a global team.\nRole Overview\nAs a Backend Developer Intern you will be working with experienced software engineers contributing to the backend systems of our platform. This role focuses primarily on Python-based backend development using FastAPI, with opportunities to work on APIs, cloud infrastructure, data pipelines, and web scraping tools.\nKey Responsibilities:\n🔹 Backend API Development\nDesign, build, and optimize RESTful APIs using Python and FastAPI.\nEnsure scalability and security of backend services.\n🔹Data, Web Scraping & Automation\nBuild and maintain web scraping pipelines to collect and process structured and unstructured data\nSupport AI-driven data workflows, including tools such as ScrapeGraph AI, LangGraph\nHelp structure scraped data for downstream use in APIs or analytics systems\n🔹 System Architecture & Design\nArchitect efficient, scalable backend solutions to support growing user demand.\nOptimize database interactions using SQL (PostgreSQL/MySQL)\nImplement authentication and authorization mechanisms (JWT, OAuth).\n🔹 Cloud & Infrastructure Management\nDeploy, monitor, and optimize applications on AWS (ECS, EC2, S3, Lambda, RDS, SQS).\nUtilize AWS services to enhance backend performance and reliability.\nWork with Docker Compose and Terraform for containerized applications and infrastructure management.\n🔹 Performance & Security\nImplement caching solutions (Redis, Memcached) to improve response times.\nIdentify and resolve backend bottlenecks to ensure smooth performance.\nEnhance platform security against vulnerabilities and attacks.\n🔹 Collaboration & Documentation\nWork closely with frontend developers, designers, and data engineers to integrate systems.\nDocument backend services, APIs, and workflows for future scalability.\nWhat We're Looking For\nCurrently pursuing or recently completed a degree in Computer Science, Software Engineering, or related fields.\nProficiency in Python\nExperience or familiarity with FastAPI\nUnderstanding of databases – SQL (PostgreSQL, MySQL)\nFamiliarity with Docker Compose, Terraform, and containerized application deployment.\nFamiliarity with LangGraph for building or managing AI workflows\nExperience  in web scraping (ScrapeGraph AI)\nStrong problem-solving and debugging skills.\nExcellent communication and collaboration abilities.\nNice to have:\nFamiliarity with AWS (ECS, EC2, S3, RDS, Lambda, IAM configurations).\nInterest in AI-powered platforms and data-driven product\nCredit Process\nStudents are responsible for consulting their academic department to ensure the internship meets program requirements (e.g., hours completed, deliverables, and learning outcomes). World Salon will collaborate with students to complete necessary forms and provide supporting documentation.",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": null,
+    "location": "Flexibility – Work from anywhere while collaborating with a global team.",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10692388",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 29, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "1 month ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:38:49.284Z"
+  },
+  "companies": {
+    "name": "World Salon",
+    "description": "At World Salon, we believe that multilateral discourse is an opportunity to unite visionaries, thinkers, and creators to create impactful change. Our workshops, coaching, and community building activities enable us to establish a wide-ranging network of driven, insightful, and talented individuals. Our leadership programs are designed to unlock your full potential and help you develop the skills you need to become a successful leader. Our community is made up of like-minded individuals who are passionate about making a positive impact in the world. Join us today in driving the urgent change we yearn to see, one conversation at a time.",
+    "company_size": 1,
+    "country": "US",
+    "state": "NY",
+    "city": "New York City",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Other Industries"
+  },
+  "employee_counts": {
+    "employee_count": 30,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

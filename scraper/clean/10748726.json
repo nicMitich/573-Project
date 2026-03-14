@@ -1,0 +1,71 @@
+{
+  "jobs": {
+    "job_id": 10748726,
+    "company_id": null,
+    "title": "Software Engineer (New Grad or Intern)",
+    "description": "Join Ra Labs: Shape the Future of AI\nAre you a driven computer science student or recent graduate eager to gain hands-on experience in a fast-paced startup environment? Do you want to work on innovative AI projects that could redefine how businesses operate? If so, Ra Labs has an exciting opportunity for you—whether you're looking for an internship or your first engineering role.\nAt Ra Labs, we're building more than just technology—we're shaping the future. Our team of dedicated engineers is creating AI solutions to drive efficiency and scalability for businesses worldwide. Check out our app at thelegionai.com. Beyond our technical mission, we're passionate about empowering the next generation of entrepreneurs, helping turn bold ideas into thriving startups.\nYour Role at Ra Labs\nAs a software engineering intern or junior engineer, you'll be a key part of our team, working on impactful projects from day one. You'll:\nContribute to the development of backend systems powering our AI applications.\nBuild and deploy cloud-based solutions that address real-world challenges.\nShip new features and see your code make an immediate difference.\nCollaborate with experienced engineers who will mentor you and accelerate your growth.\nGain exposure to the startup ecosystem, with potential opportunities to learn about pitching to top accelerators like Y Combinator and Techstars.\nThis isn't just a job—it's a chance to join a startup at the ground level. As an early team member, you'll receive equity, giving you a stake in our success and the potential for limitless upside as we scale.\nWhat We're Looking For\nAre pursuing or have recently completed a degree in Computer Science or a related field.\nThrive in a remote work environment with strong self-motivation and time management skills.\nCommunicate clearly and collaborate effectively with a team.\nTackle complex problems with creativity, persistence, and a solutions-oriented mindset.\nAre eager to learn, adapt, and grow in a dynamic startup setting.\nWhile not required, the following will make you stand out:\nPrevious internship experience or relevant project work (for interns).\n1-2 years of professional experience or equivalent (for junior engineers).\nFamiliarity with remote work tools and practices.\nProficiency in Python, JavaScript, or AI/ML technologies.\nA passion for innovation and emerging tech trends.\nWhy Join Ra Labs?\nThis opportunity offers a rare combination of immediate impact and long-term potential. Here's what you'll gain:\nEquity and Ownership: Receive equity as part of your compensation, offering a unique chance to share in the company's growth.\nHands-On Experience: Work on projects that directly contribute to our mission and see your code in action.\nMentorship and Learning: Gain insights from seasoned engineers and exposure to the startup world.\nStartup Energy: Immerse yourself in an agile, innovative environment where your contributions shape our future.\nRemote Flexibility: Enjoy a remote work setup that prioritizes productivity and work-life balance.\nOur team is built on collaboration, innovation, and a commitment to continuous learning. We value diverse perspectives and foster an inclusive environment where ideas thrive.\nReady to Shape the Future?\nIf you're excited to jump into the world of startups and make a real impact, we'd love to hear from you. Please send your resume, a brief note about why this opportunity excites you, and a link to your GitHub or portfolio (if applicable).\nAt Ra Labs, we're dedicated to building a brighter future through technology. Bring your passion for innovation and a willingness to learn—no magic wands required. Apply now and let's create something extraordinary together!",
+    "max_salary": 50,
+    "med_salary": 35,
+    "min_salary": 20,
+    "pay_period": "HOURLY",
+    "formatted_work_type": "Full-time",
+    "location": "or hybrid, based in Jersey City, NJ, or New York, NY",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10748726",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 14, 2026 at 8:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "1 month ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:37:08.035Z"
+  },
+  "companies": {
+    "name": "Ra Labs",
+    "description": "Build technology solutions, offer tech consultations, and incubate tech startups",
+    "company_size": 0,
+    "country": "US",
+    "state": "NJ",
+    "city": "Jersey City",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 50,
+    "med_salary": 35,
+    "min_salary": 20,
+    "pay_period": "HOURLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Bonus"
+    },
+    {
+      "inferred": 0,
+      "type": "Equity"
+    }
+  ],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {
+    "employee_count": 6,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 9812134,
+    "company_id": null,
+    "title": "Artificial Intelligence Developer Intern",
+    "description": "About Us\nKellynKai is an EdTech startup company headquartered in Silicon Valley, CA. We are proud to be the leading online learning platform that focuses on tutoring Chinese language and culture for individuals and companies. We are a passion-driven company that values individual happiness and growth.\nWe believe in the power of technology. The KellynKai learning platform consists of a web-based classroom, a global class scheduling system with reminders, an on-demand classroom, and mobile flashcard apps with personalized vocabulary.\nAt KellynKai you will work on impactful projects that are changing the way people learn and you will have the opportunity to advance your skills in a fast-paced environment. KellynKai software engineering interns build high quality, scalable and resilient systems that power our platform.\nWhat you will do:\nDesign and develop features for our new Artificial Intelligence (AI) Chinese language project\nWrite, test and push high quality frontend and/or backend code\nDesign and develop improvements based on user feedback\nHow you will be supported:\nYou will be closely supervised by an experienced manager\nYou will be provided training in new and unfamiliar technologies\nYou will be assigned tasks in GitHub\nYou will participate in daily meetings to review the previous day’s progress and the plan for the next day\nRequired Qualifications:\nMandarin Chinese fluency is required\nBS/MS degree in Computer Science or Computer Engineering\nHigh proficiency with JavaScript, React.js and/or Vue.js, and Node.js\nExperience with Generative Pre-trained Transformer (GPT)\nExperience with Natural Language Processing (NLP)\nExperience with text-to-speech and speech-to-text APIs\nStrong English communication skills and a desire for continuous learning",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": null,
+    "location": "United States",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/9812134",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 31, 2026 at 6:00 AM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "11 months ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": null,
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:37:28.290Z"
+  },
+  "companies": {
+    "name": "KellynKai Corporation",
+    "description": "KellynKai is a Silicon Valley Edtech Startup Company. We are proud to be the leading online learning platform that focuses on tutoring Chinese language and culture for individuals and companies. We are a passion-driven company who values individual happiness and growth.",
+    "company_size": 1,
+    "country": "US",
+    "state": "CA",
+    "city": "#1190",
+    "zip_code": "95008",
+    "address": "1901 S Bascom Ave",
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Other Education"
+  },
+  "employee_counts": {
+    "employee_count": 30,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

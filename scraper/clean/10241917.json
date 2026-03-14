@@ -1,0 +1,51 @@
+{
+  "jobs": {
+    "job_id": 10241917,
+    "company_id": null,
+    "title": "Software Engineering Internships",
+    "description": "Imagine what you could do here. At Apple, extraordinary ideas have a way of becoming phenomenal products, services, and customer experiences very quickly. Bring passion and dedication to your job and there's no telling what you could accomplish. Apple is seeking highly motivated, engineering students with a strong background in either Back-End Engineering, Core OS, Web Development, and iOS and/or macOS app Development to join its team of highly skilled software engineers.\nAt Apple, our software engineers are the brains behind some of the industry’s biggest breakthroughs! macOS, Siri, Apple Maps, iOS and iCloud — not to mention the system-level software for iPhone and Apple TV — all started here. These teams are on the front line of our constant charge toward innovation.\nDescription:\nSome responsibilities in Software Engineering may include:\nBackend Development – Building the features that Apple users love (like Siri) work by presenting data to the user-facing applications. Backend development opportunities are available for students in the following areas: Siri, iCloud, Apple Maps, Core OS, macOS, Frameworks and Applications, Audio and Media Technologies, Graphics and Displays, Audio/Video Software Integration and Localization, Advanced Computation, iWorks, Pro Apps, Apple Music, Security, Site Reliability Engineering (SRE).\nCore OS - The Core OS team is responsible for the design, build, and development of core technologies that are deployed across all Apple. Product areas include the iPhone, iPad, Watch, MacBook, iMac, Apple TV, Vision Pro and audio accessories.\nUser Experience (UX) – works closely with the other designers on the team. They are responsible for building elegant UX experiences that are simple, intuitive, and impactful. They are working in a constantly evolving environment and perform effectively under dynamic fast-paced conditions.\nUser Interface (UI) - You will work with UX team, backend engineers and other front end engineers to develop a web portal for building an end to end software development journey.\niOS and Web Development - Helps build web-based and iOS tools and applications to improve our products and do more for our customers. Our developers are responsible for crafting the direction of our products by considering the architecture, performance, testing, design, and implementation.\nInformation Systems & Technology (IS&T) - Produce key business and technical infrastructure at Apple handling orders from the online store, building applications that improve the retail store experience, developing solutions to enable customers to learn about and support their devices, providing network bandwidth for our services around the world, processing every transaction in iTunes, and closing the books. From Apple ID to the Apple website to our data centers around the globe, IS&T manages the systems and services that so many rely on. They also build the custom tools that empower our employees to solve problems on their own.\nInformation Security - protects Apple's information, including business, employee, and customer data wherever it goes. Our tools and services protect against threats that seek to compromise our systems, monitor the stability and security of our internal environment, and track emerging threats and vulnerabilities that might build an opportunity for an attacker.\nEngineers at Apple work on both UI level and lower-level implementation details. The successful intern candidate will be amenable to working in an exciting, fast paced, dynamic, collaborative environment. The person filling this position must be a hands-on, enthusiastic, self-motivated developer with strong initiative. You will have a real passion for extraordinary user experiences and an eye for details.\nMinimum Qualifications\nPursuing BS/MS/PhD program in Computer Science, Electrical Engineering, Computer Engineering, Data Science, Design, or related fields.\nAt the end of the internship, you must return to school to continue your education or the internship must be the last requirement for you to graduate.\nPreferred Qualifications\nIt’s helpful if you meet one or more of the following qualifications, but it isn’t a requirement.\nStrong object-oriented design skills, coupled with a deep knowledge of data structures and algorithms.\nProficiency in one or more developer skills: Java, C/C++, PHP, Python, Ruby, Unix, MySQL, Clojure, Scala, Java Script, CSS, HTML5, Swift.\nExperience in sophisticated methodologies such as Data Modeling, Validation, Processing, MapReduce.\nExperience with distributed technologies such as HDFS, Spark, Golang, Hadoop, Mongo, Pig, Hive.\nExperience with web frameworks such as AngularJS, NodeJS, SproutCore.\nExperience with iOS and macOS developing in Swift, XCode or Objective-C.\nClient-Server protocol & API design Skills.\nAble to craft multi-functional requirements and translate them into practical engineering tasks.\nA fundamental knowledge of embedded processors, with in-depth knowledge of real time operating system concepts.\nExcellent debugging and critical thinking skills.\nExcellent analytical and problem-solving skills.\nAbility to work in a fast paced, team-based environment.\nThis posting is not for a specific job opening and by submitting your resume you are expressing interest in being contacted about this type of role at Apple in the future.\nApple is an equal opportunity employer that is committed to inclusion and diversity. We seek to promote equal opportunity for all applicants without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, Veteran status, or other legally protected characteristics. Learn more about your EEO rights as an applicant.",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": null,
+    "location": "various US locations",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10241917",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 31, 2026 at 6:00 AM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "6 months ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:37:45.425Z"
+  },
+  "companies": {
+    "name": "Apple",
+    "description": "We’re a diverse collection of thinkers and doers, continually reimagining what’s possible to help us all do what we love in new ways. The people who work here have reinvented entire industries with the Mac, iPhone, iPad, and Apple Watch, as well as with services, including iTunes, the App Store, Apple Music, and Apple Pay. And the same innovation that goes into our products also applies to our practices — strengthening our commitment to leave the world better than we found it.",
+    "company_size": null,
+    "country": "US",
+    "state": "CA",
+    "city": "Cupertino",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Electronic & Computer Hardware"
+  },
+  "employee_counts": {}
+}

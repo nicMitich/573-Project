@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 10838946,
+    "company_id": null,
+    "title": "AI & Data Operations Analyst",
+    "description": "About Us\nWe are a commercial real estate brokerage, leasing, and property‑management firm serving the Phoenix metropolitan area. Our team supports a diverse portfolio of office, industrial, and retail properties, and we operate on the Microsoft 365 platform to drive collaboration, efficiency, and data‑driven decision‑making. As we expand our use of AI and automation, we’re looking for a motivated recent graduate to help modernize our workflows and elevate our operational capabilities.\nPosition Summary\nThe AI & Data Operations Analyst plays a key role in improving how our brokerage and property‑management teams work. This entry‑level role focuses on building AI‑assisted workflows, improving data quality, supporting analytics, and helping staff adopt new tools across Microsoft 365. It’s an ideal opportunity for a recent bachelor’s graduate who is curious, tech‑savvy, and excited to apply AI in a real‑estate business environment.\nKey Responsibilities\n• Develop and maintain AI‑powered automations using Microsoft 365 tools such as Power Automate, Power Apps, SharePoint, and Copilot.\n• Support data organization, cleaning, and reporting for leasing, property management, and financial operations.\n• Build dashboards and visualizations in Power BI to support brokers and property managers.\n• Streamline document workflows, including proposals, lease abstracts, property reports, and internal communications.\n• Assist with CRM data hygiene, tagging, and automation.\n• Conduct AI‑enhanced market research, comp analysis, and property‑level insights.\n• Collaborate with leadership to identify opportunities for automation and process improvement.\n• Train staff on AI best practices, responsible use, and day‑to‑day productivity applications.\n• Promote security awareness related to AI tools, data handling, and Microsoft 365 governance.\n• Design, build, and deploy autonomous AI agents and assistants to support internal workflows, research tasks, and operational efficiency.\nQualifications\n• Bachelor’s degree (or in Senior year of program) in Business, Information Systems, Computer Science, Data Analytics, Real Estate, or a related field.\n• Familiarity with Microsoft 365 tools, especially Excel, Teams, SharePoint, and Power Automate.\n• Interest in and exposure to AI tools, automation, and data analysis.\n• Strong analytical, organizational, and communication skills.\n• Ability to learn quickly and work collaboratively with both technical and non‑technical team members.\nPreferred Skills\n• Experience with R or Python, etc.\n• Exposure to commercial real estate concepts (brokerage, leasing, property management).\n• Experience with CRM platforms.\n• Knowledge of modern AI research and productivity tools, including NotebookLM, Perplexity, and Claude.\n• Understanding of LLM design concepts, prompt‑engineering techniques, and model‑capability differences.\n• Interest in pursuing a real estate license (optional).\n** This position is not eligible for visa sponsorship.",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": "Part-time",
+    "location": "or onsite, based in Tempe, AZ",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10838946",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 10, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "2 days ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "PART_TIME",
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:37:14.807Z"
+  },
+  "companies": {
+    "name": "Commercial Properties, Incorporated",
+    "description": "Commercial Properties Inc. (CPI) began business in 1981 as a commercial property management company for the Valley’s industrial properties.",
+    "company_size": 2,
+    "country": "US",
+    "state": "AZ",
+    "city": "Tempe",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Real Estate"
+  },
+  "employee_counts": {
+    "employee_count": 175,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

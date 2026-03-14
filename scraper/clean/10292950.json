@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 10292950,
+    "company_id": null,
+    "title": "Software Development Intern",
+    "description": "As a Software Developer Intern at Sandhills Global you will have the opportunity to learn the different modern tools and technologies we use to develop industry-leading software. Each intern is placed in our developer training department where you will go through a series of tasks designed to get you familiar with our processes, procedures and tech stack that we use. Many applications within the company are web-based data driven applications that utilize .NET, SQL Server, Web APIs, and front end frameworks such as javascript, jQuery, and React.js to name a few. Main responsibilities include to maintain, upgrade and create new software for business needs. This could include front end web development, back end business logic changes or database work.\nOnce through training, Software Developer Interns are placed within an agile team in an area that fits their skills and where we have a need, at which point they can put their new training and skills to work. As part of that team you will have the opportunity to be a part of a highly collaborative team that utilizes agile practices to develop real world software, whether its for improving operational efficiency for the company, developing services we sell to customers, or working on public websites that millions of users visit every month.\nWe are primarily a Microsoft shop, and utilize technologies in that ecosystem to solve business problems. C# is our primary coding language and what we use for any new projects, but we have many mature systems that are written in VB which we maintain. There are smaller areas that utilize other languages and technology such as PHP, Swift, Objective C, and Java for example, but these are project specific and the minority. Previous experience with Docker, Jenkins, Python can be helpful.\nAssume other duties as assigned.\nThis internship is paid at $25/hour!\nInternships at Sandhills Global can start at any point in the semester - we are having new hires start their journey with us every single week! Pick a start date that works for you.\n•Ability to commute when scheduled to the local office is required\n•Excellent oral and written communication skills\n• Able to work independently and communicate within a team environment\n•Results oriented\n•Flexible and open to change\n•Stable and progressive work history\n•Professional appearance and demeanor",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": null,
+    "location": "Scottsdale, AZ, or Lincoln, NE",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10292950",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 28, 2026 at 9:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": null,
+    "skills_desc": null,
+    "listed_time": "6 months ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:36:02.867Z"
+  },
+  "companies": {
+    "name": "Sandhills Global, Inc.",
+    "description": "Sandhills Global, Inc. is a global leader serving the truck, agriculture, construction, aviation, and related industries with a range of products from well-established trade publications and websites to hosted technology customized to meet the evolving needs of our customers.  Sandhills is backed by decades of experience and continuous investment in the most cutting-edge technologies.",
+    "company_size": 5,
+    "country": "US",
+    "state": "NE",
+    "city": "Lincoln",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Information Technology"
+  },
+  "employee_counts": {
+    "employee_count": 3000,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

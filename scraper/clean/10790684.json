@@ -1,0 +1,58 @@
+{
+  "jobs": {
+    "job_id": 10790684,
+    "company_id": null,
+    "title": "Software Developer Intern",
+    "description": "Introduction\nA career in IBM Software means you’ll be part of a team that transforms our customer’s challenges into solutions.\nSeeking new possibilities and always staying curious, we are a team dedicated to creating the world’s leading AI-powered, cloud-native software solutions for our customers. Our renowned legacy creates endless global opportunities for our IBMers, so the door is always open for those who want to grow their career.\nWe are seeking a skilled back-end developer to join our IBM Software team. As part of our team, you will be responsible for developing and maintaining high-quality software products, working with a variety of technologies and programming languages.\nIBM’s product and technology landscape includes Research, Software, and Infrastructure. Entering this domain positions you at the heart of IBM, where growth and innovation thrive.\nYour role and responsibilities\nWe are looking for Software Developer Interns to join our engineering teams. As an intern, you will work alongside experienced IBM developers to design, build, and test software that powers our cloud, AI, and hybrid‑platform solutions. This role is designed for students who are passionate about coding—regardless of which programming language they started with. You will gain hands-on experience in real-world projects, learn modern development practices, and collaborate in an Agile environment where your ideas can make an immediate impact.\nWhat You’ll Do:\n• Support the design, development, testing, and debugging of software in front-end, back-end, or full‑stack environments.\n• Work with a variety of programming languages depending on the project (examples: Python, Java, JavaScript, TypeScript, C++, Go, Rust, Swift, Kotlin, or others).\n• Help build user interfaces using frameworks like React or contribute to back-end services and APIs.\n• Use Git and other version‑control and collaboration tools.\n• Work with cloud and container technologies such as Docker, Kubernetes, and REST APIs.\n• Participate in Agile ceremonies, code reviews, and technical discussions.\n• Explore emerging technologies, including AI/ML, automation, and cloud-native development.\nRequired education\nHigh School Diploma/GED\nPreferred education\nBachelor's Degree\nRequired technical and professional expertise\n• To be eligible, candidates must be currently enrolled in a Bachelor’s, Master’s, MBA, or PhD program, with an expected graduation date between December 2026 and May 2029.\n• Coursework or project experience in software development using any programming language.\n• Familiarity with fundamental concepts such as data structures, basic algorithms, or debugging.\n• Exposure to front-end or back-end technologies (React, Node.js, Python, Java, SQL, etc.).\n• Experience using Git or similar version control tools.\n• Interest in cloud computing, containers, or modern deployment practices.\n• Strong analytical thinking, problem‑solving, and communication skills.\n• Ability to collaborate and learn quickly in a team environment.\nPreferred technical and professional experience\n• Experience with cloud services (IBM Cloud, AWS, Azure, or GCP).\n• Familiarity with REST APIs and databases (relational or NoSQL).\n• Exposure to CI/CD pipelines or automation tools.\n• Personal or open-source projects that demonstrate creativity and initiative.\n• Understanding of Agile development methods.\nABOUT BUSINESS UNIT\nIBM Software infuses core business operations with intelligence—from machine learning to generative AI—to help make organizations more responsive, productive, and resilient. IBM Software helps clients put AI into action now to create real value with trust, speed, and confidence across digital labor, IT automation, application modernization, security, and sustainability. Critical to this is the ability to make use of all data, because AI is only as good as the data that fuels it. In most organizations data is spread across multiple clouds, on premises, in private datacenters, and at the edge. IBM’s AI and data platform scales and accelerates the impact of AI with trusted data, and provides leading capabilities to train, tune and deploy AI across business. IBM’s hybrid cloud platform is one of the most comprehensive and consistent approach to development, security, and operations across hybrid environments—a flexible foundation for leveraging data, wherever it resides, to extend AI deep into a business.",
+    "max_salary": 166000,
+    "med_salary": 120500,
+    "min_salary": 75000,
+    "pay_period": "YEARLY",
+    "formatted_work_type": null,
+    "location": "San Jose, CA, Austin, TX, +5",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10790684",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 28, 2026 at 10:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "2 weeks ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:38:34.483Z"
+  },
+  "companies": {
+    "name": "IBM",
+    "description": "At IBM, we do more than work. We create. We create as technologists, developers, and engineers. We create with our partners and competitors. If you're searching for ways to make the world work better through technology and infrastructure, software and consulting, we're here to help you turn your vision into reality. Let's create something that will change everything.",
+    "company_size": null,
+    "country": "US",
+    "state": "NY",
+    "city": "Armonk",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 166000,
+    "med_salary": 120500,
+    "min_salary": 75000,
+    "pay_period": "YEARLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [],
+  "industries": {
+    "industry_name": "Information Technology"
+  },
+  "employee_counts": {}
+}

@@ -1,0 +1,62 @@
+{
+  "jobs": {
+    "job_id": 10808167,
+    "company_id": null,
+    "title": "Software Engineer Intern",
+    "description": "About Us:\nAirgain is a premier provider of wireless connectivity solutions, offering a range of embedded components, external antennas, and integrated systems worldwide. We streamline wireless connectivity across devices and markets, with a focus on solving complex connectivity challenges, expediting time to market, and optimizing wireless signals. Our mission is to connect the world through optimized, integrated wireless solutions. Our product portfolio focuses on three key markets: enterprise, consumer, and automotive. Airgain is headquartered in San Diego, California and maintains design and test centers in the U.S., U.K., and China.\nAbout The Team:\nAt Airgain, “We Simplify Wireless” is not only our tagline, but our creed and passion. A fast-moving technology company, Airgain sets the very pulse of the wireless connectivity industry, giving our unwavering focus on bringing innovative solutions to market, providing new pathways, insights and products that solve complex RF engineering problems. Our team is comprised of the industry’s most talented, driven, experienced and entrepreneurial innovators and leaders in wireless connectivity. And if that is something that resonates, well then … we would love an opportunity to speak with you.\nSummary:\nThe Software Engineer Intern contributes to multiple aspects of software development, from device-level embedded Linux to cloud platforms. This role involves collaborating with senior engineers and maintaining technical documentation.\nEssential Function:\nDesign, develop, and debug firmware and software for embedded Linux projects\nWork on userspace applications and embedded applications (bootloader, Linux kernel)\nSetup and maintain cloud platforms for device management and monitoring\nParticipate in code reviews with members of the software team\nCreate/write/update/maintain product documentation\nReport to software engineering manager\nRequirements/Qualifications:\nEducation level: Candidate must be pursuing a degree in a technical discipline including, but not limited to, Software Engineering, Computer Science, Computer Engineering, or related field\nExperience with embedded Linux hardware (Beaglebone, Raspberry Pi) and embedded Linux operating systems (Rasbperry Pi OS, OpenWRT, etc.) preferred\nProgramming experience with C, Python, Linux Shell scripting (bash, ash)\nAbility to work effectively both independently and as part of a team\nBenefits available to Regular Full Time Employees:\nFlexible hours\nCompensation:\nThe US base salary for this part-time position is $24/hr. to $25/hr.\nOur salary ranges are determined by a number of factors, including but not limited to the role, location, job-related skills, relevant education, experience, and training.\nThe range displayed on each job posting reflects the target range for new hire base salary for the position across all US locations and varies by the location of the position.\nOur Talent team member can share more about our salary ranges and other benefits of working at Airgain, which are not included in the posted base salary range.",
+    "max_salary": 25,
+    "med_salary": 24.5,
+    "min_salary": 24,
+    "pay_period": "HOURLY",
+    "formatted_work_type": null,
+    "location": "St. Louis Park, MN",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10808167",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 2, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "1 week ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:38:14.071Z"
+  },
+  "companies": {
+    "name": "Airgain, Inc.",
+    "description": "At Airgain, we simplify wireless connectivity across the value chain. Whether you are designing a connected product and are struggling with the RF design, wading through a tedious and expensive carrier certification process, or need to get your product to market quickly, we can help. On the other end of the value chain, if you are a fleet or logistics manager and need to get better coverage, track the location and status of your assets throughout their entire journey, or simply need a better signal in the harshest environments, we can help with that, too.",
+    "company_size": 2,
+    "country": "US",
+    "state": "CA",
+    "city": "San Diego",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 25,
+    "med_salary": 24.5,
+    "min_salary": 24,
+    "pay_period": "HOURLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [],
+  "industries": {
+    "industry_name": "Telecommunications"
+  },
+  "employee_counts": {
+    "employee_count": 175,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

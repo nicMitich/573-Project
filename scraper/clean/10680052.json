@@ -1,0 +1,79 @@
+{
+  "jobs": {
+    "job_id": 10680052,
+    "company_id": null,
+    "title": "Software Developer (Mid-Level)",
+    "description": "SeeWriteHear is actively seeking a skilled and experienced mid-level Software Developer to join our technology division. The ideal candidate will have a strong grasp of modern approaches to front and back-end software development, as well as experience with desktop, web, and service application development. The mid-level Software Developer will be responsible for rapidly onboarding to existing projects, developing and maintaining software that supports our accessible media conversion pipeline, and providing leadership and guidance to the Technology team.",
+    "max_salary": 75000,
+    "med_salary": 65000,
+    "min_salary": 55000,
+    "pay_period": "YEARLY",
+    "formatted_work_type": "Full-time",
+    "location": "Scottsdale, AZ",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10680052",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 27, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Bachelors",
+    "skills_desc": null,
+    "listed_time": "1 month ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": null,
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:36:36.222Z"
+  },
+  "companies": {
+    "name": "SeeWriteHear",
+    "description": "SeeWriteHear, LLC is a leader in the assistive technology and accessibility industry, meeting the growing need for accessible literary and multimedia content by developing new Alternative Text solutions, mass producing top-quality media materials, and promoting accessible regulatory compliance via expert, cost-effective consulting and remediation.",
+    "company_size": 1,
+    "country": "US",
+    "state": "AZ",
+    "city": "Scottsdale",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 75000,
+    "med_salary": 65000,
+    "min_salary": 55000,
+    "pay_period": "YEARLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Medical Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Dental Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Vision Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Paid Time Off"
+    }
+  ],
+  "industries": {
+    "industry_name": "Other Industries"
+  },
+  "employee_counts": {
+    "employee_count": 30,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

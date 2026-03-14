@@ -1,0 +1,71 @@
+{
+  "jobs": {
+    "job_id": 10817267,
+    "company_id": null,
+    "title": "Software Engineering Intern",
+    "description": "Software Engineering Intern (SharedServices) – Denver, CO - Colorado State University, University of Colorado Boulder, University of Colorado Denver, University of Northern Colorado\nThe Vertafore internship program is designed to provide vital learning and practical professional experience to take with you into your future career. During the 10-week program, you will be involved in the day-to-day operations of the company while working hand in hand with various teams across the organization. As an intern, you will be assigned a specific project that will focus on an actual Vertafore need and opportunity for process improvement at Vertafore. You’ll truly be a member of the team, and in your day-to-day, you’ll work with, be mentored by, and receive valuable performance feedback from senior leadership and management teams. Interns also participate in various educational seminars, will be educated on real-world applicable workplace skills, and learn career management/development best practices.\nKickstart your software engineering career with a Denver-based team that builds the foundational technology powering modern applications across Vertafore. This internship offers hands-on exposure to scalable platforms, cloud-driven development, and cutting-edge engineering practices in a collaborative environment that values innovation and ownership. If you’re eager to sharpen your technical skills while contributing to meaningful, enterprise-level solutions, this opportunity is built for you.\nResponsibilities:\nStep into a high-impact engineering internship with our Shared Services team, where you will work alongside experienced software engineers building real-world solutions.\nYou will contribute to the Public API initiative, gaining hands-on experience with modern platforms, cloud-native architectures, and AI-powered development tools that accelerate delivery.\nWork in a collaborative agile environment that values ownership, curiosity, and technical rigor.\nIdeal candidate experience:\nAreas of study relevant to this role are foundation in object-oriented programming and software development principles and a drive to learn.",
+    "max_salary": 18.81,
+    "med_salary": 18.81,
+    "min_salary": 18.81,
+    "pay_period": "HOURLY",
+    "formatted_work_type": null,
+    "location": "Denver, CO",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10817267",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 4, 2026 at 10:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "1 week ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:38:20.698Z"
+  },
+  "companies": {
+    "name": "Vertafore",
+    "description": "Over the past 40 years, Vertafore has advanced the business of insurance by bringing together the best software in the industry to help agencies, carriers, and MGAs run their organizations. Today, we are proud to say hundreds of thousands of Vertafore users rely on our solutions to write business faster, cut costs, and fuel growth by increasing collaboration and streamlining processes. Vertafore helps our customers deliver exceptional value to their clients with innovative, intuitive, and comprehensive products and services. Vertafore leads the industry with secure, cloud-based mobile products that provide superior reporting and analytics, delivering actionable insight— right when customers need it most.",
+    "company_size": 5,
+    "country": "US",
+    "state": "CO",
+    "city": "Suite 400N",
+    "zip_code": "80202",
+    "address": "999 18th Street",
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 18.81,
+    "med_salary": 18.81,
+    "min_salary": 18.81,
+    "pay_period": "HOURLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Equity"
+    },
+    {
+      "inferred": 0,
+      "type": "Bonus"
+    }
+  ],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {
+    "employee_count": 3000,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

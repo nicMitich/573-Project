@@ -1,0 +1,62 @@
+{
+  "jobs": {
+    "job_id": 10822901,
+    "company_id": null,
+    "title": "Python Developer Intern",
+    "description": "Precisely is the leader in data integrity. We empower businesses to make more confident decisions based on trusted data through a unique combination of software, data enrichment products and strategic services. What does this mean to you? For starters, it means joining a company focused on delivering outstanding innovation and support that helps customers increase revenue, lower costs and reduce risk. In fact, Precisely powers better decisions for more than 12,000 global organizations, including 95 of the Fortune 100. Precisely's 2500 employees are unified by four company core values that are central to who we are and how we operate: Openness, Determination, Individuality, and Collaboration. We are committed to career development for our employees and offer opportunities for growth, learning and building community. With a \"work from anywhere\" culture, we celebrate diversity in a distributed environment with a presence in 30 countries as well as 20 offices in over 5 continents. Learn more about why it's an exciting time to join Precisely!\nThis position is 100% remote anywhere in the US\nOverview:\nPrecisely’s Summer Internship Program is a paid, part-time opportunity for undergraduate students actively enrolled in university. This is an 10-week program that begins Monday June 8, 2026 and ends Friday August 14, 2026. This opportunity is 100% remote and you must be located in the United States during the summer internship. The Python Developer Intern will work closely with the R&D team.\nWe are seeking a passionate Junior Python Developer (Agent) – Intern to join our engineering team and gain hands-on experience building scalable Python applications. This internship is ideal for students or recent graduates eager to learn, contribute, and grow in a collaborative, fast-paced environment. You will work under the guidance of experienced developers, participate in real projects, and develop your skills with modern Python tools and practices.\nWhat you will do:\n Assist in designing, developing, and maintaining Python applications.\nWork with team members to understand requirements and implement features.\nLearn to use Pydantic for defining and validating data models.\nWrite clean, well-documented code with guidance.\nParticipate in code reviews and incorporate feedback.\nHelp troubleshoot and resolve basic technical issues.\nSupport testing and CI/CD processes.\nWhat we are looking for:\n   Currently pursuing or recently completed a degree in Computer Science or related field.\nBasic knowledge of Python programming.\nEagerness to learn about the Python ecosystem, frameworks, and libraries.\nInterest in object-oriented programming and REST APIs.\nExposure to version control (Git) and testing concepts is a plus.\nStrong problem-solving and communication skills.\nWillingness to take initiative and accept feedback.\nAbility to work effectively in a team and follow instructions.\nPreferred requirements:\nInterest in AI/ML-related Python libraries or frameworks.\nExposure to backend development or data engineering concepts.\nFamiliarity with cloud platforms (AWS, GCP, or Azure).\nProgram benefits:\nValuable experience related to the degree you are pursuing.\nHands on experience at an established tech company.\nNetworking opportunities with company leaders around the globe.",
+    "max_salary": 25,
+    "med_salary": 25,
+    "min_salary": 25,
+    "pay_period": "HOURLY",
+    "formatted_work_type": null,
+    "location": "United States",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10822901",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 8, 2026 at 2:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "4 days ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:37:42.124Z"
+  },
+  "companies": {
+    "name": "Precisely",
+    "description": "We are the architects behind the accuracy and consistency of your data. Our approach gives you the confidence and context to reach beyond today’s performance. We move and help process data with integrity, giving tomorrow’s market leaders the ability to make better decisions and, ultimately, build new possibilities.",
+    "company_size": 5,
+    "country": "US",
+    "state": "NY",
+    "city": "Pearl River",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 25,
+    "med_salary": 25,
+    "min_salary": 25,
+    "pay_period": "HOURLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {
+    "employee_count": 3000,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

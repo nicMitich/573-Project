@@ -1,0 +1,91 @@
+{
+  "jobs": {
+    "job_id": 10839625,
+    "company_id": null,
+    "title": "Full Stack Developer",
+    "description": "Role - Full stack Developer (Entry Level)\nLocation - Pittsburgh, PA\nJob Type - Full Time\nRole description\nFull Stack Developer is responsible for designing, developing, and maintaining applications across both frontend (client-side) and backend (server-side) layers. This role requires proficiency in multiple technologies, frameworks, and tools to deliver scalable, secure, and user-friendly applications. Candidate should be able to work with cross-functional teams (developers, designers, product managers) in delivering new features.\nKey Responsibilities\nApplication Development: Assist in building and maintaining web applications using modern frameworks and technologies.\nFront-End Development: Develop responsive and interactive user interfaces using HTML, CSS, JavaScript, and frameworks like React or Angular.\nBack-End Development: Implement server-side logic, APIs, and database interactions using Node.js, Java, or Python.\nDatabase Management: Work with relational and NoSQL databases (e.g., MySQL, PostgreSQL, Cosmos DB) for data storage and retrieval.\nIntegration & Testing: Support integration of APIs and third-party services; perform unit and integration testing to ensure quality.\nVersion Control & Collaboration: Use Git and CI/CD pipelines for code management and deployment.\nCloud & DevOps Basics: Gain exposure to deploying applications on cloud platforms (Azure/AWS/GCP) and containerization tools like Docker.\nContinuous Learning: Stay updated on emerging technologies, frameworks, and best practices in full-stack development.\nQualification and Specialization\nEducation: Master’s degree in Computer Science, Software Engineering, or related field.\nTechnical Skills:\nProficiency in JavaScript, HTML, CSS; familiarity with frameworks like React, Angular.\nBack-end experience with Node.js, Java, or Python.\nKnowledge of RESTful APIs, microservices, and database design.\nFamiliarity with Git, CI/CD, and basic cloud deployment concepts.\nSoft Skills: Strong problem-solving ability, collaboration, and communication skills.\nNice-to-Have: Exposure to containerization (Docker/Kubernetes), cloud certifications, or personal projects on GitHub.\nUnique Experience from This Role\nHands-on experience in end-to-end application development, from UI design to back-end logic and deployment.\nExposure to modern frameworks and cloud-native development practices.\nOpportunity to work on real-world projects impacting customer experience and operational efficiency.\nLearn Agile methodologies, DevOps practices, and CI/CD pipelines for rapid delivery.\nCollaborate with cross-functional teams to design scalable and secure applications.\nLearning Outcomes for the Trainee\nFront-End Mastery: Build responsive, accessible, and interactive interfaces using modern frameworks.\nBack-End Development: Implement APIs, business logic, and database interactions for scalable applications.\nDatabase Skills: Design and optimize relational and NoSQL databases for performance and reliability.\nCloud & Deployment: Gain practical knowledge of deploying applications on cloud platforms and using containerization tools.\nTesting & Quality Assurance: Learn unit, integration, and automated testing techniques.\nVersion Control & Collaboration: Use Git effectively and understand CI/CD pipelines for continuous delivery.\nSecurity & Performance: Understand best practices for securing applications and optimizing performance.\nAgile & Team Collaboration: Work in sprints, participate in code reviews, and contribute to collaborative development.\nContinuous Learning: Stay current with evolving technologies and frameworks in full-stack development.\nSalary Range - $60K - $70K Per Annum + Benefits",
+    "max_salary": 70000,
+    "med_salary": 65000,
+    "min_salary": 60000,
+    "pay_period": "YEARLY",
+    "formatted_work_type": "Full-time",
+    "location": "Deerfield, IL, or Pittsburgh, PA",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10839625",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 10, 2026 at 8:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "2 days ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:38:24.073Z"
+  },
+  "companies": {
+    "name": "Tata Consultancy Services",
+    "description": "#ExperienceTCS, one of the most valuable IT services and consulting organizations globally, with market capitalization of $144+ B. We have more than 450,000 of the best IT professionals, trained to guide enterprises through their Business 4.0™ growth and digital transformation journeys – helping them to become agile, intelligent, automated, and on the cloud. Our U.S. clients include one-third of the Fortune 500 across all major industries.",
+    "company_size": null,
+    "country": "US",
+    "state": "NJ",
+    "city": "Edison",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 70000,
+    "med_salary": 65000,
+    "min_salary": 60000,
+    "pay_period": "YEARLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Medical Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Dental Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Vision Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Bonus"
+    },
+    {
+      "inferred": 0,
+      "type": "Equity"
+    },
+    {
+      "inferred": 0,
+      "type": "Paid Time Off"
+    },
+    {
+      "inferred": 0,
+      "type": "Parental Leave"
+    },
+    {
+      "inferred": 0,
+      "type": "401(k)"
+    }
+  ],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {}
+}

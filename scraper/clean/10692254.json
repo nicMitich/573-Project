@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 10692254,
+    "company_id": null,
+    "title": "Full Stack Developer (Internship)",
+    "description": "Company Overview\nWorld Salon is a rapidly growing startup operating at the intersection of technology, professional development, and media. Originally founded as a student organization at Columbia University, we now connect professionals across the finance, technology, and ESG sectors, fostering collaboration through curated seminars, digital events, and AI-driven content. Our mission is to ignite bold conversations, empower thought leaders, and inspire innovation through dynamic and inclusive platforms.\nWe are seeking a Full Stack Developer Intern who is excited to work across the frontend and backend, contributing to real product features while gaining hands-on startup experience.\nWhat We Offer\nImpactful Work – Build and optimize a platform that connects professionals worldwide.\nInnovative Tech Stack – Work with modern technologies like Node.js, Python, and cloud-based tools\nMentorship & Learning – Gain experience working with experienced developers and designers.\nRemote Flexibility – Work from anywhere while collaborating with a global team.\nStack Flexibility – Opportunity to explore both frontend and backend\nRole Overview\nAs a Full Stack Developer Intern, you will contribute to both the frontend and backend of our platform, with a stronger emphasis on frontend development. You will work closely with designers, product managers, and engineers to build our innovative event management platform.\nKey Responsibilities:\n🔹Frontend Development\nBuild and maintain responsive and interactive frontend applications using React.js and Next.js.\nCollaborate with designers to translate wireframes and mockups into polished UI components\nOptimize frontend components for performance, accessibility, and cross-browser compatibility\nWork with TypeScript to improve code quality and maintainability.\n🔹 Backend API Development\nAssist in building and maintaining backend services using Node.js and/or Python\nDevelop and integrate RESTful APIs to support frontend functionality\nCollaborate with senior engineers on backend architecture and implementation decisions\n🔹Cloud, Deployment & Tooling\nUtilize AWS cloud infrastructure (S3, CloudFront, Amplify) to deploy and manage frontend applications.\nWork with CI/CD pipelines (GitHub Actions, AWS CodePipeline) to automate deployment and updates.\nEnsure seamless integration between development, testing, and production environments\n🔹 Collaboration & Agile Development\nWork closely with backend developers, designers, and product teams\nParticipate in code reviews and team meetings to improve development workflows.\nDocument frontend processes, best practices, and reusable components.\nWhat We're Looking For:\nCurrently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field.\nProficiency in JavaScript, React.js, and Next.js.\nFamiliarity with Python and Node.js\nUnderstanding of CSS frameworks (Tailwind CSS, Bootstrap, Styled Components).\nFamiliarity with API integration (REST)\nKnowledge of state management (Redux, Context API,  Zustand).\nBasic understanding of backend concepts (APIs, server-side logic, databases)\nExperience with AWS cloud services (S3, CloudFront, Amplify, or Lambda).\nBasic understanding of CI/CD tools (GitHub Actions, AWS CodePipeline).\nStrong problem-solving and debugging skills.\nNice to have:\nExperience with frontend testing (Jest, React Testing Library) and web performance optimization.\nFamiliarity with basic database concepts (SQL)\nInterest in AI-driven products or professional networking platforms\nCredit Process:\nStudents are responsible for consulting their academic department to ensure the internship meets program requirements (e.g., hours completed, deliverables, and learning outcomes). World Salon will collaborate with students to complete necessary forms and provide supporting documentation.",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": null,
+    "location": "Flexibility – Work from anywhere while collaborating with a global team.",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10692254",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 29, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "1 month ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:38:02.481Z"
+  },
+  "companies": {
+    "name": "World Salon",
+    "description": "At World Salon, we believe that multilateral discourse is an opportunity to unite visionaries, thinkers, and creators to create impactful change. Our workshops, coaching, and community building activities enable us to establish a wide-ranging network of driven, insightful, and talented individuals. Our leadership programs are designed to unlock your full potential and help you develop the skills you need to become a successful leader. Our community is made up of like-minded individuals who are passionate about making a positive impact in the world. Join us today in driving the urgent change we yearn to see, one conversation at a time.",
+    "company_size": 1,
+    "country": "US",
+    "state": "NY",
+    "city": "New York City",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Other Industries"
+  },
+  "employee_counts": {
+    "employee_count": 30,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

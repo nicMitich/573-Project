@@ -1,0 +1,71 @@
+{
+  "jobs": {
+    "job_id": 10821415,
+    "company_id": null,
+    "title": "Full-Stack Engineer",
+    "description": "Full-Stack Engineer\nPart-Time or Full Time  | Remote or Hybrid in San Francisco, CA |  Equity Upside + Path to Full-Time\nAbout Uno Wallet\nUno Wallet is building the first AI-powered iOS wallet that automatically selects the optimal credit card for every purchase: maximizing rewards with zero effort.\nWe're one of the first companies on Apple's newly opened NFC & Secure Element platform (iOS 18.1+), and we've just closed funding from a top-tier investor. Our CTO Saket Joshi built X's video recommendation algorithm at xAI. Our CEO went to Harvard Business School. We move fast and build things that don't exist yet.\nThe Role\nYou'll work directly with Saket to build our backend infrastructure from the ground up — APIs, data pipelines, merchant categorization, and the integrations connecting our iOS app to payment networks and financial data providers. Part-time or full-time contract to start, with a clear path to full-time and equity.\nWhat You'll Work On\nBuilding backend APIs that serve our iOS app from scratch\nIntegrating with payment tokenization services (Visa, Mastercard) and our TSM layer\nDeveloping data pipelines for merchant category prediction and rewards optimization\nConnecting to financial data providers (e.g., Plaid) for bank and transaction syncing\nArchitecting backend systems as an early technical hire\nWhat We're Looking For\nSolid backend experience — Python, Node.js, or similar\nComfortable building and consuming REST APIs\nExperience with databases and data modeling\nAbility to work independently and own open-ended problems\n0-4 years of experience — new grads welcome if your work is strong\nBonus: financial APIs, ML pipelines, or real-time data systems\nCompensation & Growth\nDirect mentorship from our CTO who built xAI's recommendation engine\nAccess to Harvard and Stanford networks of CEO\nPath to full-time + equity\nWe are not able to offer competitive compensation yet",
+    "max_salary": 3000,
+    "med_salary": 26500,
+    "min_salary": 50000,
+    "pay_period": "MONTHLY",
+    "formatted_work_type": "Full-time",
+    "location": "or hybrid, based in San Francisco, CA",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10821415",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 5, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "1 week ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:38:31.141Z"
+  },
+  "companies": {
+    "name": "Uno Wallet",
+    "description": "Uno Wallet is a fintech startup that provides users with a single smart payment card that automatically routes each purchase to whichever of their existing credit cards will earn the maximum rewards for that transaction category.",
+    "company_size": 0,
+    "country": "US",
+    "state": "CA",
+    "city": "Palo Alto",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 3000,
+    "med_salary": 26500,
+    "min_salary": 50000,
+    "pay_period": "MONTHLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Equity"
+    },
+    {
+      "inferred": 0,
+      "type": "Bonus"
+    }
+  ],
+  "industries": {
+    "industry_name": "Financial Services"
+  },
+  "employee_counts": {
+    "employee_count": 6,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

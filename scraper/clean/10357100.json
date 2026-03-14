@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 10357100,
+    "company_id": null,
+    "title": "Software Engineering Intern",
+    "description": "Organization: Irenix Empowerment Foundation\nDepartment: Innovation & Technology\nReports To: Director of Technology\nLocation: 100% Remote\nTerm: 3–6 months (summer, fall, or spring)\nTime Commitment: 10–20 hrs/week\nCompensation: Unpaid internship — no exceptions at this time. (Academic credit may be arranged with your institution.)\nAbout Irenix Empowerment Foundation\nIrenix Empowerment Foundation is a Wyoming-based nonprofit organized for charitable and educational purposes. Our initiatives include developing technology that expands access to care and community resources in underserved populations.\nWhy Join\nMentored by a NASA engineer. Learn directly from an active NASA software developer working on satellite ops and ISS systems.\nWork with an AI PhD. Apply machine learning to nonprofit use cases (analytics, automation, decision support).\nMission-driven focus. Build tools that advance mental health and community well-being, with privacy and ethics at the core.\nWhat You’ll Build\nFull-stack features. Develop front-end and back-end solutions in JavaScript/TypeScript, Python, or Java.\nData & storage. Design relational/NoSQL schemas; write secure, performant queries.\nAPIs & microservices. Create clean, well-documented REST endpoints that connect our ecosystem.\nQuality & automation. Write tests, support CI/CD pipelines (GitHub Actions/Jenkins), and streamline cloud deployments.\nAgile teamwork. Join sprint planning, stand-ups, and retros; contribute to documentation and collaboration tools.\nMentorship deep-dives. Attend weekly tech talks and code clinics with the NASA mentor and AI lead.\nYou Are\nEnrolled in a BS/MS program in CS, Software Engineering, or related field.\nComfortable with a modern FE framework (React/Angular/Vue) and a BE stack (Express/Django/Spring Boot).\nProficient with Git; interested in CI/CD, containerization (Docker/Kubernetes), and cloud (AWS/Azure/GCP).\nA clear, proactive communicator who values clean, tested code and peer review.\nNice-to-Have\nInterest in regulated/ethical domains (HIPAA, privacy-by-design).\nFamiliarity with Jest, PyTest, or JUnit.\nExposure to DevOps/IaC/observability (Terraform, Prometheus, OpenTelemetry, etc.).\nWhat You’ll Gain\nResume-level experience: NASA mentorship + nonprofit tech portfolio.\nAI in practice: Hands-on ML/automation experience with real beneficiaries.\nNetworking: Collaborate with seasoned engineers and a motivated peer group.\nPurpose-driven work: Build software that directly supports access to care and empowerment.\nInternship Standards (Nonprofit/FLSA-Aligned)\nThis internship is for educational purposes only. It is unpaid with no exceptions, does not displace staff, and carries no promise of employment. We provide defined learning goals, a supervisor, flexible scheduling, and evaluations as requested.\nHow to Apply\nEmail your resume and a brief cover letter to info@irenix.org with the subject line “Software Engineering Intern — Irenix Empowerment Foundation.” Rolling review; ideal start October 2025.",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": null,
+    "location": "United States",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10357100",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "September 30, 2026 at 6:00 AM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "5 months ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:37:59.079Z"
+  },
+  "companies": {
+    "name": "Irenix Empowerment Foundation",
+    "description": "Irenix Empowerment Foundation is a nonprofit research and development organization dedicated to building innovative solutions that improve health, education, and opportunity in underserved communities. We are currently developing technology-driven initiatives, designs that we hope will expand access to mental health care and other wraparound services.",
+    "company_size": 0,
+    "country": "US",
+    "state": "WY",
+    "city": "Sheridan",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Non-Profit - Other"
+  },
+  "employee_counts": {
+    "employee_count": 6,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

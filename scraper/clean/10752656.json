@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 10752656,
+    "company_id": null,
+    "title": "Software Engineer",
+    "description": "Description:\nHave you ever showed up to a job interview nervous, anxious, wishing you knew your hiring manager's hobbies so you could try to break the ice? We have all been there! Which begs the question of: why does interviewing have to be this way when it is such a common practice of professionals?\nIt doesn't! If you are you looking to create the future of interviewing, come join MyMicrojourney! We are looking for a strong Software Engineer who will continue to help develop the MyMicrojourney product for our customers.\nWork closely with the CEO and Business Developer to design, implement, and deploy applications. Own the design and delivery of an integral piece of a system or application.\nManagement and execution against project plans and delivery commitments.\nCreate and execute appropriate quality plans, project plans, test strategies and processes for development activities in concert with business and project management efforts.\nBasic Qualifications:\nSoftware development experience.\nExperience in at least one software programming language.\nSome experience in leading design or architecture (design patterns, reliability and scaling) of new and existing systems experience.\nPreferred Qualifications:\nKnowledge of professional software engineering practices & best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations.\nUnderstanding of distributed and service-oriented architectures, large scale commercial enterprise software systems, or large scale online services.\nFull stack experience ranging from front-end user interfaces through to back-end systems and all points in between.\nMyMicrojourney is an equal opportunities employer. We believe that employing a diverse workforce is core to our success and make recruiting decisions based on your experience and skills. Protecting your privacy and the security of your data is a top priority for MyMicrojourney.",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": null,
+    "location": "United States",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10752656",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 15, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "3 weeks ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:38:45.901Z"
+  },
+  "companies": {
+    "name": "MyMicrojourney",
+    "description": "MyMicrojourney’s vision is to give candidates sneak peeks into culture at small and medium-sized businesses (SMBs) and individuals they will work with before the actual interviews.",
+    "company_size": 0,
+    "country": "US",
+    "state": "WA",
+    "city": "Seattle",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {
+    "employee_count": 6,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

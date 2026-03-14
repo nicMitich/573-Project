@@ -1,0 +1,55 @@
+{
+  "jobs": {
+    "job_id": 10000452,
+    "company_id": null,
+    "title": "Quantitative Researcher – Master's: 2026",
+    "description": "Overview\nAs a Quantitative Researcher at Susquehanna, you’ll blend strong research capabilities with a deep understanding of trading to design, validate, backtest, and implement statistical and advanced machine learning models. Your work will span a range of initiatives, including large-scale data analysis, alpha signal research, and strategy performance enhancement. While there is some overlap with the Quantitative Systematic Trader role, Quantitative Researchers typically focus more on model development, robustness, and long-term reliability.\nWhat you can expect\nModelling. Apply probability theory, statistical analysis, and machine learning techniques to build robust models and generate alphas\nExecution. Propose improvements or optimize existing strategies\nEvaluation.  Backtest ideas using historical market data and large research clusters\nEducation. Participate in a comprehensive education program and receive personalized mentorship from senior professionals to accelerate your growth\nCollaboration. Work in an open environment that allows you to collaborate with systematic traders and technologists to push strategies into production\nWhat we're looking for\nMasters graduating by Summer 2026 in quantitative fields such as Mathematics, Physics, Statistics, Electrical Engineering, Computer Science, Operations Research, or Economics\nAnalytical problem-solvers with excellent logical reasoning and a passion for turning data into decisions\nClear communicators in a fast-paced and highly collaborative environment\nProgrammers comfortable processing and analyzing large data sets in Python; experience with C++ (or another low-level language) is a plus\nStrategic thinkers with demonstrated interests in strategic games and/or competitive activities\nSelf-motivated  and quick to learn, thriving in dynamic, fast-moving environment\nBy applying to this role, you will be automatically considered for the Quantitative Systematic Trader position. There is no need to apply to both positions to be considered for both.\nVisa sponsorship is available for this position.\nSusquehanna does not accept unsolicited resumes from recruiters or search firms. If you're a recruiting agency and want to partner with us, please reach out to recruiting@sig.com. Any resume or referral submitted in the absence of a signed agreement will not be eligible for an agency fee.",
+    "max_salary": null,
+    "med_salary": null,
+    "min_salary": null,
+    "pay_period": null,
+    "formatted_work_type": "Full-time",
+    "location": "Bala Cynwyd, PA",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10000452",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "June 16, 2026 at 3:00 AM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "8 months ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": null,
+    "compensation_type": null,
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:38:37.820Z"
+  },
+  "companies": {
+    "name": "Susquehanna",
+    "description": "Susquehanna is a global quantitative trading firm founded by a group of friends who share a passion for game theory and probabilistic thinking. Our rigorous and analytical approach to decision making has led Susquehanna to become one of the largest and most successful proprietary trading firms in the world. Our employees are relentless problem solvers who collaborate to make optimal decisions.",
+    "company_size": 5,
+    "country": "US",
+    "state": "PA",
+    "city": "Bala Cynwyd",
+    "zip_code": "19004",
+    "address": "401 City Avenue",
+    "url": null
+  },
+  "salaries": {},
+  "benefits": [],
+  "industries": {
+    "industry_name": "Investment / Portfolio Management"
+  },
+  "employee_counts": {
+    "employee_count": 3000,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

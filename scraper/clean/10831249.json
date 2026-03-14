@@ -1,0 +1,79 @@
+{
+  "jobs": {
+    "job_id": 10831249,
+    "company_id": null,
+    "title": "Software Developer",
+    "description": "VueData is looking for a Software Developer (AI/ML) with Bachelor’s degree, or equivalent, in Computer Science, Information Technology, Software or Computer Engineering, or related discipline, +5 years of progressive experience in Node.js, Python, AWS, Docker, agentic AI, Retrieval-Augmented Generation (RAG), MongoDB, SQL, Pinecone, Large Language Models (LLMs), Kafka, Redis, Elasticsearch, distributed systems architecture, and enterprise-grade data pipelines.\nDuties:\nProvide expert technical leadership, architecture, and hands-on development of enterprise AI services and distributed applications built on Node.js and Python.\nDesign and implement agentic AI systems and RAG pipelines including document ingestion, embedding generation, vector indexing (Pinecone), grounding, tool-use/orchestration, and evaluation/guardrails for safety and reliability.\nArchitect and deploy advanced AI capabilities, including fine-tuning and customization of Large Language Models, development of multi-modal pipelines (text, vision, and speech), and integration of custom domain-specific models for production workloads.\nDefine complex microservice architectures on AWS, including containerization, secrets management, autoscaling strategies, and integration of robust, scalable data pipelines.\nOwn end-to-end data and inference pathways by engineering low-latency APIs, asynchronous workers, and streaming/queueing topologies using Kafka and Redis; design systems that can handle heavy AI workloads.\nArchitect and optimize multi-store persistence (SQL, MongoDB, vector DB) with rigorous schema/versioning, replication, and disaster recovery; implement query-planning and caching for high-throughput retrieval and personalization.\nTranslate ambiguous business objectives into actionable technical specifications by collaborating directly with Product and Business teams; lead client engagement to gather requirements, design integrations, present solution architectures, and drive resolution of cross-system dependencies.\nProvide support for highly complex production incidents across AI pipelines, retrieval layers and perform root-cause analysis.\nLead large-scale AI project delivery from proof-of-concept through testing, security review, performance benchmarking, and production rollout; define acceptance criteria, operational readiness, and agile sprint deliverables.\nDirect statistics gathering and analysis to determine compute footprint, storage/IO, vector throughput, and partitioning strategies required to meet projected traffic, response-time, and availability targets.\n Evaluate, develop, customize, and utilize advanced developer productivity, MLOps, observability, and CI/CD tooling to accelerate safe, repeatable releases and continuous model/application improvement.\nMentor engineers, establish engineering best practices, and drive cross-functional initiatives that impact the enterprise AI infrastructure and product roadmap.\nApply agile methods to ensure iterative delivery, transparency, and continuous improvement; connect and coordinate with distributed remote teams across time zones to ensure alignment, collaboration, and timely execution of global initiatives.\nJob Location: VueData, 11332 NE 122nd Way, Suite 100, Kirkland, WA 98034.  Job may require some travel in the US with expenses paid by employer. 40hrs per week. Applicant must be authorized to work in the United States. Send resume to meredith@vuedata.com.",
+    "max_salary": 200000,
+    "med_salary": 200000,
+    "min_salary": 200000,
+    "pay_period": null,
+    "formatted_work_type": "Full-time",
+    "location": "Kirkland, WA",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 0,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10831249",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "April 9, 2026 at 11:59 PM",
+    "closed_time": null,
+    "formatted_experience_level": "Bachelors",
+    "skills_desc": null,
+    "listed_time": "3 days ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": "FULL_TIME",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": null,
+    "scraped_at": "2026-03-14T01:39:06.383Z"
+  },
+  "companies": {
+    "name": "VueData",
+    "description": "VueData is a customer obsessed, global IT and software development services company with a proven track record for executing projects using tailored offshore & onsite model for each project and client, with strong expertise in delivering solutions through developing enterprise scale applications and web & mobile applications.",
+    "company_size": 2,
+    "country": "US",
+    "state": "WA",
+    "city": "Seattle",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 200000,
+    "med_salary": 200000,
+    "min_salary": 200000,
+    "pay_period": null,
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Medical Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Dental Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Vision Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Paid Time Off"
+    }
+  ],
+  "industries": {
+    "industry_name": "Internet & Software"
+  },
+  "employee_counts": {
+    "employee_count": 75,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "jobs": {
+    "job_id": 10349939,
+    "company_id": null,
+    "title": "2026 Software Engineer Intern",
+    "description": "Join Axon and be a Force for Good\nAt Axon, we’re on a mission to Protect Life. We’re explorers, pursuing society’s most critical safety and justice issues with our ecosystem of devices and cloud software. Like our products, we work better together. We connect with candor and care, seeking out diverse perspectives from our customers, communities and each other.\nLife at Axon is fast-paced, challenging and meaningful. Here, you’ll take ownership and drive real change. Constantly grow as you work hard for a mission that matters at a company where you matter.\nYour Impact\nAs a Software Engineer Intern, you have foundational computer science knowledge and a strong command of one or more object-oriented programming languages. Your passion is software engineering and coming up with innovative solutions for customer problems. You will grow rapidly by driving high impact features to production with coaching from your veteran teammates.\nThis role will enable you to elevate your skills to the next level. As an intern, you will have regular 1:1s with your mentor, an experienced engineer on your team. You will get career advice through regular meetings with your manager, who is accountable for developing the careers of their reports. As part of your internship, you’ll get visibility by presenting your ideas, vision, and accomplishments to executive leadership.\nJoin Forces in an exciting environment where you use your passion, experience, and analytical skills to help bring new solutions to public safety and leave a positive impact on the world.\nWhat You'll Do\nOwning and driving end-to-end features with Product and Design\nWorking with the latest open source technologies\nParticipating in code reviews and architecture design meetings\nEnsuring that your code hits a high bar for quality and performance\nDaily involvement with all team activities, from standup and sprint planning to team morale events\nOpportunity for on-site agency visits, including ride alongs\nWhat You Bring\nPursuing graduation in a Computer Science, Engineering, or a related field at a community college, university, or bootcamp\nExperience in at least one object-oriented language such as Java, Python, Scala, Go, C#, or similar\nEffective communication and collaboration skills\nCultural alignment to Axon Company Values: https://global.axon.com/company/values\nA previous software development internship\nUp-to-date knowledge of the latest in software engineering and open source technologies\nWorking knowledge of database technology such as SQL or NoSQL\nGood Linux/Unix/Mac experience\nPlease Note\nMust be pursuing an undergraduate degree (Class of 2027)\nStrive for a full 12 weeks\nStart date either 5/27/26 or 6/9/26\nEnd date either 8/21/26 or 9/5/26\nWork Location\nThis role is based out of our Boston, Seattle, or Atlanta office and follows a hybrid schedule. We rely on in-person collaboration and ask that team members work onsite Tuesdays through Fridays, with the flexibility to work remotely on Mondays, unless there is an approved workplace accommodation. We believe that connection fuels innovation, and our in-office culture is designed to foster meaningful teamwork, mentorship, and shared success.\nThe starting hourly pay for this role is USD $45. The actual hourly pay is dependent upon many factors such as: level, function, training, transferable skills, work experience, business needs, geographic market, and often a combination of all these factors. Our benefits offer an array of options to help support you physically, financially and emotionally through the big milestones and in your everyday life. To see more details on our benefits offerings please visit http://www.axon.com/careers/benefits.\nDon’t meet every single requirement? That's ok. At Axon, we Aim Far. We think big with a long-term view because we want to reinvent the world to be a safer, better place. We are also committed to building diverse teams that reflect the communities we serve.\nStudies have shown that women and people of color are less likely to apply to jobs unless they check every box in the job description. If you’re excited about this role and our mission to Protect Life but your experience doesn’t align perfectly with every qualification listed here, we encourage you to apply anyways. You may be just the right candidate for this or other roles.\nImportant Notes\nThe above job description is not intended as, nor should it be construed as, exhaustive of all duties, responsibilities, skills, efforts, or working conditions associated with this job. The job description may change or be supplemented at any time in accordance with business needs and conditions.\nSome roles may also require legal eligibility to work in a firearms environment.\nAxon’s mission is to Protect Life and is committed to the well-being and safety of its employees as well as Axon’s impact on the environment. All Axon employees must be aware of and committed to the appropriate environmental, health, and safety regulations, policies, and procedures. Axon employees are empowered to report safety concerns as they arise and activities potentially impacting the environment.\nWe are an equal opportunity employer that promotes justice, advances equity, values diversity and fosters inclusion. We’re committed to hiring the best talent — regardless of race, creed, color, ancestry, religion, sex (including pregnancy), national origin, sexual orientation, age, citizenship status, marital status, disability, gender identity, genetic information, veteran status, or any other characteristic protected by applicable laws, regulations and ordinances — and empowering all of our employees so they can do their best work. If you have a disability or special need that requires assistance or accommodation during the application or the recruiting process, please email recruitingops@axon.com. Please note that this email address is for accommodation purposes only. Axon will not respond to inquiries for other purposes.",
+    "max_salary": 45,
+    "med_salary": 45,
+    "min_salary": 45,
+    "pay_period": "HOURLY",
+    "formatted_work_type": null,
+    "location": "Seattle, WA, Atlanta, GA, +1",
+    "applies": null,
+    "original_listed_time": null,
+    "remote_allowed": 1,
+    "views": null,
+    "job_posting_url": "https://app.joinhandshake.com/jobs/10349939",
+    "application_url": null,
+    "application_type": null,
+    "expiry": "March 26, 2026 at 6:00 AM",
+    "closed_time": null,
+    "formatted_experience_level": "Masters",
+    "skills_desc": null,
+    "listed_time": "5 months ago",
+    "posting_domain": "joinhandshake.com",
+    "sponsored": 0,
+    "work_type": null,
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY",
+    "work_authorization": "US work authorization required",
+    "opt_cpt": "Open to candidates with OPT/CPT",
+    "scraped_at": "2026-03-14T01:37:52.251Z"
+  },
+  "companies": {
+    "name": "Axon",
+    "description": "At Axon, we’re on a mission to Protect Life. We’re explorers, pursuing society’s most critical safety and justice issues with our ecosystem of devices and cloud software. Like our products, we work better together. We connect with candor and care, seeking out diverse perspectives from our customers, communities and each other.",
+    "company_size": 5,
+    "country": "US",
+    "state": "AZ",
+    "city": "Phoenix",
+    "zip_code": null,
+    "address": null,
+    "url": null
+  },
+  "salaries": {
+    "max_salary": 45,
+    "med_salary": 45,
+    "min_salary": 45,
+    "pay_period": "HOURLY",
+    "currency": "USD",
+    "compensation_type": "BASE_SALARY"
+  },
+  "benefits": [
+    {
+      "inferred": 0,
+      "type": "Medical Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Dental Insurance"
+    },
+    {
+      "inferred": 0,
+      "type": "Vision Insurance"
+    }
+  ],
+  "industries": {
+    "industry_name": "Other Industries"
+  },
+  "employee_counts": {
+    "employee_count": 3000,
+    "follower_count": null,
+    "time_recorded": 1773452736
+  }
+}
