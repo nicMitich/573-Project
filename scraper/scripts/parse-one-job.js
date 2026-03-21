@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-// ── Helpers ──────────────────────────────────────────────────────────
 
 function pickBetween(text, startLabel, endLabelOptions) {
   const startIdx = text.indexOf(startLabel);
@@ -159,14 +158,6 @@ function parseEmployer(text) {
   if (!block) return {};
 
   const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
-
-  // Typical pattern:
-  // "The Exit Group"
-  // "Investment Banking"
-  // "Follow"
-  // "10-50 employees"
-  // "Henderson, NV"
-  // "A Premier Buy-Side M&A..."
   const info = {};
   const addressLines = []; // track which lines are address/location so we skip them for description
 
@@ -332,26 +323,21 @@ function parseExperienceLevel(text) {
  */
 function cleanLocation(locationStr) {
   if (!locationStr) return null;
-  // Remove "Onsite, based in " / "Remote, based in " / "Hybrid, " prefix
-  return locationStr
+
+  // If purely remote with no real city, return "Remote"
+  const stripped = locationStr
     .replace(/^(onsite|remote|hybrid)\s*,?\s*(based\s+in\s*)?/i, "")
+    .replace(/^or\s+(onsite|remote|hybrid)\s*,?\s*(based\s+in\s*)?/i, "")
     .trim();
+
+  // Check if original line is remote and there's no real location left
+  if (/\bremote\b/i.test(locationStr) && (!stripped || stripped.length > 80 || !/[A-Z]{2}/.test(stripped))) {
+    return "Remote";
+  }
+
+  return stripped || null;
 }
 
-// ── Main parser ──────────────────────────────────────────────────────
-
-/**
- * Parse raw scraped Handshake job into professor's normalized schema.
- *
- * Returns: {
- *   jobs: { ... },        // matches professor's jobs table
- *   companies: { ... },   // matches professor's companies table
- *   salaries: { ... },    // matches professor's salaries table
- *   benefits: { ... },    // matches professor's benefits table
- *   industries: { ... },  // matches professor's industries table
- *   employee_counts: { ... }
- * }
- */
 function parseJob(raw) {
   const mainText = raw.mainText || "";
   const t = mainText.replace(/\u00a0/g, " ").replace(/\s+\n/g, "\n").trim();
@@ -413,6 +399,16 @@ function parseJob(raw) {
     ]);
   }
 
+  // Strip UI junk from end of description (Save, Apply, etc.)
+  if (description) {
+    description = description
+      .replace(/[\n\s]*(Save|Apply|Apply Now|Show more|Show less)[\n\s]*/gi, (match, _w, offset) => {
+        // Only strip if near the end of the description
+        return offset > description.length - 30 ? "" : match;
+      })
+      .trim();
+  }
+
   // Experience level
   const formatted_experience_level = parseExperienceLevel(t);
 
@@ -428,95 +424,34 @@ function parseJob(raw) {
     employer.industry ||
     (firstLines.length >= 2 ? firstLines[1] : null);
 
-  // ── Build output matching professor's table structure ──
+  // ── Build flat output matching team-agreed structure ──
 
   const result = {
-    jobs: {
-      job_id,
-      company_id: null, // Handshake doesn't expose a numeric company ID
-      title: raw.title || null,
-      description: description || null,
-      max_salary: salary ? salary.max_salary : null,
-      med_salary: salary ? salary.med_salary : null,
-      min_salary: salary ? salary.min_salary : null,
-      pay_period: salary ? salary.pay_period : null,
-      formatted_work_type,
-      location,
-      applies: null,
-      original_listed_time: null,
-      remote_allowed,
-      views: null,
-      job_posting_url: raw.url || null,
-      application_url: null,
-      application_type: null,
-      expiry,
-      closed_time: null,
-      formatted_experience_level,
-      skills_desc: null,
-      listed_time,
-      posting_domain: "joinhandshake.com",
-      sponsored: 0,
-      work_type,
-      currency: salary ? salary.currency : null,
-      compensation_type: salary ? salary.compensation_type : null,
-      // Handshake-specific extras
-      work_authorization,
-      opt_cpt,
-      scraped_at: raw.scraped_at || new Date().toISOString(),
-    },
-
-    companies: {
-      name: raw.company || null,
-      description: employer.description || null,
-      company_size: employer.company_size != null ? employer.company_size : null,
-      country: employer.country || null,
-      state: employer.state || null,
-      city: employer.city || null,
-      zip_code: employer.zip_code || null,
-      address: employer.address || null,
-      url: null,
-    },
-
-    salaries: salary
-      ? {
-          max_salary: salary.max_salary,
-          med_salary: salary.med_salary,
-          min_salary: salary.min_salary,
-          pay_period: salary.pay_period,
-          currency: salary.currency,
-          compensation_type: salary.compensation_type,
-        }
-      : {},
-
-    benefits: benefitTypes.map((type) => ({
-      inferred: 0,
-      type,
-    })),
-
-    industries: industry ? { industry_name: industry } : {},
-
-    employee_counts: employer.employee_count
-      ? {
-          employee_count: employer.employee_count,
-          follower_count: null,
-          time_recorded: Math.round(Date.now() / 1000),
-        }
-      : {},
+    job_id: job_id != null ? String(job_id) : null,
+    company_name: raw.company || null,
+    title: raw.title || null,
+    description: description || null,
+    max_salary: salary ? salary.max_salary : null,
+    pay_period: salary ? salary.pay_period : null,
+    location,
+    company_id: null,
+    views: null,
+    med_salary: salary ? salary.med_salary : null,
   };
 
   return result;
 }
 
-// ── Export for use by other scripts ──
+
 module.exports = { parseJob };
 
-// ── CLI: run directly on a single file ──
+
 if (require.main === module) {
   const inputFile = process.argv[2] || path.join(__dirname, "..", "raw", "one_job.json");
   const raw = JSON.parse(fs.readFileSync(inputFile, "utf8"));
   const parsed = parseJob(raw);
 
-  const jobId = parsed.jobs.job_id || "unknown";
+  const jobId = parsed.job_id || "unknown";
   const outDir = path.join(__dirname, "..", "clean");
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
