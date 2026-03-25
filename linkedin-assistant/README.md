@@ -1,4 +1,7 @@
 # How to Run
+You will need to first npm install
+and update/download Node/Vite
+
 To run:
 - 'npm run dev' in linkedin-assistant folder
 
