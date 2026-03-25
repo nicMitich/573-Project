@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <h1>Resume Generator</h1>
+
+  <!-- INPUT FORM -->
+  <div class="form-container">
+
+    <label>Name</label>
+    <input type="text" id="nameInput" placeholder="Your full name">
+
+    <label>Email</label>
+    <input type="email" id="emailInput" placeholder="you@example.com">
+
+    <label>Phone Number</label>
+    <input type="text" id="phoneInput" placeholder="(555) 555-5555">
+
+    <label>Location</label>
+    <input type="text" id="locationInput" placeholder="City, State">
+
+    <label>Professional Summary</label>
+    <textarea id="summaryInput" placeholder="A short professional summary..."></textarea>
+
+    <label>Education</label>
+    <textarea id="educationInput" placeholder="School, degree, graduation year..."></textarea>
+
+    <label>Skills</label>
+    <textarea id="skillsInput" placeholder="List your skills..."></textarea>
+
+    <label>Work Experience</label>
+    <textarea id="experienceInput" placeholder="Job title, company, dates, responsibilities..."></textarea>
+
+    <button id="generateResumeBtn">Generate Resume</button>
+  </div>
+
+  <!-- PREVIEW -->
+  <h2>Preview</h2>
+  <div id="resumePreview" class="resume-box"></div>
+
+  <button id="downloadPdfBtn">Download PDF</button>
+  <button onclick="window.location.href='index.html'">Back to Home</button>
+
+  <script>
+    document.getElementById("generateResumeBtn").addEventListener("click", () => {
+
+      const name = document.getElementById("nameInput").value;
+      const email = document.getElementById("emailInput").value;
+      const phone = document.getElementById("phoneInput").value;
+      const location = document.getElementById("locationInput").value;
+      const summary = document.getElementById("summaryInput").value;
+      const education = document.getElementById("educationInput").value;
+      const skills = document.getElementById("skillsInput").value;
+      const experience = document.getElementById("experienceInput").value;
+
+      const resumeHTML = `
+        <h1>${name}</h1>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Location:</strong> ${location}</p>
+
+        <h2>Professional Summary</h2>
+        <p>${summary}</p>
+
+        <h2>Education</h2>
+        <p>${education.replace(/\n/g, "<br>")}</p>
+
+        <h2>Skills</h2>
+        <p>${skills.replace(/\n/g, "<br>")}</p>
+
+        <h2>Work Experience</h2>
+        <p>${experience.replace(/\n/g, "<br>")}</p>
+      `;
+
+      document.getElementById("resumePreview").innerHTML = resumeHTML;
+    });
+
+    document.getElementById("downloadPdfBtn").addEventListener("click", () => {
+      const element = document.getElementById("resumePreview");
+
+      const options = {
+        margin: 0.5,
+        filename: 'resume.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      html2pdf().from(element).set(options).save();
+    });
+  </script>
+
+</body>
+</html>
