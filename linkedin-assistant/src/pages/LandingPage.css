@@ -1,0 +1,100 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  gap: 64px;
+}
+
+.landing-hero { max-width: 540px; }
+
+.landing-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.landing-heading {
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.landing-sub {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+/* ── Cards ──────────────────────────────────────────────────────── */
+.landing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.landing-card {
+  background: var(--bg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  transition: background 0.15s;
+  position: relative;
+}
+
+.landing-card:hover {
+  background: var(--surface);
+}
+
+.landing-card:hover .card-arrow {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.card-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.card-arrow {
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: 8px;
+  transition: color 0.15s, transform 0.15s;
+}
+
+@media (max-width: 640px) {
+  .landing-cards { grid-template-columns: 1fr; }
+}
