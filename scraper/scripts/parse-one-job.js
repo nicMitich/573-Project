@@ -42,9 +42,14 @@ function parseSalary(salaryStr) {
     min_salary = parseFloat(rangeMatch[1].replace(/,/g, ""));
     max_salary = parseFloat(rangeMatch[2].replace(/,/g, ""));
     if (rangeMatch[3]) {
-      // "K" suffix — multiply both
-      min_salary *= 1000;
-      max_salary *= 1000;
+      // "K" suffix — if min <= max, both are in K (e.g. "$70-80K")
+      // if min > max before K, only max gets K (e.g. "$50-3K" means $50 to $3K)
+      if (min_salary <= max_salary) {
+        min_salary *= 1000;
+        max_salary *= 1000;
+      } else {
+        max_salary *= 1000;
+      }
     }
   } else if (singleMatch) {
     min_salary = parseFloat(singleMatch[1].replace(/,/g, ""));
@@ -346,12 +351,13 @@ function parseJob(raw) {
   const jobIdMatch = (raw.url || "").match(/\/(?:jobs|job-search)\/(\d+)/);
   const job_id = jobIdMatch ? parseInt(jobIdMatch[1]) : null;
 
-  // Posted / Apply-by
-  const postedMatch = t.match(
-    /Posted\s+([^\n∙]+)\s*∙\s*Apply by\s+([^\n]+)/i
-  );
-  const listed_time = postedMatch ? postedMatch[1].trim() : null;
-  const expiry = postedMatch ? postedMatch[2].trim() : null;
+  // original_listed_time: use scraped_at as UNIX timestamp (Handshake doesn't expose listed time)
+  const original_listed_time = raw.scraped_at
+    ? Math.round(new Date(raw.scraped_at).getTime() / 1000)
+    : Math.round(Date.now() / 1000);
+
+  // expiry: original_listed_time + 30 days
+  const expiry = original_listed_time + 30 * 24 * 60 * 60;
 
   // Salary
   const salaryMatch = t.match(/At a glance\s*\n([$\d][^\n]+)/i);
@@ -360,9 +366,9 @@ function parseJob(raw) {
 
   // Location
   const locationMatch =
-    t.match(/\n(Onsite[^\n]+)/i) ||
-    t.match(/\n(Remote[^\n]+)/i) ||
-    t.match(/\n(Hybrid[^\n]+)/i);
+    t.match(/\n(Onsite[^\n]*)/i) ||
+    t.match(/\n(Remote[^\n]*)/i) ||
+    t.match(/\n(Hybrid[^\n]*)/i);
   const rawLocation = locationMatch ? locationMatch[1].trim() : null;
   const remote_allowed = parseRemoteAllowed(rawLocation);
   const location = cleanLocation(rawLocation);
@@ -437,6 +443,9 @@ function parseJob(raw) {
     company_id: null,
     views: null,
     med_salary: salary ? salary.med_salary : null,
+    job_posting_url: raw.url || null,
+    original_listed_time,
+    expiry,
   };
 
   return result;
