@@ -1,4 +1,68 @@
+import { useState, useRef, useEffect } from "react"
+
+
 export default function ChatPage() {
+  const [messages, setMessages] = useState([])
+  const [input, setInput] = useState("")
+  const [loading, setLoading] = useState(false)
+  const messagesEndRef = useRef(null)
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [messages])
+
+  const sendMessage = async () => {
+    const text = input.trim()
+    if (!text || loading) return
+
+    const userMsg = { role: "user", content: text }
+    const updated = [...messages, userMsg]
+    setMessages(updated)
+    setInput("")
+    setLoading(true)
+
+    try {
+      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          models: ["openrouter/auto"],
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are a helpful job and career assistant. You help users with resume feedback, job searching, career advice, and interview preparation. Be concise and practical.",
+            },
+            ...updated,
+          ],
+        }),
+      })
+
+      const data = await res.json()
+      console.log("API response:", data)
+      const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response."
+      setMessages((prev) => [...prev, { role: "assistant", content: reply }])
+    } catch (err) {
+      console.error(err)
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "Error: Failed to reach the API. Check your key and try again." },
+      ])
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault()
+      sendMessage()
+    }
+  }
+
   return (
     <div className="page">
       <p className="page-label">01 — Chat</p>
@@ -10,9 +74,138 @@ export default function ChatPage() {
 
       <hr className="divider" />
 
-      <div className="placeholder">
-        Chat interface — implementation coming soon
+      <div style={styles.chatContainer}>
+        <div style={styles.messages}>
+          {messages.length === 0 && (
+            <p style={styles.empty}>Send a message to start the conversation.</p>
+          )}
+          {messages.map((msg, i) => (
+            <div
+              key={i}
+              style={{
+                ...styles.bubble,
+                ...(msg.role === "user" ? styles.userBubble : styles.assistantBubble),
+              }}
+            >
+              <span style={styles.roleLabel}>
+                {msg.role === "user" ? "You" : "Assistant"}
+              </span>
+              <p style={styles.msgText}>{msg.content}</p>
+            </div>
+          ))}
+          {loading && (
+            <div style={{ ...styles.bubble, ...styles.assistantBubble }}>
+              <span style={styles.roleLabel}>Assistant</span>
+              <p style={styles.msgText}>Thinking...</p>
+            </div>
+          )}
+          <div ref={messagesEndRef} />
+        </div>
+
+        <div style={styles.inputRow}>
+          <textarea
+            style={styles.textarea}
+            rows={1}
+            placeholder="Ask about jobs, resumes, interviews..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <button
+            style={{
+              ...styles.sendBtn,
+              opacity: loading || !input.trim() ? 0.5 : 1,
+            }}
+            onClick={sendMessage}
+            disabled={loading || !input.trim()}
+          >
+            Send
+          </button>
+        </div>
       </div>
     </div>
   )
+}
+
+const styles = {
+  chatContainer: {
+    display: "flex",
+    flexDirection: "column",
+    height: "60vh",
+    border: "1px solid #333",
+    borderRadius: "12px",
+    overflow: "hidden",
+    background: "#111",
+  },
+  messages: {
+    flex: 1,
+    overflowY: "auto",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "12px",
+  },
+  empty: {
+    color: "#666",
+    textAlign: "center",
+    marginTop: "40px",
+  },
+  bubble: {
+    maxWidth: "75%",
+    padding: "12px 16px",
+    borderRadius: "12px",
+    wordWrap: "break-word",
+  },
+  userBubble: {
+    alignSelf: "flex-end",
+    background: "#2563eb",
+    color: "#fff",
+  },
+  assistantBubble: {
+    alignSelf: "flex-start",
+    background: "#222",
+    color: "#ddd",
+    border: "1px solid #333",
+  },
+  roleLabel: {
+    fontSize: "11px",
+    fontWeight: 600,
+    opacity: 0.6,
+    display: "block",
+    marginBottom: "4px",
+  },
+  msgText: {
+    margin: 0,
+    lineHeight: 1.5,
+    whiteSpace: "pre-wrap",
+  },
+  inputRow: {
+    display: "flex",
+    gap: "8px",
+    padding: "12px",
+    borderTop: "1px solid #333",
+    background: "#0a0a0a",
+  },
+  textarea: {
+    flex: 1,
+    padding: "10px 14px",
+    borderRadius: "8px",
+    border: "1px solid #333",
+    background: "#1a1a1a",
+    color: "#fff",
+    fontSize: "14px",
+    fontFamily: "inherit",
+    resize: "none",
+    outline: "none",
+  },
+  sendBtn: {
+    padding: "10px 20px",
+    borderRadius: "8px",
+    border: "none",
+    background: "#2563eb",
+    color: "#fff",
+    fontWeight: 600,
+    cursor: "pointer",
+    fontSize: "14px",
+  },
 }
