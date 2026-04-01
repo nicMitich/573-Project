@@ -11,7 +11,7 @@ export default function Neo4jPage() {
       <hr className="divider" />
 
       <div className="placeholder">
-        Neo4j graph explorer — implementation coming soon
+        Neo4j graph explorer — implementation coming sooooooon
       </div>
     </div>
   )
