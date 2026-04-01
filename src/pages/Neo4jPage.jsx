@@ -5,7 +5,7 @@ export default function Neo4jPage() {
       <h1 className="page-title">Graph Database</h1>
       <p className="page-desc">
         Explore relationships between jobs, skills, and companies stored in Neo4j.
-        Find skill gaps, related roles, and career path connections.
+        Find skill gaps, related roles, and career path connection.
       </p>
 
       <hr className="divider" />
