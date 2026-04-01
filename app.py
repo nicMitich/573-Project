@@ -6,6 +6,10 @@ from resume_parser import parse_resume
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def index():
+    return jsonify({'status': 'resume parser API is running'})
+    
 @app.route('/parse-resume', methods=['POST'])
 def parse():
     if 'file' not in request.files:
