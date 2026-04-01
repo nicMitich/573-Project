@@ -17,7 +17,7 @@ export default function ResumePage() {
     formData.append('file', file)
 
     try {
-      const res = await fetch('http://localhost:5000/parse-resume', {
+      const res = await fetch('https://linkedin-assistant-dm1u.onrender.com/parse-resume', {
         method: 'POST',
         body: formData
       })
