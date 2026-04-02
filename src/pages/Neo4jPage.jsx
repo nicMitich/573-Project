@@ -84,19 +84,8 @@ export default function Neo4jPage() {
 
       <hr className="divider" />
 
-      {/* Connection Status */}
-      <div className="section">
-        <h2>Connection Status</h2>
-        <div className="status-bar">
-          <span className={`status-indicator ${connected === true ? "connected" : connected === false ? "disconnected" : ""}`}>
-            {connected === true ? "● Connected" : connected === false ? "● Disconnected" : "● Unknown"}
-          </span>
-          <button onClick={checkConnection} disabled={loading} className="btn">
-            {loading ? "Checking..." : "Test Connection"}
-          </button>
-        </div>
-        {message && <p className="message success">{message}</p>}
-        {error && <p className="message error">{error}</p>}
+      <div className="placeholder">
+        Neo4j graph explorer — implementation coming sooooooon
       </div>
 
       {/* Actions */}

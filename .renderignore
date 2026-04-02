@@ -1,0 +1,5 @@
+requirements.txt
+resume-backend/
+app.py
+resume_parser.py
+*.py
