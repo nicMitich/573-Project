@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+import { useState, useEffect } from "react"
+
+const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"
+
+>>>>>>> Stashed changes
 export default function Neo4jPage() {
   return (
     <div className="page">
