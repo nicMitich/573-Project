@@ -3,9 +3,6 @@ import { useState, useEffect } from "react"
 
 const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"
 
-import { useState, useEffect } from "react"
-
-const API_BASE = "http://localhost:5000"
 
 export default function Neo4jPage() {
   const [connected, setConnected] = useState(null)
