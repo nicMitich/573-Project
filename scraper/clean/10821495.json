@@ -1,0 +1,15 @@
+{
+  "job_id": "10821495",
+  "company_name": "comma.ai",
+  "title": "Full Stack Software Engineer",
+  "description": "Role: Full Stack Software Engineer\nLocation: San Diego, CA (On-site)\nWe are comma.ai. We're building the Android of self-driving cars and already operate the second largest fleet after Tesla. We own our stack from shipping state of the art machine learning models trained on our own infrastructure, building the operating system, designing the hardware, and manufacturing it.\nWe are looking for a Full Stack Software Engineer to build the systems that connect our devices, users, and internal teams. You’ll work across the frontend and backend to build tools that support live telemetry, fleet management, community features, and company operations. If you’re excited to ship production-grade software to real users, this role is for you.\nResponsibilities:\nBuild user-facing web tools for openpilot drivers and the comma community\nDesign and implement scalable backend APIs that interact with fleet and telemetry data\nImprove and maintain internal dashboards and admin tools\nOwn projects end-to-end: frontend, backend, database, deployment\nQualifications:\nGood programming skills\nFamiliarity with relational databases, CI/CD pipelines, and devops tooling\nStrong product sense and attention to performance, usability, and code quality\nPerks:\nChef-prepared lunch and dinner\nOn-site gym and yoga studio\n24/7 access to the comma fleet of cars\nHealth, dental, and vision insurance\nFlexible time off\nWe love a great GitHub, open source contributors, good projects, and competition winners. To apply, complete one of our challenges or get a bounty merged then reach into work@comma.ai.",
+  "max_salary": 7000,
+  "pay_period": "MONTHLY",
+  "location": "San Diego, CA",
+  "company_id": null,
+  "views": null,
+  "med_salary": 6500,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10821495",
+  "original_listed_time": 1774339998,
+  "expiry": 1776931998
+}

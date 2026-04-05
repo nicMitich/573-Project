@@ -1,83 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10024342,
-    "company_id": null,
-    "title": "Software Engineer",
-    "description": "Two Dots is helping to unlock unstructured information and connect it with software. The computer revolution helped us organize the world’s business data, but data entry and integrations have continued to be huge bottlenecks for most businesses. We’re using AI to solve a boring problem - extracting information from PDFs and integrating it into financial workflows that deliver huge value for our customers. We’re retrofitting the computer revolution onto every document trapped in a bank filing cabinet today.\nPlease note that we require all full-time employees to work from our office in San Francisco, CA.\nRole overview:\nTwo Dots is looking for entry-level Software Engineers to join our small but growing team in San Francisco. You’ll work closely with our Co-Founder and CTO, gaining direct mentorship and exposure to all aspects of our platform. This is a great opportunity to take ownership of projects early in your career while learning rapidly in a high-impact environment. We’re looking for strong generalists who are eager to grow their skills across web applications and backend development.\nKey Responsibilities:\nDesign, develop, test, deploy, and maintain new features across our frontend and backend.\nDeliver performant, reliable, scalable and secure code\nCollaborate with the team to monitor and resolve production issues, continually improving stability.\nManage individual priorities, deadlines, and deliverables with your technical expertise\nDesirable Traits:\nDegree or certification in Computer Science or related technical field\n0-2 years experience in backend distributed systems and full-stack development\nProficiency in Node.js, TypeScript, and JavaScript\nAbility to perform independently on development tasks based on designs and specs\nStrong problem solving skills, with the ability to think critically and creatively\nExcellent communication and interpersonal skills, capable of explaining complex operational information in an understandable way\nA proactive, curious mindset with a relentless pursuit of excellence and innovation in tackling complex problems\nHungry for personal and professional growth and ready to scale with Two Dots!\nWhat you get in return:\nAn opportunity to revolutionize the real estate leasing industry and own projects that make a tangible impact\nA work culture that is based on trust, ownership, flexibility and a growth mindset\nA competitive salary, comprehensive equity package, and substantial benefits\nClosing:\nTwo Dots is an equal opportunity employer. We aim to build a workforce of individuals from different backgrounds, with different abilities, identities, and mindsets. Even if you do not meet all of the qualifications listed above, we encourage you to apply!\nCompensation is variable and subject to a candidate’s personal qualifications and expectations. For this role, we offer the following base salary range, in addition to an equity package and full benefits: $120k - $170k per year.",
-    "max_salary": 170000,
-    "med_salary": 145000,
-    "min_salary": 120000,
-    "pay_period": "YEARLY",
-    "formatted_work_type": "Full-time",
-    "location": "San Francisco, CA",
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": 0,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10024342",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "June 26, 2026 at 6:00 AM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "8 months ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": "FULL_TIME",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY",
-    "work_authorization": "US work authorization required",
-    "opt_cpt": "Open to candidates with OPT/CPT",
-    "scraped_at": "2026-03-14T01:39:02.898Z"
-  },
-  "companies": {
-    "name": "Two Dots",
-    "description": "Two Dots is a rapidly growing tech company building a universal income and employment verification service. Our mission is to make consumer underwriting more fair by enabling seamless payroll data access between companies and consumers. We’re starting with income verification for residential real estate.",
-    "company_size": 1,
-    "country": "US",
-    "state": "CA",
-    "city": "San Francisco",
-    "zip_code": null,
-    "address": null,
-    "url": null
-  },
-  "salaries": {
-    "max_salary": 170000,
-    "med_salary": 145000,
-    "min_salary": 120000,
-    "pay_period": "YEARLY",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY"
-  },
-  "benefits": [
-    {
-      "inferred": 0,
-      "type": "Medical Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Dental Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Vision Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Equity"
-    },
-    {
-      "inferred": 0,
-      "type": "Paid Time Off"
-    }
-  ],
-  "industries": {
-    "industry_name": "Information Technology"
-  },
-  "employee_counts": {
-    "employee_count": 30,
-    "follower_count": null,
-    "time_recorded": 1773452736
-  }
+  "job_id": "10024342",
+  "company_name": "Two Dots",
+  "title": "Software Engineer",
+  "description": "Two Dots is helping to unlock unstructured information and connect it with software. The computer revolution helped us organize the world’s business data, but data entry and integrations have continued to be huge bottlenecks for most businesses. We’re using AI to solve a boring problem - extracting information from PDFs and integrating it into financial workflows that deliver huge value for our customers. We’re retrofitting the computer revolution onto every document trapped in a bank filing cabinet today.\nPlease note that we require all full-time employees to work from our office in San Francisco, CA.\nRole overview:\nTwo Dots is looking for entry-level Software Engineers to join our small but growing team in San Francisco. You’ll work closely with our Co-Founder and CTO, gaining direct mentorship and exposure to all aspects of our platform. This is a great opportunity to take ownership of projects early in your career while learning rapidly in a high-impact environment. We’re looking for strong generalists who are eager to grow their skills across web applications and backend development.\nKey Responsibilities:\nDesign, develop, test, deploy, and maintain new features across our frontend and backend.\nDeliver performant, reliable, scalable and secure code\nCollaborate with the team to monitor and resolve production issues, continually improving stability.\nManage individual priorities, deadlines, and deliverables with your technical expertise\nDesirable Traits:\nDegree or certification in Computer Science or related technical field\n0-2 years experience in backend distributed systems and full-stack development\nProficiency in Node.js, TypeScript, and JavaScript\nAbility to perform independently on development tasks based on designs and specs\nStrong problem solving skills, with the ability to think critically and creatively\nExcellent communication and interpersonal skills, capable of explaining complex operational information in an understandable way\nA proactive, curious mindset with a relentless pursuit of excellence and innovation in tackling complex problems\nHungry for personal and professional growth and ready to scale with Two Dots!\nWhat you get in return:\nAn opportunity to revolutionize the real estate leasing industry and own projects that make a tangible impact\nA work culture that is based on trust, ownership, flexibility and a growth mindset\nA competitive salary, comprehensive equity package, and substantial benefits\nClosing:\nTwo Dots is an equal opportunity employer. We aim to build a workforce of individuals from different backgrounds, with different abilities, identities, and mindsets. Even if you do not meet all of the qualifications listed above, we encourage you to apply!\nCompensation is variable and subject to a candidate’s personal qualifications and expectations. For this role, we offer the following base salary range, in addition to an equity package and full benefits: $120k - $170k per year.",
+  "max_salary": 170000,
+  "pay_period": "YEARLY",
+  "location": "San Francisco, CA",
+  "company_id": null,
+  "views": null,
+  "med_salary": 145000,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10024342",
+  "original_listed_time": 1774339940,
+  "expiry": 1776931940
 }

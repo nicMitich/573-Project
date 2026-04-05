@@ -1,87 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10698574,
-    "company_id": null,
-    "title": "Junior Full-Stack Web Developer",
-    "description": "Junior Full-Stack Web Developer\n Department: Technology\n Job Type: Full-Time\n Compensation: 70k-85k\nWho We Are\nSurf or Sound Realty is Hatteras Island’s premier vacation rental management company serving more than 600 vacation homes and over 100,000 guests annually. Our digital platforms power booking, pricing, payments, and internal operations across the company.\nOverview\nWe are seeking a Junior Full-Stack Web Developer who is motivated, curious, and highly driven. This role is designed for someone who wants real responsibility, real production exposure, and the opportunity to grow quickly by doing meaningful work. This is not a passive support role. We are looking for a builder who takes pride in learning fast, solving problems, and doing what it takes to get the job done.\nThis position supports daily platform maintenance while contributing to new features, performance improvements, and ongoing modernization initiatives. It is ideal for someone who is hungry to grow, comfortable working through ambiguity, and eager to take ownership of real production systems.\nResponsibilities\nBuild and maintain React-based user interfaces. Assist with backend development using C# and ASP.NET. Write SQL Server queries and assist with validating production data. Support CMS templates and content workflows. Assist with testing, debugging, deployments, and live production fixes. Participate in performance improvements and modernization initiatives. Document systems, workflows, and code patterns. Collaborate with marketing and operations teams to solve real business problems.\nQualifications\nCore Competencies: Strong willingness to learn and adapt in a fast-paced environment. High personal accountability and work ethic. Comfort working through unfamiliar technical challenges. Foundational knowledge of JavaScript, HTML, CSS, and C#. Willingness to learn SQL Server and cloud infrastructure tools. Strong problem-solving and communication skills.\n Experience: Bachelor’s degree in Computer Science, Web Development, IT, or related field (or graduating within 12 months). Personal projects, portfolios, or hands-on coursework demonstrating initiative are strongly valued.\nPosition Requirements\nSelf-directed and proactive. Comfortable working on live production systems with mentorship. Willing to dig into problems, research solutions, and see tasks through to completion. Able to manage priorities and execution without close supervision. Highly dependable and adaptable. Background check and references required.",
-    "max_salary": 85000,
-    "med_salary": 77500,
-    "min_salary": 70000,
-    "pay_period": "YEARLY",
-    "formatted_work_type": "Full-time",
-    "location": "Avon, NC",
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": 0,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10698574",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "March 31, 2026 at 8:59 PM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "1 month ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": "FULL_TIME",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY",
-    "work_authorization": "US work authorization required",
-    "opt_cpt": null,
-    "scraped_at": "2026-03-14T01:37:38.728Z"
-  },
-  "companies": {
-    "name": "Surf or Sound Realty",
-    "description": "Surf or Sound Realty is a professional property management company. For 40 years we have been representing vacation properties exclusively on Hatteras Island. We provide premier service to our homeowners and represent the finest luxury homes offering the most attractive amenities in the most desirable communities.",
-    "company_size": 2,
-    "country": "US",
-    "state": "NC",
-    "city": "Avon",
-    "zip_code": null,
-    "address": null,
-    "url": null
-  },
-  "salaries": {
-    "max_salary": 85000,
-    "med_salary": 77500,
-    "min_salary": 70000,
-    "pay_period": "YEARLY",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY"
-  },
-  "benefits": [
-    {
-      "inferred": 0,
-      "type": "Medical Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Dental Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Vision Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Paid Time Off"
-    },
-    {
-      "inferred": 0,
-      "type": "Life Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "401(k)"
-    }
-  ],
-  "industries": {
-    "industry_name": "Real Estate"
-  },
-  "employee_counts": {
-    "employee_count": 75,
-    "follower_count": null,
-    "time_recorded": 1773452736
-  }
+  "job_id": "10698574",
+  "company_name": "Surf or Sound Realty",
+  "title": "Junior Full-Stack Web Developer",
+  "description": "Junior Full-Stack Web Developer\n Department: Technology\n Job Type: Full-Time\n Compensation: 70k-85k\nWho We Are\nSurf or Sound Realty is Hatteras Island’s premier vacation rental management company serving more than 600 vacation homes and over 100,000 guests annually. Our digital platforms power booking, pricing, payments, and internal operations across the company.\nOverview\nWe are seeking a Junior Full-Stack Web Developer who is motivated, curious, and highly driven. This role is designed for someone who wants real responsibility, real production exposure, and the opportunity to grow quickly by doing meaningful work. This is not a passive support role. We are looking for a builder who takes pride in learning fast, solving problems, and doing what it takes to get the job done.\nThis position supports daily platform maintenance while contributing to new features, performance improvements, and ongoing modernization initiatives. It is ideal for someone who is hungry to grow, comfortable working through ambiguity, and eager to take ownership of real production systems.\nResponsibilities\nBuild and maintain React-based user interfaces. Assist with backend development using C# and ASP.NET. Write SQL Server queries and assist with validating production data. Support CMS templates and content workflows. Assist with testing, debugging, deployments, and live production fixes. Participate in performance improvements and modernization initiatives. Document systems, workflows, and code patterns. Collaborate with marketing and operations teams to solve real business problems.\nQualifications\nCore Competencies: Strong willingness to learn and adapt in a fast-paced environment. High personal accountability and work ethic. Comfort working through unfamiliar technical challenges. Foundational knowledge of JavaScript, HTML, CSS, and C#. Willingness to learn SQL Server and cloud infrastructure tools. Strong problem-solving and communication skills.\n Experience: Bachelor’s degree in Computer Science, Web Development, IT, or related field (or graduating within 12 months). Personal projects, portfolios, or hands-on coursework demonstrating initiative are strongly valued.\nPosition Requirements\nSelf-directed and proactive. Comfortable working on live production systems with mentorship. Willing to dig into problems, research solutions, and see tasks through to completion. Able to manage priorities and execution without close supervision. Highly dependable and adaptable. Background check and references required.",
+  "max_salary": 85000,
+  "pay_period": "YEARLY",
+  "location": "Avon, NC",
+  "company_id": null,
+  "views": null,
+  "med_salary": 77500,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10698574",
+  "original_listed_time": 1774339978,
+  "expiry": 1776931978
 }

@@ -1,0 +1,15 @@
+{
+  "job_id": "10857137",
+  "company_name": "Perpendo AI",
+  "title": "Agentic Platform: Data Engineering Intern",
+  "description": "Perpendo AI is looking for a Data Engineering Intern to help build and maintain the data infrastructure that\nunderpins our AI-native Insurance platform. You will work directly on SOV ingestion pipelines, field-level\nontology validation, null handling strategies, and the data governance framework that ensures every risk record\nis traceable from intake to output.\nKey Responsibilities\n• Build and maintain ETL pipelines for ingesting Statement of Values (SOV) and COPE data from diverse\nclient formats (Excel, CSV, Accord XML)\n• Implement field-level validation rules across 57+ data fields spanning 9 ontological categories\n• Develop null-handling, imputation, and transformation logic aligned with the Perpendo AI Field Ontology\nand Data Dictionary\n• Integrate with Verisk SQL, geocoding APIs, and external regulatory data sources\n• Maintain data quality dashboards and anomaly detection monitors\n• Collaborate with AI agents (AGT-01 Intake, AGT-02 Normalization) to ensure clean data hand-offs\nRequired Qualifications\n• Pursuing BS/MS in Computer Science, Data Science, Statistics, or related field\n• Strong Python skills; proficiency with Pandas, Polars, or PySpark for data manipulation\n• Working knowledge of SQL and relational database design\n• Attention to detail and comfort working with messy, real-world tabular data\n• Understanding of data quality principles: validation, deduplication, schema enforcement\nPreferred / Bonus Skills\n• Experience with dbt, Apache Airflow, or similar data pipeline tools\n• Familiarity with insurance data\n• Exposure to data governance frameworks, data lineage, or audit trail design\n• Knowledge of Excel/XLSB parsing (openpyxl, xlrd) and PDF extraction",
+  "max_salary": null,
+  "pay_period": null,
+  "location": "Remote",
+  "company_id": null,
+  "views": null,
+  "med_salary": null,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10857137",
+  "original_listed_time": 1774339916,
+  "expiry": 1776931916
+}

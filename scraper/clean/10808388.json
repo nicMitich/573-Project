@@ -1,87 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10808388,
-    "company_id": null,
-    "title": "Software Engineer",
-    "description": "Over the next few years, every financial institution will have teams of AI analysts working alongside their sharpest minds. At Endex, we're on a mission to bridge the present to the inevitable by building the most sophisticated digital coworker for financial services. We're recruiting a team to work on the frontier of agentic development and applied finance, in close collaboration with leading research labs.\nWhat You’ll Do\nAs a Software Engineer at Endex, you’ll join a fast-moving, cross-functional team that’s developing the core infrastructure, data pipelines, product interfaces, and deployment systems that power our platform. You’ll work on projects spanning:\nScalable backend systems and robust APIs\nHigh-quality data ingestion and transformation pipelines\nIntuitive user interfaces for financial workflows\nSecure, resilient infrastructure and deployment pipelines\nCustom client-facing solutions that meet rigorous security standards\nYou’ll work closely with AI researchers, product leaders, and financial analysts to bring advanced tooling to life—and shape the future of finance.\nYou May Be a Fit If You…\nHave experience building mission-critical backend systems, APIs, and services\nHave designed secure, scalable infrastructure in regulated or on-prem environments\nKnow how to build and maintain data models, pipelines, and monitoring systems\nEnjoy translating complex business logic into clean technical solutions\nHave strong product instincts and care deeply about user experience\nAre curious about finance and motivated by real-world impact\nAre excited to work on-site with a tight-knit, high-ownership team",
-    "max_salary": 180000,
-    "med_salary": 140000,
-    "min_salary": 100000,
-    "pay_period": "YEARLY",
-    "formatted_work_type": "Full-time",
-    "location": "New York, NY",
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": 0,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10808388",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "April 3, 2026 at 8:59 PM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "1 week ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": "FULL_TIME",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY",
-    "work_authorization": "US work authorization required",
-    "opt_cpt": null,
-    "scraped_at": "2026-03-14T01:37:31.685Z"
-  },
-  "companies": {
-    "name": "Endex AI",
-    "description": "In partnership with OpenAI, Endex is on a mission to bridge the present to the inevitable by building the most sophisticated digital coworker for financial services. We are focused on delivering agentic AI solutions to financial institutions like investment banks, hedge funds, and private equity firms.",
-    "company_size": 1,
-    "country": "US",
-    "state": "NY",
-    "city": "New York",
-    "zip_code": null,
-    "address": null,
-    "url": null
-  },
-  "salaries": {
-    "max_salary": 180000,
-    "med_salary": 140000,
-    "min_salary": 100000,
-    "pay_period": "YEARLY",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY"
-  },
-  "benefits": [
-    {
-      "inferred": 0,
-      "type": "Medical Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Dental Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Vision Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Equity"
-    },
-    {
-      "inferred": 0,
-      "type": "Paid Time Off"
-    },
-    {
-      "inferred": 0,
-      "type": "401(k)"
-    }
-  ],
-  "industries": {
-    "industry_name": "Internet & Software"
-  },
-  "employee_counts": {
-    "employee_count": 30,
-    "follower_count": null,
-    "time_recorded": 1773452736
-  }
+  "job_id": "10808388",
+  "company_name": "Endex AI",
+  "title": "Software Engineer",
+  "description": "Over the next few years, every financial institution will have teams of AI analysts working alongside their sharpest minds. At Endex, we're on a mission to bridge the present to the inevitable by building the most sophisticated digital coworker for financial services. We're recruiting a team to work on the frontier of agentic development and applied finance, in close collaboration with leading research labs.\nWhat You’ll Do\nAs a Software Engineer at Endex, you’ll join a fast-moving, cross-functional team that’s developing the core infrastructure, data pipelines, product interfaces, and deployment systems that power our platform. You’ll work on projects spanning:\nScalable backend systems and robust APIs\nHigh-quality data ingestion and transformation pipelines\nIntuitive user interfaces for financial workflows\nSecure, resilient infrastructure and deployment pipelines\nCustom client-facing solutions that meet rigorous security standards\nYou’ll work closely with AI researchers, product leaders, and financial analysts to bring advanced tooling to life—and shape the future of finance.\nYou May Be a Fit If You…\nHave experience building mission-critical backend systems, APIs, and services\nHave designed secure, scalable infrastructure in regulated or on-prem environments\nKnow how to build and maintain data models, pipelines, and monitoring systems\nEnjoy translating complex business logic into clean technical solutions\nHave strong product instincts and care deeply about user experience\nAre curious about finance and motivated by real-world impact\nAre excited to work on-site with a tight-knit, high-ownership team",
+  "max_salary": 180000,
+  "pay_period": "YEARLY",
+  "location": "New York, NY",
+  "company_id": null,
+  "views": null,
+  "med_salary": 140000,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10808388",
+  "original_listed_time": 1774339882,
+  "expiry": 1776931882
 }

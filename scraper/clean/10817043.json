@@ -1,99 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10817043,
-    "company_id": null,
-    "title": "Software Engineer I",
-    "description": "About Handshake\nHandshake is the career network for the AI economy. 20 million knowledge workers, 1,600 educational institutions, 1 million employers (including 100% of the Fortune 50), and every foundational AI lab trust Handshake to power career discovery, hiring, and upskilling, from freelance AI training gigs to first internships to full-time careers and beyond. This unique value is leading to unparalleled growth; in 2025, we tripled our ARR at scale.\nWhy join Handshake now:\nShape how every career evolves in the AI economy, at global scale, with impact your friends, family and peers can see and feel\nWork hand-in-hand with world-class AI labs, Fortune 500 partners and the world’s top educational institutions\nJoin a team with leadership from Scale AI, Meta, xAI, Notion, Coinbase, and Palantir, among others\nBuild a massive, fast-growing business with billions in revenue\nAbout the Role\nAs a Software Engineer, you will play a critical role in building the core experiences that help students find opportunities, spanning search, discovery, jobs, and job search.\nIn this role, you will:\nDesign and implement scalable systems powering search and discovery experiences across our platform.\nBuild agentic AI experiences for students, including our conversational AI agent for resume help, job search, and interview prep.\nWork with OpenAI real-time APIs and agentic frameworks to deliver intelligent, conversational features.\nCollaborate with cross-functional teams to integrate new features that drive member value and engagement.\nContribute to code reviews to maintain high code quality standards and mentor teammates to foster continuous learning.\nDesired Capabilities\n2+ years of experience in software engineering, ideally with consumer platforms or social apps.\nProficiency in programming languages such as Python, Java, or JavaScript to deliver robust solutions.\nStrong product sense with a focus on building features that create real value for members.\nExperience with cloud platforms (AWS, Azure, or Google Cloud) to optimize system performance.\nExcellent communication skills to collaborate within a diverse team environment.\nExtra Credit\nExperience with AI, chatbots, or conversational interfaces.\nPerks\nHandshake delivers benefits that help you feel supported—and thrive at work and in life.\nThe below benefits are for full-time US employees.\n🎯 Ownership: Equity in a fast-growing company\n💰 Financial Wellness: 401(k) match, competitive compensation, financial coaching\n🍼 Family Support: Paid parental leave, fertility benefits, parental coaching\n💝 Wellbeing: Medical, dental, and vision, mental health support, wellness stipend\n📚 Growth: Learning stipend, ongoing development\n💻 Remote & Office: Internet, commuting, and free lunch/gym in our SF office\n🏝 Time Off: Flexible PTO, 15 holidays + 2 flex days\n🤝 Connection: Team outings & referral bonuses\nExplore our mission, values, and comprehensive US benefits at joinhandshake.com/careers.",
-    "max_salary": 170000,
-    "med_salary": 157500,
-    "min_salary": 145000,
-    "pay_period": "YEARLY",
-    "formatted_work_type": "Full-time",
-    "location": "San Francisco, CA",
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": 0,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10817043",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "May 4, 2026 at 11:59 PM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "1 week ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": "FULL_TIME",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY",
-    "work_authorization": "US work authorization required",
-    "opt_cpt": null,
-    "scraped_at": "2026-03-14T01:39:19.745Z"
-  },
-  "companies": {
-    "name": "Handshake",
-    "description": "Handshake is an early career social network—helping students, employers, and educational institutions connect, inspire, and grow careers together.",
-    "company_size": 4,
-    "country": "US",
-    "state": "CA",
-    "city": "San Francisco",
-    "zip_code": null,
-    "address": null,
-    "url": null
-  },
-  "salaries": {
-    "max_salary": 170000,
-    "med_salary": 157500,
-    "min_salary": 145000,
-    "pay_period": "YEARLY",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY"
-  },
-  "benefits": [
-    {
-      "inferred": 0,
-      "type": "Medical Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Dental Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Vision Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Equity"
-    },
-    {
-      "inferred": 0,
-      "type": "Paid Time Off"
-    },
-    {
-      "inferred": 0,
-      "type": "Parental Leave"
-    },
-    {
-      "inferred": 0,
-      "type": "401(k)"
-    },
-    {
-      "inferred": 0,
-      "type": "Life Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Disability Insurance"
-    }
-  ],
-  "industries": {
-    "industry_name": "Internet & Software"
-  },
-  "employee_counts": {
-    "employee_count": 625,
-    "follower_count": null,
-    "time_recorded": 1773452736
-  }
+  "job_id": "10817043",
+  "company_name": "Handshake",
+  "title": "Software Engineer I",
+  "description": "About Handshake\nHandshake is the career network for the AI economy. 20 million knowledge workers, 1,600 educational institutions, 1 million employers (including 100% of the Fortune 50), and every foundational AI lab trust Handshake to power career discovery, hiring, and upskilling, from freelance AI training gigs to first internships to full-time careers and beyond. This unique value is leading to unparalleled growth; in 2025, we tripled our ARR at scale.\nWhy join Handshake now:\nShape how every career evolves in the AI economy, at global scale, with impact your friends, family and peers can see and feel\nWork hand-in-hand with world-class AI labs, Fortune 500 partners and the world’s top educational institutions\nJoin a team with leadership from Scale AI, Meta, xAI, Notion, Coinbase, and Palantir, among others\nBuild a massive, fast-growing business with billions in revenue\nAbout the Role\nAs a Software Engineer, you will play a critical role in building the core experiences that help students find opportunities, spanning search, discovery, jobs, and job search.\nIn this role, you will:\nDesign and implement scalable systems powering search and discovery experiences across our platform.\nBuild agentic AI experiences for students, including our conversational AI agent for resume help, job search, and interview prep.\nWork with OpenAI real-time APIs and agentic frameworks to deliver intelligent, conversational features.\nCollaborate with cross-functional teams to integrate new features that drive member value and engagement.\nContribute to code reviews to maintain high code quality standards and mentor teammates to foster continuous learning.\nDesired Capabilities\n2+ years of experience in software engineering, ideally with consumer platforms or social apps.\nProficiency in programming languages such as Python, Java, or JavaScript to deliver robust solutions.\nStrong product sense with a focus on building features that create real value for members.\nExperience with cloud platforms (AWS, Azure, or Google Cloud) to optimize system performance.\nExcellent communication skills to collaborate within a diverse team environment.\nExtra Credit\nExperience with AI, chatbots, or conversational interfaces.\nPerks\nHandshake delivers benefits that help you feel supported—and thrive at work and in life.\nThe below benefits are for full-time US employees.\n🎯 Ownership: Equity in a fast-growing company\n💰 Financial Wellness: 401(k) match, competitive compensation, financial coaching\n🍼 Family Support: Paid parental leave, fertility benefits, parental coaching\n💝 Wellbeing: Medical, dental, and vision, mental health support, wellness stipend\n📚 Growth: Learning stipend, ongoing development\n💻 Remote & Office: Internet, commuting, and free lunch/gym in our SF office\n🏝 Time Off: Flexible PTO, 15 holidays + 2 flex days\n🤝 Connection: Team outings & referral bonuses\nExplore our mission, values, and comprehensive US benefits at joinhandshake.com/careers.",
+  "max_salary": 170000,
+  "pay_period": "YEARLY",
+  "location": "San Francisco, CA",
+  "company_id": null,
+  "views": null,
+  "med_salary": 157500,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10817043",
+  "original_listed_time": 1774339950,
+  "expiry": 1776931950
 }

@@ -1,62 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10817252,
-    "company_id": null,
-    "title": "Software Engineering AI Intern",
-    "description": "Software Engineering AI Intern (ReferenceConnect) – Denver, CO - Colorado State University, University of Colorado Boulder, University of Colorado Denver, University of Northern Colorado\nThe Vertafore internship program is designed to provide vital learning and practical professional experience to take with you into your future career. During the 10-week program, you will be involved in the day-to-day operations of the company while working hand in hand with various teams across the organization. As an intern, you will be assigned a specific project that will focus on an actual Vertafore need and opportunity for process improvement at Vertafore. You’ll truly be a member of the team, and in your day-to-day, you’ll work with, be mentored by, and receive valuable performance feedback from senior leadership and management teams. Interns also participate in various educational seminars, will be educated on real-world applicable workplace skills, and learn career management/development best practices.\nResponsibilities:\nThe ReferenceConnect team is excited to offer a Summer 2026 Internship focused on hands-on product analysis and AI innovation.  This is a unique opportunity for a motivated student to contribute directly to the evolution of ReferenceConnect AI, our newest intelligent search experience launching for general availability on April 1, 2026.\nAs the feature continues to grow – especially with the integration of emerging technologies such as LangFuse – we’re seeking an intern who is curious, analytical, and eager to explore how real customers interact with cutting-edge AI tools.  In this internship, the student will work closely with the ReferenceConnect team to:\nAnalyze real, live customer questions submitted through ReferenceConnect AI to understand patterns in usage, clarity, and complexity.\nCompare historical customer questions and responses against results generated using newer AI-related technologies, identifying areas of improvement in accuracy, depth, and relevance.\nHelp evaluate how enhancements introduced throughout the summer impact user experience and output quality.\nDocument and track insights using Excel, helping the team measure progress and identify trends.\nIdeal candidate experience:\nThe ideal candidate will be comfortable working with Excel to organize and analyze data, have strong attention to detail and an interest in how users interact with AI-powered tools, be able to work independently, ask thoughtful questions, and bring a curious, problem-solving mindset.",
-    "max_salary": 18.81,
-    "med_salary": 18.81,
-    "min_salary": 18.81,
-    "pay_period": "HOURLY",
-    "formatted_work_type": null,
-    "location": "Denver, CO",
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": 0,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10817252",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "April 4, 2026 at 10:59 PM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "1 week ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": null,
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY",
-    "work_authorization": "US work authorization required",
-    "opt_cpt": "Open to candidates with OPT/CPT",
-    "scraped_at": "2026-03-14T01:38:06.314Z"
-  },
-  "companies": {
-    "name": "Vertafore",
-    "description": "Over the past 40 years, Vertafore has advanced the business of insurance by bringing together the best software in the industry to help agencies, carriers, and MGAs run their organizations. Today, we are proud to say hundreds of thousands of Vertafore users rely on our solutions to write business faster, cut costs, and fuel growth by increasing collaboration and streamlining processes. Vertafore helps our customers deliver exceptional value to their clients with innovative, intuitive, and comprehensive products and services. Vertafore leads the industry with secure, cloud-based mobile products that provide superior reporting and analytics, delivering actionable insight— right when customers need it most.",
-    "company_size": 5,
-    "country": "US",
-    "state": "CO",
-    "city": "Suite 400N",
-    "zip_code": "80202",
-    "address": "999 18th Street",
-    "url": null
-  },
-  "salaries": {
-    "max_salary": 18.81,
-    "med_salary": 18.81,
-    "min_salary": 18.81,
-    "pay_period": "HOURLY",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY"
-  },
-  "benefits": [],
-  "industries": {
-    "industry_name": "Internet & Software"
-  },
-  "employee_counts": {
-    "employee_count": 3000,
-    "follower_count": null,
-    "time_recorded": 1773452736
-  }
+  "job_id": "10817252",
+  "company_name": "Vertafore",
+  "title": "Software Engineering AI Intern",
+  "description": "Software Engineering AI Intern (ReferenceConnect) – Denver, CO - Colorado State University, University of Colorado Boulder, University of Colorado Denver, University of Northern Colorado\nThe Vertafore internship program is designed to provide vital learning and practical professional experience to take with you into your future career. During the 10-week program, you will be involved in the day-to-day operations of the company while working hand in hand with various teams across the organization. As an intern, you will be assigned a specific project that will focus on an actual Vertafore need and opportunity for process improvement at Vertafore. You’ll truly be a member of the team, and in your day-to-day, you’ll work with, be mentored by, and receive valuable performance feedback from senior leadership and management teams. Interns also participate in various educational seminars, will be educated on real-world applicable workplace skills, and learn career management/development best practices.\nResponsibilities:\nThe ReferenceConnect team is excited to offer a Summer 2026 Internship focused on hands-on product analysis and AI innovation.  This is a unique opportunity for a motivated student to contribute directly to the evolution of ReferenceConnect AI, our newest intelligent search experience launching for general availability on April 1, 2026.\nAs the feature continues to grow – especially with the integration of emerging technologies such as LangFuse – we’re seeking an intern who is curious, analytical, and eager to explore how real customers interact with cutting-edge AI tools.  In this internship, the student will work closely with the ReferenceConnect team to:\nAnalyze real, live customer questions submitted through ReferenceConnect AI to understand patterns in usage, clarity, and complexity.\nCompare historical customer questions and responses against results generated using newer AI-related technologies, identifying areas of improvement in accuracy, depth, and relevance.\nHelp evaluate how enhancements introduced throughout the summer impact user experience and output quality.\nDocument and track insights using Excel, helping the team measure progress and identify trends.\nIdeal candidate experience:\nThe ideal candidate will be comfortable working with Excel to organize and analyze data, have strong attention to detail and an interest in how users interact with AI-powered tools, be able to work independently, ask thoughtful questions, and bring a curious, problem-solving mindset.",
+  "max_salary": 18.81,
+  "pay_period": "HOURLY",
+  "location": "Denver, CO",
+  "company_id": null,
+  "views": null,
+  "med_salary": 18.81,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10817252",
+  "original_listed_time": 1774339831,
+  "expiry": 1776931831
 }

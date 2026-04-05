@@ -1,55 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10790257,
-    "company_id": null,
-    "title": "Fullstack Intern- fashion AI Startup",
-    "description": "Fullstack Engineer Intern\nLocation: Remote\nInternship Type: Part-time, 3–6 months\nTeam: Software Development & Engineering\n🌐 About Us — www.fAIshion.AI\nAt fAIshion.AI, we're building the next generation of AI-powered fashion experiences — from virtual try-on to smart sizing and intelligent styling systems. Our mission is to help users shop with confidence through personalized, real-time recommendations, while enabling brands to reduce returns and increase conversion. We’re redefining personal styling by making it scalable, affordable, and globally accessible.\n🚀 Users in 110+ countries\n🔥 3,000+ active installations\n🛍️ Trusted by 1,000+ brands\nWe’re looking for a Fullstack Engineer Intern who enjoys building end-to-end systems, thrives in fast-moving AI-driven product environments, and cares about clean architecture, performance, and real-world user impact.\nCore Responsibilities\nRefactor and unify our platform into a single Next.js fullstack service, consolidating frontend, API routes, and Chrome extension authentication.\nBuild and maintain AI-powered features using Google GenAI, OpenAI, and the Vercel AI SDK, including real-time streaming interfaces.\nImplement secure, shared authentication across web applications and browser extensions to prevent API abuse and ensure data integrity.\nDesign and develop backend services using Prisma ORM and PostgreSQL to manage user data, preferences, and system state.\nCollaborate with product, design, and computer vision teams to support virtual try-on workflows and AI styling systems.\nMonitor and analyze system performance, user behavior, and feature adoption to drive continuous improvement.\nContribute to deployment, CI/CD, and production releases on Vercel.\nRequirements\nCurrently pursuing a Master’s degree in Computer Science, AI, or a related technical field, or recently completed a Bachelor’s degree in a related discipline.\nProficient in Next.js and React for building unified fullstack applications.\nExperience with Google GenAI, OpenAI APIs, and the Vercel AI SDK.\nStrong knowledge of the Prisma ORM framework and relational databases, especially PostgreSQL.\nComfortable implementing authentication systems (e.g., NextAuth, Clerk) across web and browser extensions.\nSolid understanding of modern web architecture, API design, and deployment workflows.\nSelf-driven, detail-oriented, and accountable, with strong problem-solving skills and attention to edge cases.\nGood to Have\nExperience with cloud platforms (AWS, GCP, Azure) and scalable deployment strategies.\nFamiliarity with LLMs, streaming AI responses, and prompt engineering in production environments.\nExposure to computer vision or 3D rendering for virtual try-on systems.\nKnowledge of MLOps or deploying AI models at scale.\nInterest in AI-driven e-commerce, fashion tech, or personalization systems.\nWhat You’ll Gain\nSchool credit or recommendation letter (if eligible).\nReal-world portfolio experience working on production AI systems used globally.\nDirect mentorship from Silicon Valley founders and engineers.\nPerformance-based gift cards for interns who exceed project milestones.\nA strong track record: several past interns have gone on to receive full-time offers from top tech companies after completing their internship.\n📌 To be considered, please complete this form in addition to Handshake:\n👉 fAIshion.AI Interest Form\nWe’ll reach out via email after reviewing your application.",
-    "max_salary": null,
-    "med_salary": null,
-    "min_salary": null,
-    "pay_period": null,
-    "formatted_work_type": null,
-    "location": null,
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": null,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10790257",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "March 29, 2026 at 8:59 AM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "2 weeks ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": null,
-    "currency": null,
-    "compensation_type": null,
-    "work_authorization": null,
-    "opt_cpt": null,
-    "scraped_at": "2026-03-14T01:39:16.401Z"
-  },
-  "companies": {
-    "name": "fAIshion Inc",
-    "description": "fAIshion is a browser extension serving as an AI purchasing assistant across all apparel brands.",
-    "company_size": 1,
-    "country": "US",
-    "state": "CA",
-    "city": "Rancho Santa Fe",
-    "zip_code": null,
-    "address": null,
-    "url": null
-  },
-  "salaries": {},
-  "benefits": [],
-  "industries": {
-    "industry_name": "Information Technology"
-  },
-  "employee_counts": {
-    "employee_count": 30,
-    "follower_count": null,
-    "time_recorded": 1773452736
-  }
+  "job_id": "10790257",
+  "company_name": "fAIshion Inc",
+  "title": "Fullstack Intern- fashion AI Startup",
+  "description": "Fullstack Engineer Intern\nLocation: Remote\nInternship Type: Part-time, 3–6 months\nTeam: Software Development & Engineering\n🌐 About Us — www.fAIshion.AI\nAt fAIshion.AI, we're building the next generation of AI-powered fashion experiences — from virtual try-on to smart sizing and intelligent styling systems. Our mission is to help users shop with confidence through personalized, real-time recommendations, while enabling brands to reduce returns and increase conversion. We’re redefining personal styling by making it scalable, affordable, and globally accessible.\n🚀 Users in 110+ countries\n🔥 3,000+ active installations\n🛍️ Trusted by 1,000+ brands\nWe’re looking for a Fullstack Engineer Intern who enjoys building end-to-end systems, thrives in fast-moving AI-driven product environments, and cares about clean architecture, performance, and real-world user impact.\nCore Responsibilities\nRefactor and unify our platform into a single Next.js fullstack service, consolidating frontend, API routes, and Chrome extension authentication.\nBuild and maintain AI-powered features using Google GenAI, OpenAI, and the Vercel AI SDK, including real-time streaming interfaces.\nImplement secure, shared authentication across web applications and browser extensions to prevent API abuse and ensure data integrity.\nDesign and develop backend services using Prisma ORM and PostgreSQL to manage user data, preferences, and system state.\nCollaborate with product, design, and computer vision teams to support virtual try-on workflows and AI styling systems.\nMonitor and analyze system performance, user behavior, and feature adoption to drive continuous improvement.\nContribute to deployment, CI/CD, and production releases on Vercel.\nRequirements\nCurrently pursuing a Master’s degree in Computer Science, AI, or a related technical field, or recently completed a Bachelor’s degree in a related discipline.\nProficient in Next.js and React for building unified fullstack applications.\nExperience with Google GenAI, OpenAI APIs, and the Vercel AI SDK.\nStrong knowledge of the Prisma ORM framework and relational databases, especially PostgreSQL.\nComfortable implementing authentication systems (e.g., NextAuth, Clerk) across web and browser extensions.\nSolid understanding of modern web architecture, API design, and deployment workflows.\nSelf-driven, detail-oriented, and accountable, with strong problem-solving skills and attention to edge cases.\nGood to Have\nExperience with cloud platforms (AWS, GCP, Azure) and scalable deployment strategies.\nFamiliarity with LLMs, streaming AI responses, and prompt engineering in production environments.\nExposure to computer vision or 3D rendering for virtual try-on systems.\nKnowledge of MLOps or deploying AI models at scale.\nInterest in AI-driven e-commerce, fashion tech, or personalization systems.\nWhat You’ll Gain\nSchool credit or recommendation letter (if eligible).\nReal-world portfolio experience working on production AI systems used globally.\nDirect mentorship from Silicon Valley founders and engineers.\nPerformance-based gift cards for interns who exceed project milestones.\nA strong track record: several past interns have gone on to receive full-time offers from top tech companies after completing their internship.\n📌 To be considered, please complete this form in addition to Handshake:\n👉 fAIshion.AI Interest Form\nWe’ll reach out via email after reviewing your application.",
+  "max_salary": null,
+  "pay_period": null,
+  "location": "Remote",
+  "company_id": null,
+  "views": null,
+  "med_salary": null,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10790257",
+  "original_listed_time": 1774339906,
+  "expiry": 1776931906
 }

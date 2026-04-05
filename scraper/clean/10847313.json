@@ -1,0 +1,15 @@
+{
+  "job_id": "10847313",
+  "company_name": "ProtagoLabs Inc.",
+  "title": "Machine Learning Engineer Intern",
+  "description": "Position Overview\nProtagolabs is seeking an experienced Machine Learning Engineer Intern with experience in NLP and computer vision to join our team. We are at the forefront of innovation, leveraging our own decentralized compute platform and distributed training techniques.\nResponsibilities\nDevelop and deploy state-of-the-art machine learning models and algorithms for NLP and computer vision applications.\nImplement and manage deep learning models using NVIDIA TensorRT for high-performance inference optimization.\nUtilize NVIDIA Triton Inference Server to deploy, manage, and scale AI models in production environments.\nPerform rigorous testing and validation of models to ensure stability and performance under various conditions.\nStay updated with the latest advancements in AI and deep learning technologies and methodologies.\nCollaborate with data engineers to build scalable and efficient data pipelines for training and testing.\nDesign and build a robust data labeling pipeline to support various data labeling tasks, enhancing the training of machine learning models.\nDesign, develop, and deploy AI agent systems with autonomous reasoning, multi-step workflows, and tool/function execution.\nQualifications\nBachelor’s or Master’s degree in the STEM field (Computer Science, Engineering, Machine Learning, Operations Research, Mathematics, Statistics,etc.)\nProven track record of developing and deploying successful machine learning models.\nStrong background in machine learning, with expertise in NLP and computer vision and good understanding of the deep learning methods (CNN, Transformer, etc.)\nStrong knowledge of machine learning frameworks and libraries, including TensorFlow, Keras, PyTorch, and scikit-learn.\nSelf-motivated, collaborative, attention to details, and excellent time management.\nFamiliarity with data preprocessing, feature engineering, and model evaluation techniques.\nExperience with cloud platforms such as AWS/Azure for deploying and managing machine learning models.\nPreferred Qualifications\nExperience with NVIDIA TensorRT and NVIDIA Triton Inference Server\nCommunication and collaboration: Excellent verbal and written communication skills.\nProven ability to collaborate effectively with cross-functional teams, explain complex concepts to non-technical stakeholders, and contribute to a positive team environment.\nExperience building or working with AI agents or LLM-based autonomous workflows in production or research settings.",
+  "max_salary": 30,
+  "pay_period": "HOURLY",
+  "location": "Remote",
+  "company_id": null,
+  "views": null,
+  "med_salary": 25,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10847313",
+  "original_listed_time": 1774339964,
+  "expiry": 1776931964
+}

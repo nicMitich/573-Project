@@ -1,55 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10730159,
-    "company_id": null,
-    "title": "Software / Application Developer",
-    "description": "Seeking a Software Developer with an emphasis on developing web-based applications.\nAs a member of the project team, the developer will work in an interactive environment with business and technical staff to ensure a high degree of collaboration in support of a successful overall solution.\nRequirements\nKnowledge of C#, ASP.NET MVC / Web API and SQL.\nKnowledge in JavaScript, jQuery, and modern strongly opinionated JavaScript frameworks such as Angular, React, Angular 2, etc.\nAbility to develop performant and compliant .NET source code.\nAbility to effectively analyze software source code in order to validate the application for business and technical requirements while supporting the improvement of the application.\nAbility in performance testing and optimization of developed source code for an enterprise business application.\nAt this time, AstreaX will not sponsor a new applicant for employment authorization, or offer any immigration related support for this position (i.e. H1B, F-1 OPT, F-1 STEM OPT, F-1 CPT, J-1, TN, E-2, E-3, L-1, and O-1, or any EADs or other forms of work authorization that require immigration support from an employer).\n*Please submit your resume with a proper title (FirstLast_Resume) and as a PDF*",
-    "max_salary": null,
-    "med_salary": null,
-    "min_salary": null,
-    "pay_period": null,
-    "formatted_work_type": "Full-time",
-    "location": "Phoenix, AZ, or Tucson, AZ",
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": 1,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10730159",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "April 10, 2026 at 8:59 PM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "1 month ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": "FULL_TIME",
-    "currency": null,
-    "compensation_type": null,
-    "work_authorization": "US work authorization required",
-    "opt_cpt": null,
-    "scraped_at": "2026-03-14T01:36:39.827Z"
-  },
-  "companies": {
-    "name": "AstreaX",
-    "description": "AstreaX is an Enterprise Software Development company with cross-functional industry experience. We have provided numerous customized and scalable solutions enabling our customers to keep up with their ever-changing business needs. Our expertise across both Private and Public Sectors provides a well-rounded holistic perspective on the specific needs of your organization.",
-    "company_size": 2,
-    "country": "US",
-    "state": "AZ",
-    "city": "Phoenix",
-    "zip_code": null,
-    "address": null,
-    "url": null
-  },
-  "salaries": {},
-  "benefits": [],
-  "industries": {
-    "industry_name": "Internet & Software"
-  },
-  "employee_counts": {
-    "employee_count": 75,
-    "follower_count": null,
-    "time_recorded": 1773452736
-  }
+  "job_id": "10730159",
+  "company_name": "AstreaX",
+  "title": "Software / Application Developer",
+  "description": "Seeking a Software Developer with an emphasis on developing web-based applications.\nAs a member of the project team, the developer will work in an interactive environment with business and technical staff to ensure a high degree of collaboration in support of a successful overall solution.\nRequirements\nKnowledge of C#, ASP.NET MVC / Web API and SQL.\nKnowledge in JavaScript, jQuery, and modern strongly opinionated JavaScript frameworks such as Angular, React, Angular 2, etc.\nAbility to develop performant and compliant .NET source code.\nAbility to effectively analyze software source code in order to validate the application for business and technical requirements while supporting the improvement of the application.\nAbility in performance testing and optimization of developed source code for an enterprise business application.\nAt this time, AstreaX will not sponsor a new applicant for employment authorization, or offer any immigration related support for this position (i.e. H1B, F-1 OPT, F-1 STEM OPT, F-1 CPT, J-1, TN, E-2, E-3, L-1, and O-1, or any EADs or other forms of work authorization that require immigration support from an employer).\n*Please submit your resume with a proper title (FirstLast_Resume) and as a PDF*",
+  "max_salary": null,
+  "pay_period": null,
+  "location": "Remote",
+  "company_id": null,
+  "views": null,
+  "med_salary": null,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10730159",
+  "original_listed_time": 1774339974,
+  "expiry": 1776931974
 }

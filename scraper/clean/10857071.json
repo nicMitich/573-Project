@@ -1,0 +1,15 @@
+{
+  "job_id": "10857071",
+  "company_name": "Perpendo AI",
+  "title": "Agentic AI Platform: Backend Engineering Intern",
+  "description": "As a Backend Engineering Intern at Perpendo AI, you will build the core API services, data pipelines, and integration layers that power our insurance platform. This role is ideal for students who love distributed systems, clean API design, and the challenge of making complex data workflows reliable at scale.\nKey Responsibilities\nDesign and implement FastAPI endpoints supporting multi-track service delivery\nBuild and maintain PostgreSQL schemas, Redis caching layers, and asynchronous task queues\nIntegrate third-party APIs, SQL data services\nImplement TraceID-based audit logging and data lineage tracking across platform services\nWrite comprehensive unit and integration tests; maintain >80% code coverage targets\nParticipate in architecture reviews and contribute to technical documentation\nRequired Qualifications\nPursuing BS/MS in Computer Science, Software Engineering, or related field\nProficiency in Python; experience with FastAPI or Flask for REST API development\nWorking knowledge of SQL databases (PostgreSQL preferred) and ORM frameworks (SQLAlchemy)\nUnderstanding of HTTP, JSON APIs, authentication patterns (JWT/OAuth)\nComfortable with Git version control and collaborative development workflows\nPreferred / Bonus Skills\nExperience with Docker and containerized development environments\nExposure to message queues (Celery, Redis, RabbitMQ) or event-driven architectures\nBasic knowledge of AWS services (S3, RDS, Lambda)\nFamiliarity with insurance or financial services data",
+  "max_salary": null,
+  "pay_period": null,
+  "location": "Remote",
+  "company_id": null,
+  "views": null,
+  "med_salary": null,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10857071",
+  "original_listed_time": 1774339991,
+  "expiry": 1776931991
+}

@@ -1,95 +1,15 @@
 {
-  "jobs": {
-    "job_id": 10797360,
-    "company_id": null,
-    "title": "Associate",
-    "description": "The Associate role is an entry level position within the Technology career stream, designed specifically for recent graduates in Computer Science, Information Technology and associated streams.\nAs an Associate, you will receive structured training and hands on exposure to the software development lifecycle, blending analysis, design and development, testing, and production support. You will work alongside experienced professionals on client facing projects that deliver high quality digital solutions and positive user experiences.\nThis role is ideal for graduates who are eager to learn, enjoy problem solving, and want to start their technology career in a collaborative, global environment.\nEducational Qualifications\n• Bachelor’s degree (minimum 4 years) or equivalent\n• Recent graduates or students graduating within the last 0-18 months\n• Preferred majors include:\nComputer Science\nInformation Technology\nSoftware Engineering\nData Science, Computer Engineering, or other related fields\nCandidates authorized to work for any employer in the United States without employer-based visa sponsorship are welcome to apply. Infosys is unable to provide immigration sponsorship for this role at this time.\n--\nWhat you will do:\nSoftware Development\n• Assist in coding and refinement of basic code structures in line with internal guidelines, to meet project's technical specifications​\nTesting\n• Assist in execution of test cases based on guidance and test plans, to meet functional requirements\nProduction Support and Maintenance\n• Participate in troubleshooting and resolving production issues, to enhance system reliability\n--\nSkills and Competencies:\nTechnical and Analytical Skills\n• Basic understanding of programming concepts (such as Java, Python, C/C++, or similar)\n• Focused to develop competence for activities as part of entire SDLC life cycle ​\n• Ability to assist in code development, refinement and testing, adhering to guidance and best practices​ Strong logical thinking and problem solving skills\n• Dedication to continuous improvement and knowledge sharing\n• Willingness to learn new tools, technologies, and frameworks\n• Willingness to learn and adapt to new technologies​\nProfessional and Behavioral\n• Communication Skills: Ability to communicate clearly in written and verbal formats\n• Team Collaboration: Comfortable working in diverse, team based environments\n• Execution and Accountability: Ability to meet deadlines and follow through on assigned tasks\n• Curiosity and Innovation: Openness to feedback, learning, and continuous improvement\n--\nAssessment Requirement:\nAs part of the campus hiring process, candidates will be required to complete an online assessment. The assessment is remotely monitored and includes identity verification and fraud‑prevention measures to ensure a fair and consistent evaluation for all applicants.\n--\nWhy Start Your Career at Infosys\n• Comprehensive onboarding and technical training programs for new graduates\n• Exposure to global clients, enterprise scale systems, and modern technologies\n• Ongoing mentorship and career development support\n• Inclusive, values driven workplace with strong learning culture\nThe job entails sitting as well as working at a computer for extended periods of time. Should be able to communicate by telephone, email or face to face. Travel may be required as per the job requirements.",
-    "max_salary": 65000,
-    "med_salary": 65000,
-    "min_salary": 65000,
-    "pay_period": "YEARLY",
-    "formatted_work_type": "Full-time",
-    "location": "Phoenix, AZ, Austin, TX, +5",
-    "applies": null,
-    "original_listed_time": null,
-    "remote_allowed": 0,
-    "views": null,
-    "job_posting_url": "https://app.joinhandshake.com/jobs/10797360",
-    "application_url": null,
-    "application_type": null,
-    "expiry": "June 30, 2026 at 8:59 PM",
-    "closed_time": null,
-    "formatted_experience_level": "Masters",
-    "skills_desc": null,
-    "listed_time": "2 weeks ago",
-    "posting_domain": "joinhandshake.com",
-    "sponsored": 0,
-    "work_type": "FULL_TIME",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY",
-    "work_authorization": "US work authorization required",
-    "opt_cpt": null,
-    "scraped_at": "2026-03-14T01:39:09.749Z"
-  },
-  "companies": {
-    "name": "Infosys",
-    "description": "Infosys is a global leader in next-generation digital services and consulting. We enable clients in more than 50 countries to navigate their digital transformation. With over four decades of experience in managing the systems and workings of global enterprises, we expertly steer our clients through their digital journey. We do it by enabling the enterprise with an AI-powered core that helps prioritize the execution of change. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring digital skills, expertise, and ideas from our innovation ecosystem.",
-    "company_size": null,
-    "country": "US",
-    "state": "MA",
-    "city": "Quincy",
-    "zip_code": null,
-    "address": null,
-    "url": null
-  },
-  "salaries": {
-    "max_salary": 65000,
-    "med_salary": 65000,
-    "min_salary": 65000,
-    "pay_period": "YEARLY",
-    "currency": "USD",
-    "compensation_type": "BASE_SALARY"
-  },
-  "benefits": [
-    {
-      "inferred": 0,
-      "type": "Medical Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Dental Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Vision Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Paid Time Off"
-    },
-    {
-      "inferred": 0,
-      "type": "401(k)"
-    },
-    {
-      "inferred": 0,
-      "type": "Parental Leave"
-    },
-    {
-      "inferred": 0,
-      "type": "Life Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Disability Insurance"
-    },
-    {
-      "inferred": 0,
-      "type": "Tuition Reimbursement"
-    }
-  ],
-  "industries": {
-    "industry_name": "Information Technology"
-  },
-  "employee_counts": {}
+  "job_id": "10797360",
+  "company_name": "Infosys",
+  "title": "Associate",
+  "description": "The Associate role is an entry level position within the Technology career stream, designed specifically for recent graduates in Computer Science, Information Technology and associated streams.\nAs an Associate, you will receive structured training and hands on exposure to the software development lifecycle, blending analysis, design and development, testing, and production support. You will work alongside experienced professionals on client facing projects that deliver high quality digital solutions and positive user experiences.\nThis role is ideal for graduates who are eager to learn, enjoy problem solving, and want to start their technology career in a collaborative, global environment.\nEducational Qualifications\n• Bachelor’s degree (minimum 4 years) or equivalent\n• Recent graduates or students graduating within the last 0-18 months\n• Preferred majors include:\nComputer Science\nInformation Technology\nSoftware Engineering\nData Science, Computer Engineering, or other related fields\nCandidates authorized to work for any employer in the United States without employer-based visa sponsorship are welcome to apply. Infosys is unable to provide immigration sponsorship for this role at this time.\n--\nWhat you will do:\nSoftware Development\n• Assist in coding and refinement of basic code structures in line with internal guidelines, to meet project's technical specifications​\nTesting\n• Assist in execution of test cases based on guidance and test plans, to meet functional requirements\nProduction Support and Maintenance\n• Participate in troubleshooting and resolving production issues, to enhance system reliability\n--\nSkills and Competencies:\nTechnical and Analytical Skills\n• Basic understanding of programming concepts (such as Java, Python, C/C++, or similar)\n• Focused to develop competence for activities as part of entire SDLC life cycle ​\n• Ability to assist in code development, refinement and testing, adhering to guidance and best practices​ Strong logical thinking and problem solving skills\n• Dedication to continuous improvement and knowledge sharing\n• Willingness to learn new tools, technologies, and frameworks\n• Willingness to learn and adapt to new technologies​\nProfessional and Behavioral\n• Communication Skills: Ability to communicate clearly in written and verbal formats\n• Team Collaboration: Comfortable working in diverse, team based environments\n• Execution and Accountability: Ability to meet deadlines and follow through on assigned tasks\n• Curiosity and Innovation: Openness to feedback, learning, and continuous improvement\n--\nAssessment Requirement:\nAs part of the campus hiring process, candidates will be required to complete an online assessment. The assessment is remotely monitored and includes identity verification and fraud‑prevention measures to ensure a fair and consistent evaluation for all applicants.\n--\nWhy Start Your Career at Infosys\n• Comprehensive onboarding and technical training programs for new graduates\n• Exposure to global clients, enterprise scale systems, and modern technologies\n• Ongoing mentorship and career development support\n• Inclusive, values driven workplace with strong learning culture\nThe job entails sitting as well as working at a computer for extended periods of time. Should be able to communicate by telephone, email or face to face. Travel may be required as per the job requirements.\n--\nAbout Us\nInfosys is a global leader in digital services and consulting, partnering with organizations to drive digital transformation at scale. With a strong emphasis on learning, innovation, and career development, Infosys provides recent graduates with the opportunity to work on real world technology solutions while building a strong foundation for long term career growth.\nWe also enable clients in more than 50 countries to navigate their digital transformation. With over four decades of experience in managing the systems and workings of global enterprises, we expertly steer our clients through their digital journey. We do it by enabling the enterprise with an AI-powered core that helps prioritize the execution of change. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring digital skills, expertise, and ideas from our innovation ecosystem.\nEEO\nInfosys provides equal employment opportunities to applicants and employees without regard to race; color; sex; gender identity; sexual orientation; religious practices and observances; national origin; pregnancy, childbirth, or related medical conditions; status as a protected veteran or spouse/family member of a protected veteran; or disability.",
+  "max_salary": 65000,
+  "pay_period": "YEARLY",
+  "location": "Phoenix, AZ, Austin, TX, +5",
+  "company_id": null,
+  "views": null,
+  "med_salary": 65000,
+  "job_posting_url": "https://app.joinhandshake.com/jobs/10797360",
+  "original_listed_time": 1774340063,
+  "expiry": 1776932063
 }
