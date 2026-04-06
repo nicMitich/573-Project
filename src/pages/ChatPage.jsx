@@ -53,6 +53,7 @@ export default function ChatPage({ navigate }) {
 
   const handleBack = () => {
     sessionStorage.removeItem("generateMode")
+    sessionStorage.setItem("cameFromChat", "true")  // added this
     navigate("landing")
   }
 
