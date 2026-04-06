@@ -7,7 +7,11 @@ export default function LandingPage({ navigate }) {
     const s = sessionStorage.getItem("selectedCard")
     return s !== null ? parseInt(s) : null
   })
-  const [resumeParsed, setResumeParsed] = useState(false)
+  //const [resumeParsed, setResumeParsed] = useState(false)
+  const [resumeParsed, setResumeParsed] = useState(
+  () => sessionStorage.getItem("resumeParsed") === "true" && 
+        sessionStorage.getItem("cameFromChat") === "true"
+  )
   const [status, setStatus] = useState(null) // null | "parsing" | "success" | "error"
   const [statusMsg, setStatusMsg] = useState("")
 
