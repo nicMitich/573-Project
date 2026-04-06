@@ -7,8 +7,16 @@ export default function LandingPage({ navigate }) {
     const s = sessionStorage.getItem("selectedCard")
     return s !== null ? parseInt(s) : null
   })
-  const [resumeParsed, setResumeParsed] = useState(false)
-  const [status, setStatus] = useState(null) // null | "parsing" | "success" | "error"
+  //const [resumeParsed, setResumeParsed] = useState(false)
+  const [resumeParsed, setResumeParsed] = useState(
+  () => sessionStorage.getItem("resumeParsed") === "true" && 
+        sessionStorage.getItem("cameFromChat") === "true"
+  )
+  //const [status, setStatus] = useState(null) // null | "parsing" | "success" | "error"
+  const [status, setStatus] = useState(
+  () => sessionStorage.getItem("cameFromChat") === "true" && 
+        sessionStorage.getItem("resumeParsed") === "true" ? "saved" : null
+  )
   const [statusMsg, setStatusMsg] = useState("")
 
   // Apply theme to <html>
@@ -212,6 +220,7 @@ export default function LandingPage({ navigate }) {
                 {status === "parsing" && <span className="lp-badge lp-badge--info">⏳ {statusMsg}</span>}
                 {status === "success" && <span className="lp-badge lp-badge--success">✓ {statusMsg}</span>}
                 {status === "error"   && <span className="lp-badge lp-badge--error">✗ {statusMsg}</span>}
+                {status === "saved"   && <span className="lp-badge lp-badge--info">📎 File saved — {sessionStorage.getItem("resumeFileName")}</span>}
               </div>
 
               <div className="lp-divider"><span>or</span></div>
