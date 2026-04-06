@@ -53,7 +53,7 @@ export default function LandingPage({ navigate }) {
     }
   }
 
-  const handleFile = (e) => {
+  /* const handleFile = (e) => {
     const file = e.target.files[0]
     if (!file) return
     const allowed = [".pdf", ".doc", ".docx", ".txt"]
@@ -85,6 +85,46 @@ export default function LandingPage({ navigate }) {
       setResumeParsed(false)
     }
     reader.readAsText(file)
+  }  */
+
+  const handleFile = async (e) => {
+    const file = e.target.files[0]
+    if (!file) return
+    const allowed = [".pdf", ".doc", ".docx", ".txt"]
+    const ext = "." + file.name.split(".").pop().toLowerCase()
+    if (!allowed.includes(ext)) {
+      setStatus("error")
+      setStatusMsg("Unsupported file type. Use PDF, DOCX, or TXT.")
+      setResumeParsed(false)
+      return
+    }
+
+    setStatus("parsing")
+    setStatusMsg("Parsing…")
+
+    const formData = new FormData()
+    formData.append("file", file)
+
+    try {
+      const res = await fetch("https://linkedin-assistant-dm1u.onrender.com/parse-resume", {
+        method: "POST",
+        body: formData,
+      })
+      const data = await res.json()
+
+      sessionStorage.setItem("resumeFileName", file.name)
+      sessionStorage.setItem("resumeParsed", "true")
+      sessionStorage.setItem("resumeData", JSON.stringify(data))
+      sessionStorage.removeItem("cameFromChat")
+
+      setStatus("success")
+      setStatusMsg("Parsed successfully!")
+      setResumeParsed(true)
+    } catch (err) {
+      setStatus("error")
+      setStatusMsg("Could not parse. Please try again.")
+      setResumeParsed(false)
+    }
   }
 
   const handleGenerate = () => {

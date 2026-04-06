@@ -70,7 +70,7 @@ export default function ChatPage({ navigate }) {
     setInput("")
     setLoading(true)
 
-    try {
+    /*try {
       const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -88,7 +88,38 @@ export default function ChatPage({ navigate }) {
             ...updated,
           ],
         }),
-      })
+      })*/
+      try {
+        const resumeRaw = sessionStorage.getItem("resumeData")
+        const resume = resumeRaw ? JSON.parse(resumeRaw) : null
+        const resumeContext = resume ? `
+      The user has uploaded their resume. Here is the parsed content:
+      - Name: ${resume.name || "N/A"}
+      - Email: ${resume.email || "N/A"}
+      - Phone: ${resume.phone || "N/A"}
+      - Skills: ${resume.skills?.join(", ") || "N/A"}
+      - Education: ${resume.education?.join(" | ") || "N/A"}
+      - Experience: ${resume.experience?.join(" | ") || "N/A"}
+      - Projects: ${resume.projects?.join(" | ") || "N/A"}
+      ` : "No resume has been uploaded."
+
+        const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            models: ["openrouter/auto"],
+            messages: [
+              {
+                role: "system",
+                content: `You are a helpful job and career assistant. You help users with resume feedback, job searching, career advice, and interview preparation. Be concise and practical.\n\n${resumeContext}`,
+              },
+              ...updated,
+            ],
+          }),
+        })
       const data = await res.json()
       const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response."
       setMessages(prev => [...prev, { role: "assistant", content: reply }])
