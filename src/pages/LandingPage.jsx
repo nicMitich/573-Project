@@ -8,10 +8,17 @@ export default function LandingPage({ navigate }) {
     return s !== null ? parseInt(s) : null
   })
   //const [resumeParsed, setResumeParsed] = useState(false)
-  const [resumeParsed, setResumeParsed] = useState(
-  () => sessionStorage.getItem("resumeParsed") === "true" && 
-        sessionStorage.getItem("cameFromChat") === "true"
-  )
+  const [resumeParsed, setResumeParsed] = useState(() => {
+  // On a fresh page load (not coming back from chat), clear everything
+    if (sessionStorage.getItem("cameFromChat") !== "true") {
+      sessionStorage.removeItem("resumeData")
+      sessionStorage.removeItem("resumeFileName")
+      sessionStorage.removeItem("resumeParsed")
+      return false
+    }
+    return sessionStorage.getItem("resumeParsed") === "true"
+  })
+  
   //const [status, setStatus] = useState(null) // null | "parsing" | "success" | "error"
   const [status, setStatus] = useState(
   () => sessionStorage.getItem("cameFromChat") === "true" && 
@@ -106,6 +113,13 @@ export default function LandingPage({ navigate }) {
       setResumeParsed(false)
       return
     }
+
+    // Clear any previously stored resume data before parsing new file
+    sessionStorage.removeItem("resumeData")
+    sessionStorage.removeItem("resumeFileName")
+    sessionStorage.removeItem("resumeParsed")
+    sessionStorage.removeItem("cameFromChat")
+    setResumeParsed(false)
 
     setStatus("parsing")
     setStatusMsg("Parsing…")
