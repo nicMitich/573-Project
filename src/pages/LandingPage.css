@@ -317,6 +317,15 @@
   background: var(--lp-card-border);
 }
 
+.lp-gen-row {
+  display: block;
+}
+
+.lp-continue-row {
+  display: block;
+  margin-top: 22px;
+}
+
 .lp-gen-btn {
   background: none;
   border: none;
@@ -333,7 +342,6 @@
 
 .lp-continue-btn {
   display: inline-block;
-  margin-top: 22px;
   padding: 13px 36px;
   border-radius: 999px;
   border: none;

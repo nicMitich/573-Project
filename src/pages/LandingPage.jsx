@@ -178,14 +178,18 @@ export default function LandingPage({ navigate }) {
 
               <div className="lp-divider"><span>or</span></div>
 
-              <button className="lp-gen-btn" onClick={handleGenerate}>
-                I don't have a resume — help me generate one →
-              </button>
+              <div className="lp-gen-row">
+                <button className="lp-gen-btn" onClick={handleGenerate}>
+                  I don't have a resume — help me generate one →
+                </button>
+              </div>
 
               {resumeParsed && (
-                <button className="lp-continue-btn" onClick={handleContinue}>
-                  Continue →
-                </button>
+                <div className="lp-continue-row">
+                  <button className="lp-continue-btn" onClick={handleContinue}>
+                    Continue →
+                  </button>
+                </div>
               )}
             </div>
           </div>

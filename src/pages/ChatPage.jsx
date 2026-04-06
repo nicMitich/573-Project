@@ -18,7 +18,6 @@ export default function ChatPage({ navigate }) {
   const cardIdx     = parseInt(sessionStorage.getItem("selectedCard") ?? "0")
   const isGenMode   = sessionStorage.getItem("generateMode") === "true"
   const resumeName  = sessionStorage.getItem("resumeFileName") || "your resume"
-  const theme       = sessionStorage.getItem("theme") || "dark"
 
   const modeName    = CARD_NAMES[cardIdx] ?? "Assistant"
   const prePrompt   = isGenMode ? GEN_PROMPTS[cardIdx] : CARD_PROMPTS[cardIdx]
@@ -26,15 +25,17 @@ export default function ChatPage({ navigate }) {
     ? "No resume? No problem! I'll help you build one. Feel free to edit the message below or just hit Send."
     : `Hi! I've received ${resumeName}. Feel free to edit the pre-filled message or just hit Send to get started.`
 
+  const [theme, setTheme]       = useState(() => sessionStorage.getItem("theme") || "dark")
   const [messages, setMessages] = useState([{ role: "assistant", content: greeting }])
   const [input, setInput]       = useState(prePrompt)
   const [loading, setLoading]   = useState(false)
   const messagesEndRef          = useRef(null)
   const textareaRef             = useRef(null)
 
-  // Apply theme
+  // Apply theme to <html> whenever it changes
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme)
+    sessionStorage.setItem("theme", theme)
   }, [theme])
 
   // Scroll to bottom on new messages
@@ -56,11 +57,7 @@ export default function ChatPage({ navigate }) {
   }
 
   const toggleTheme = () => {
-    const next = theme === "dark" ? "light" : "dark"
-    sessionStorage.setItem("theme", next)
-    document.documentElement.setAttribute("data-theme", next)
-    // force re-render via a tiny state trick
-    window.location.reload()
+    setTheme(t => t === "dark" ? "light" : "dark")
   }
 
   const sendMessage = async () => {
