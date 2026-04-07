@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 
+const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"  // Deployed backend URL
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([])
@@ -22,34 +23,34 @@ export default function ChatPage() {
     setLoading(true)
 
     try {
-      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      const res = await fetch(`${API_BASE}/chat`, {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          models: ["openrouter/auto"],
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are a helpful job and career assistant. You help users with resume feedback, job searching, career advice, and interview preparation. Be concise and practical.",
-            },
-            ...updated,
-          ],
+          message: text,
+          history: messages.map(msg => ({
+            role: msg.role,
+            content: msg.content
+          }))
         }),
       })
 
       const data = await res.json()
       console.log("API response:", data)
-      const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response."
+      
+      if (data.error) {
+        throw new Error(data.error)
+      }
+      
+      const reply = data.response || "Sorry, I couldn't get a response."
       setMessages((prev) => [...prev, { role: "assistant", content: reply }])
     } catch (err) {
       console.error(err)
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Error: Failed to reach the API. Check your key and try again." },
+        { role: "assistant", content: `Error: ${err.message || "Failed to reach the API. Please try again."}` },
       ])
     } finally {
       setLoading(false)
