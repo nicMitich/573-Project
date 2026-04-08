@@ -10,7 +10,15 @@ from langgraph_agent import run_agent
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+# Configure CORS from environment variable `CORS_ORIGINS` (comma-separated)
+CORS_ORIGINS = os.environ.get('CORS_ORIGINS', '')
+if CORS_ORIGINS:
+    origins = [o.strip() for o in CORS_ORIGINS.split(',') if o.strip()]
+else:
+    origins = "*"
+
+# Apply CORS with configured origins; allow credentials for cookies if needed
+CORS(app, resources={r"/*": {"origins": origins}}, supports_credentials=True)
 
 # Neo4j connection configuration - uses environment variables for security
 NEO4J_URI = os.environ.get('NEO4J_URI')
