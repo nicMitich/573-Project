@@ -25,6 +25,15 @@ def get_neo4j_driver():
 def index():
     return jsonify({'status': 'resume parser API is running'})
 
+
+@app.route('/_debug_routes', methods=['GET'])
+def debug_routes():
+    """Return a JSON list of registered URL rules for debugging."""
+    rules = []
+    for rule in app.url_map.iter_rules():
+        rules.append({'rule': str(rule), 'methods': sorted(list(rule.methods))})
+    return jsonify({'routes': rules})
+
 @app.route('/neo4j/connect', methods=['GET'])
 def test_neo4j_connection():
     """Test Neo4j connection and return basic info"""
@@ -142,9 +151,11 @@ def parse():
         os.unlink(tmp_path)
 
 
-@app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=['POST', 'OPTIONS'])
 def chat():
     """Chat with LangGraph agent."""
+    if request.method == 'OPTIONS':
+        return '', 200
     try:
         data = request.get_json()
         if not data or 'message' not in data:

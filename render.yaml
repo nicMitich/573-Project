@@ -21,4 +21,4 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://linkedin-assistant-dm1u.onrender.com
+        value: https://linkedin-assistant-backend.onrender.com

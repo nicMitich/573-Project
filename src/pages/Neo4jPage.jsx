@@ -1,7 +1,9 @@
 
 import { useState, useEffect } from "react"
 
-const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"
+const API_BASE = import.meta.env.MODE === "development"
+  ? ""
+  : import.meta.env.VITE_API_BASE_URL || "http://localhost:5000"
 
 
 export default function Neo4jPage() {
