@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react"
 
-const API_BASE = import.meta.env.MODE === "development"
-  ? ""
-  : import.meta.env.VITE_API_BASE_URL || ""
+const API_BASE = (import.meta.env.MODE === 'development'
+  ? ''
+  : (import.meta.env.VITE_API_BASE_URL || '')).replace(/\/$/, '')
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([])
