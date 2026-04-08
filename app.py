@@ -4,6 +4,7 @@ import tempfile, os
 from dotenv import load_dotenv
 from resume_parser import parse_resume
 from neo4j import GraphDatabase
+from langgraph_agent import run_agent
 
 # Load environment variables from .env file
 load_dotenv()
@@ -23,6 +24,15 @@ def get_neo4j_driver():
 @app.route('/')
 def index():
     return jsonify({'status': 'resume parser API is running'})
+
+
+@app.route('/_debug_routes', methods=['GET'])
+def debug_routes():
+    """Return a JSON list of registered URL rules for debugging."""
+    rules = []
+    for rule in app.url_map.iter_rules():
+        rules.append({'rule': str(rule), 'methods': sorted(list(rule.methods))})
+    return jsonify({'routes': rules})
 
 @app.route('/neo4j/connect', methods=['GET'])
 def test_neo4j_connection():
@@ -139,6 +149,26 @@ def parse():
         return jsonify(result)
     finally:
         os.unlink(tmp_path)
+
+
+@app.route('/chat', methods=['POST', 'OPTIONS'])
+def chat():
+    """Chat with LangGraph agent."""
+    if request.method == 'OPTIONS':
+        return '', 200
+    try:
+        data = request.get_json()
+        if not data or 'message' not in data:
+            return jsonify({'error': 'Missing message'}), 400
+        
+        response = run_agent(
+            user_message=data['message'],
+            conversation_history=data.get('history', [])
+        )
+        return jsonify({'response': response, 'status': 'success'})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
