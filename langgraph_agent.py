@@ -17,7 +17,7 @@ load_dotenv()
 NEO4J_URI = os.environ.get('NEO4J_URI')
 NEO4J_USER = os.environ.get('NEO4J_USER')
 NEO4J_PASSWORD = os.environ.get('NEO4J_PASSWORD')
-OPENROUTER_API_KEY = os.environ.get('OPENROUTER_API_KEY') or os.environ.get('VITE_OPENROUTER_API_KEY')
+OPENROUTER_API_KEY = os.environ.get('VITE_OPENROUTER_API_KEY')
 
 _driver = None
 def get_driver():
