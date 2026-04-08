@@ -13,7 +13,7 @@ services:
         fromSecret: openrouter_api_key
       - key: CORS_ORIGINS
         # Set this to your Vercel frontend domain, e.g. https://my-app.vercel.app
-        value: 573-project.vercel.app
+        value: https://573-project.vercel.app
     plan: free
 
   # Frontend (React static site)
