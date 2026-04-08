@@ -181,6 +181,11 @@ def recommend_skills(current_skills: str, target_job: str) -> str:
 tools = [search_jobs, get_job_details, get_companies, get_locations, get_stats, skills_for_job, recommend_skills]
 
 # Initialize LLM
+# Ensure OpenRouter key is exposed to libraries that expect OpenAI-style env vars
+if OPENROUTER_API_KEY:
+    os.environ["OPENAI_API_KEY"] = OPENROUTER_API_KEY
+    os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
+
 llm = ChatOpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=OPENROUTER_API_KEY,
