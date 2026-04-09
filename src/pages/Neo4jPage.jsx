@@ -1,9 +1,7 @@
 
 import { useState, useEffect } from "react"
 
-const API_BASE = (import.meta.env.MODE === 'development'
-  ? ''
-  : (import.meta.env.VITE_API_BASE_URL || '')).replace(/\/$/, '')
+const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"
 
 export default function Neo4jPage() {
   const [connected, setConnected] = useState(null)
