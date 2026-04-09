@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 
 const CARD_NAMES = ["Job Compatibility", "Skill Growth", "Resume Enhancer"]
+const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"
 
 const CARD_PROMPTS = [
   "I've uploaded my resume. Please match me with the top 10 most compatible job roles based on my skills and experience.",
@@ -71,23 +72,18 @@ export default function ChatPage({ navigate }) {
     setInput("")
     setLoading(true)
 
-    /*try {
-      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    try {
+      const res = await fetch(`${API_BASE}/chat`, {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          models: ["openrouter/auto"],
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are a helpful job and career assistant. You help users with resume feedback, job searching, career advice, and interview preparation. Be concise and practical.",
-            },
-            ...updated,
-          ],
+          message: text,
+          history: messages.map(msg => ({
+            role: msg.role,
+            content: msg.content
+          }))
         }),
       })*/
       try {
@@ -104,29 +100,26 @@ export default function ChatPage({ navigate }) {
       - Projects: ${resume.projects?.join(" | ") || "N/A"}
       ` : "No resume has been uploaded."
 
-        const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            models: ["openrouter/auto"],
-            messages: [
-              {
-                role: "system",
-                content: `You are a helpful job and career assistant. You help users with resume feedback, job searching, career advice, and interview preparation. Be concise and practical.\n\n${resumeContext}`,
-              },
-              ...updated,
-            ],
-          }),
-        })
+      if (!res.ok) {
+        const errorText = await res.text()
+        throw new Error(`API returned ${res.status}: ${errorText}`)
+      }
+
       const data = await res.json()
-      const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response."
-      setMessages(prev => [...prev, { role: "assistant", content: reply }])
+      console.log("API response:", data)
+      
+      if (data.error) {
+        throw new Error(data.error)
+      }
+      
+      const reply = data.response || "Sorry, I couldn't get a response."
+      setMessages((prev) => [...prev, { role: "assistant", content: reply }])
     } catch (err) {
       console.error(err)
-      setMessages(prev => [...prev, { role: "assistant", content: "Error: Failed to reach the API. Check your key and try again." }])
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: `Error: ${err.message || "Failed to reach the API. Please try again."}` },
+      ])
     } finally {
       setLoading(false)
     }
