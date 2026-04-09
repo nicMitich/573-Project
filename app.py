@@ -4,7 +4,6 @@ import tempfile, os
 from dotenv import load_dotenv
 from resume_parser import parse_resume
 from neo4j import GraphDatabase
-from langgraph_agent import run_agent
 
 # Load environment variables from .env file
 load_dotenv()
@@ -161,14 +160,13 @@ def parse():
 
 @app.route('/chat', methods=['POST', 'OPTIONS'])
 def chat():
-    """Chat with LangGraph agent."""
     if request.method == 'OPTIONS':
         return '', 200
     try:
+        from langgraph_agent import run_agent  # ← lazy import inside the function
         data = request.get_json()
         if not data or 'message' not in data:
             return jsonify({'error': 'Missing message'}), 400
-        
         response = run_agent(
             user_message=data['message'],
             conversation_history=data.get('history', [])
