@@ -1,6 +1,28 @@
 services:
+  # Backend API (Flask + LangGraph + Neo4j)
+  - type: web
+    name: linkedin-assistant-backend
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        fromSecret: openrouter_api_key
+      - key: VITE_OPENROUTER_API_KEY
+        fromSecret: openrouter_api_key
+      - key: CORS_ORIGINS
+        # Set this to your Vercel frontend domain, e.g. https://my-app.vercel.app
+        value: https://573-project.vercel.app
+    plan: free
+
+  # Frontend (React static site)
   - type: web
     name: linkedin-assistant-frontend
     env: static
     buildCommand: npm install && npm run build
     staticPublishPath: dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: "https://linkedin-assistant-dm1u.onrender.com"
+        
