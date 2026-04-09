@@ -249,7 +249,7 @@ def get_graph():
         _graph = create_workflow()
     return _graph
 
-def run_agent(user_message: str, conversation_history: list = None) -> str:
+def run_agent(user_message: str, conversation_history: list = None, resume_context: str = None) -> str:
     """Run the agent and return response."""
     messages = []
     if conversation_history:
