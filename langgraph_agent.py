@@ -189,9 +189,13 @@ if OPENROUTER_API_KEY:
 llm = ChatOpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=OPENROUTER_API_KEY,
-    model="openai/gpt-4o-mini",
+    model="openai/gpt-oss-120b:free",
     temperature=0.7,
-    max_tokens=1000
+    max_tokens=1000,
+    default_headers={
+        "HTTP-Referer": "https://573-project.vercel.app",  
+        "X-Title": "Job Assistant"
+    }
 )
 llm_with_tools = llm.bind_tools(tools)
 
