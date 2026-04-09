@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react"
 
-const CARD_NAMES = ["Job Compatibility", "Skill Growth", "Resume Enhancer"]
 const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"
+
+const CARD_NAMES = ["Job Compatibility", "Skill Growth", "Resume Enhancer"]
 
 const CARD_PROMPTS = [
   "I've uploaded my resume. Please match me with the top 10 most compatible job roles based on my skills and experience.",
@@ -16,13 +17,13 @@ const GEN_PROMPTS = [
 ]
 
 export default function ChatPage({ navigate }) {
-  const cardIdx     = parseInt(sessionStorage.getItem("selectedCard") ?? "0")
-  const isGenMode   = sessionStorage.getItem("generateMode") === "true"
-  const resumeName  = sessionStorage.getItem("resumeFileName") || "your resume"
+  const cardIdx    = parseInt(sessionStorage.getItem("selectedCard") ?? "0")
+  const isGenMode  = sessionStorage.getItem("generateMode") === "true"
+  const resumeName = sessionStorage.getItem("resumeFileName") || "your resume"
 
-  const modeName    = CARD_NAMES[cardIdx] ?? "Assistant"
-  const prePrompt   = isGenMode ? GEN_PROMPTS[cardIdx] : CARD_PROMPTS[cardIdx]
-  const greeting    = isGenMode
+  const modeName  = CARD_NAMES[cardIdx] ?? "Assistant"
+  const prePrompt = isGenMode ? GEN_PROMPTS[cardIdx] : CARD_PROMPTS[cardIdx]
+  const greeting  = isGenMode
     ? "No resume? No problem! I'll help you build one. Feel free to edit the message below or just hit Send."
     : `Hi! I've received ${resumeName}. Feel free to edit the pre-filled message or just hit Send to get started.`
 
@@ -33,18 +34,19 @@ export default function ChatPage({ navigate }) {
   const messagesEndRef          = useRef(null)
   const textareaRef             = useRef(null)
 
-  // Apply theme to <html> whenever it changes
+  useEffect(() => {
+  fetch(`${API_BASE}/health`).catch(() => {})
+  }, [])
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme)
     sessionStorage.setItem("theme", theme)
   }, [theme])
 
-  // Scroll to bottom on new messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages])
 
-  // Auto-resize textarea
   useEffect(() => {
     const el = textareaRef.current
     if (!el) return
@@ -54,12 +56,28 @@ export default function ChatPage({ navigate }) {
 
   const handleBack = () => {
     sessionStorage.removeItem("generateMode")
-    sessionStorage.setItem("cameFromChat", "true")  // added this
+    sessionStorage.setItem("cameFromChat", "true")
     navigate("landing")
   }
 
   const toggleTheme = () => {
     setTheme(t => t === "dark" ? "light" : "dark")
+  }
+
+  const buildSystemContext = () => {
+    const resumeRaw = sessionStorage.getItem("resumeData")
+    const resume = resumeRaw ? JSON.parse(resumeRaw) : null
+    if (!resume) return "No resume has been uploaded."
+    return `
+The user has uploaded their resume. Here is the parsed content:
+- Name: ${resume.name || "N/A"}
+- Email: ${resume.email || "N/A"}
+- Phone: ${resume.phone || "N/A"}
+- Skills: ${resume.skills?.join(", ") || "N/A"}
+- Education: ${resume.education?.join(" | ") || "N/A"}
+- Experience: ${resume.experience?.join(" | ") || "N/A"}
+- Projects: ${resume.projects?.join(" | ") || "N/A"}
+    `.trim()
   }
 
   const sendMessage = async () => {
@@ -73,32 +91,45 @@ export default function ChatPage({ navigate }) {
     setLoading(true)
 
     try {
-      const res = await fetch(`${API_BASE}/chat`, {
+      const resumeContext = buildSystemContext()
+
+      // Build full history, skipping the initial greeting message
+      const history = messages
+        .filter((m, idx) => !(m.role === "assistant" && idx === 0))
+        .map(msg => ({ role: msg.role, content: msg.content }))
+
+      // Determine if this is the first real user message (history has no prior user turns)
+      const isFirstMessage = history.filter(m => m.role === "user").length === 0
+
+      // For the first message, prepend resume context directly into the message body
+      // so the LangGraph agent receives it inline rather than as an ignored side field.
+      const messageWithContext = isFirstMessage && resumeContext !== "No resume has been uploaded."
+        ? `${resumeContext}\n\n---\n\n${text}`
+        : text
+
+      const fetchWithRetry = async (url, options, retries = 2) => {
+        try {
+          return await fetch(url, options)
+        } catch (err) {
+          if (retries === 0) throw err
+          await new Promise(r => setTimeout(r, 2000)) // wait 2s
+          return fetchWithRetry(url, options, retries - 1)
+        }
+      }
+
+      const res = await fetchWithRetry(`${API_BASE}/chat`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: text,
-          history: messages.map(msg => ({
-            role: msg.role,
-            content: msg.content
-          }))
+          message: messageWithContext,
+          resume_context: resumeContext, // kept for backends that do read it
+          history,
+          // Pass openrouter key if available (used by LangGraph agent backend)
+          ...(typeof import.meta !== "undefined" && import.meta.env?.VITE_OPENROUTER_API_KEY
+            ? { openrouter_key: import.meta.env.VITE_OPENROUTER_API_KEY }
+            : {}),
         }),
-      })*/
-      try {
-        const resumeRaw = sessionStorage.getItem("resumeData")
-        const resume = resumeRaw ? JSON.parse(resumeRaw) : null
-        const resumeContext = resume ? `
-      The user has uploaded their resume. Here is the parsed content:
-      - Name: ${resume.name || "N/A"}
-      - Email: ${resume.email || "N/A"}
-      - Phone: ${resume.phone || "N/A"}
-      - Skills: ${resume.skills?.join(", ") || "N/A"}
-      - Education: ${resume.education?.join(" | ") || "N/A"}
-      - Experience: ${resume.experience?.join(" | ") || "N/A"}
-      - Projects: ${resume.projects?.join(" | ") || "N/A"}
-      ` : "No resume has been uploaded."
+      })
 
       if (!res.ok) {
         const errorText = await res.text()
@@ -107,19 +138,17 @@ export default function ChatPage({ navigate }) {
 
       const data = await res.json()
       console.log("API response:", data)
-      
-      if (data.error) {
-        throw new Error(data.error)
-      }
-      
+
+      if (data.error) throw new Error(data.error)
+
       const reply = data.response || "Sorry, I couldn't get a response."
-      setMessages((prev) => [...prev, { role: "assistant", content: reply }])
+      setMessages(prev => [...prev, { role: "assistant", content: reply }])
     } catch (err) {
       console.error(err)
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: `Error: ${err.message || "Failed to reach the API. Please try again."}` },
-      ])
+      setMessages(prev => [...prev, {
+        role: "assistant",
+        content: `Error: ${err.message || "Failed to reach the API. Please try again."}`,
+      }])
     } finally {
       setLoading(false)
     }

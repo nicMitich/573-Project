@@ -29,8 +29,8 @@ def get_driver():
 # ============ TOOLS ============
 
 @tool
-def search_jobs(title: str = None, location: str = None, company: str = None, limit: int = 5) -> str:
-    """Search jobs by title, location, or company."""
+def search_jobs(title: str = None, location: str = None, company: str = None, limit: int = 10) -> str:
+    """Search jobs by title, location, or company. Returns results including application URLs."""
     if not any([title, location, company]):
         return "Please provide a title, location, or company to search."
     
@@ -51,7 +51,8 @@ def search_jobs(title: str = None, location: str = None, company: str = None, li
     MATCH (j:Job)-[:POSTED_BY]->(c:Company)
     MATCH (j)-[:LOCATED_IN]->(l:Location)
     {where}
-    RETURN j.title as title, c.company_name as company, l.name as location, j.max_salary as salary, j.job_posting_url as url
+    RETURN j.title as title, c.company_name as company, l.name as location,
+           j.max_salary as salary, j.job_posting_url as url
     ORDER BY j.title LIMIT $limit
     """
     
@@ -64,12 +65,13 @@ def search_jobs(title: str = None, location: str = None, company: str = None, li
                 return "No jobs found."
             output = f"Found {len(jobs)} job(s):\n\n"
             for i, job in enumerate(jobs, 1):
-                output += f"{i}. {job['title']} at {job['company']}\n"
+                output += f"{i}. **{job['title']}** at {job['company']}\n"
                 output += f"   Location: {job['location']}\n"
                 if job.get('salary'):
                     output += f"   Salary: ${job['salary']}/year\n"
-                if job.get('url'):
-                    output += f"   URL: {job['url']}\n"
+                # Always include URL line — even if missing — so the LLM doesn't silently drop it
+                url = job.get('url') or "URL not available"
+                output += f"   Apply: {url}\n"
                 output += "\n"
             return output
     except Exception as e:
@@ -81,7 +83,8 @@ def get_job_details(job_id: str) -> str:
     query = """
     MATCH (j:Job {job_id: $job_id})-[:POSTED_BY]->(c:Company)
     MATCH (j)-[:LOCATED_IN]->(l:Location)
-    RETURN j.title as title, c.company_name as company, l.name as location, j.description as description, j.max_salary as salary, j.job_posting_url as url
+    RETURN j.title as title, c.company_name as company, l.name as location,
+           j.description as description, j.max_salary as salary, j.job_posting_url as url
     """
     try:
         driver = get_driver()
@@ -99,8 +102,8 @@ def get_job_details(job_id: str) -> str:
                 output += f"Salary: ${job['salary']}/year\n"
             if job.get('description'):
                 output += f"\nDescription:\n{job['description'][:500]}...\n"
-            if job.get('url'):
-                output += f"\nURL: {job['url']}\n"
+            url = job.get('url') or "URL not available"
+            output += f"\nApply: {url}\n"
             return output
     except Exception as e:
         return f"Error: {str(e)}"
@@ -181,7 +184,6 @@ def recommend_skills(current_skills: str, target_job: str) -> str:
 tools = [search_jobs, get_job_details, get_companies, get_locations, get_stats, skills_for_job, recommend_skills]
 
 # Initialize LLM
-# Ensure OpenRouter key is exposed to libraries that expect OpenAI-style env vars
 if OPENROUTER_API_KEY:
     os.environ["OPENAI_API_KEY"] = OPENROUTER_API_KEY
     os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
@@ -189,11 +191,11 @@ if OPENROUTER_API_KEY:
 llm = ChatOpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=OPENROUTER_API_KEY,
-    model="openai/gpt-oss-120b:free",
-    temperature=0.7,
+    model="nvidia/nemotron-3-super-120b-a12b:free",
+    temperature=0.3,
     max_tokens=1000,
     default_headers={
-        "HTTP-Referer": "https://573-project.vercel.app",  
+        "HTTP-Referer": "https://573-project.vercel.app",
         "X-Title": "Job Assistant"
     }
 )
@@ -210,7 +212,18 @@ Tools:
 - skills_for_job: Get skills for a job title (unavailable)
 - recommend_skills: Recommend skills to learn (unavailable)
 
-Always call a tool when the user asks for information. Be concise and helpful."""
+CRITICAL FORMATTING RULES — you must follow these exactly:
+1. Every job listing MUST include its "Apply:" URL exactly as returned by the tool. Never omit, hide, or paraphrase a URL.
+2. If the tool returns "URL not available" for a job, write that explicitly — do not invent a URL.
+3. Do NOT reformat job results into a table. Present each job as a numbered list so URLs are preserved and visible.
+4. Do not summarise or truncate the tool output — reproduce every field the tool returns, especially the Apply URL.
+
+MANDATORY RULE:
+If the user asks about jobs, you MUST call the search_jobs tool.
+Do NOT answer from your own knowledge.
+Do NOT fabricate or infer job listings.
+
+If you fail to call the tool, your response is incorrect."""
 
 def create_workflow():
     from langgraph.graph import MessagesState
@@ -220,10 +233,17 @@ def create_workflow():
     
     def agent_node(state):
         messages = state["messages"]
-        if not any(isinstance(msg, SystemMessage) for msg in messages):
-            messages = [SystemMessage(content=system_prompt)] + messages
-        
+
         response = llm_with_tools.invoke(messages)
+
+        #FORCE TOOL if user is asking about jobs
+        last_user = next((m for m in reversed(messages) if isinstance(m, HumanMessage)), None)
+        if last_user and "job" in last_user.content.lower() and not response.tool_calls:
+            # manually trigger search_jobs
+            response = llm_with_tools.invoke(
+                messages + [HumanMessage(content="Use search_jobs tool for this query.")]
+            )
+
         return {"messages": [response]}
     
     workflow = StateGraph(State)
@@ -232,13 +252,14 @@ def create_workflow():
     workflow.set_entry_point("agent")
     
     def should_continue(state):
-        last = state["messages"][-1] if state["messages"] else None
-        if last and hasattr(last, 'tool_calls') and last.tool_calls:
+        last = state["messages"][-1]
+
+        if hasattr(last, "tool_calls") and last.tool_calls:
             return "tools"
+
         return END
     
     workflow.add_conditional_edges("agent", should_continue)
-    workflow.add_edge("tools", "agent")
     return workflow.compile()
 
 # Global compiled graph
@@ -249,7 +270,7 @@ def get_graph():
         _graph = create_workflow()
     return _graph
 
-def run_agent(user_message: str, conversation_history: list = None) -> str:
+def run_agent(user_message: str, conversation_history: list = None, resume_context: str = None) -> str:
     """Run the agent and return response."""
     messages = []
     if conversation_history:
@@ -260,6 +281,7 @@ def run_agent(user_message: str, conversation_history: list = None) -> str:
                 messages.append(AIMessage(content=msg["content"]))
     messages.append(HumanMessage(content=user_message))
     
+    messages = [SystemMessage(content=system_prompt)] + messages
     state = {"messages": messages}
     graph = get_graph()
     
