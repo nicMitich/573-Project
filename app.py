@@ -24,6 +24,7 @@ NEO4J_URI = os.environ.get('NEO4J_URI')
 NEO4J_USER = os.environ.get('NEO4J_USER')
 NEO4J_PASSWORD = os.environ.get('NEO4J_PASSWORD')
 
+
 def get_neo4j_driver():
     """Create and return a Neo4j driver instance"""
     return GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
@@ -174,6 +175,16 @@ def chat():
         return jsonify({'response': response, 'status': 'success'})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/debug', methods=['GET'])
+def debug():
+    return jsonify({
+        'neo4j_uri': NEO4J_URI,
+        'neo4j_user': NEO4J_USER,
+        'neo4j_password_set': bool(NEO4J_PASSWORD),
+        'openrouter_key_set': bool(os.environ.get('VITE_OPENROUTER_API_KEY')),
+        'env_file_exists': os.path.exists('.env'),
+    })
 
 
 if __name__ == '__main__':
