@@ -4,6 +4,7 @@ import tempfile, os
 from dotenv import load_dotenv
 from resume_parser import parse_resume
 from neo4j import GraphDatabase
+from langgraph_agent import run_agent
 
 # Load environment variables from .env file
 load_dotenv()
@@ -164,7 +165,6 @@ def chat():
     if request.method == 'OPTIONS':
         return '', 200
     try:
-        from langgraph_agent import run_agent  # ← lazy import inside the function
         data = request.get_json()
         if not data or 'message' not in data:
             return jsonify({'error': 'Missing message'}), 400
@@ -178,15 +178,9 @@ def chat():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-@app.route('/debug', methods=['GET'])
-def debug():
-    return jsonify({
-        'neo4j_uri': NEO4J_URI,
-        'neo4j_user': NEO4J_USER,
-        'neo4j_password_set': bool(NEO4J_PASSWORD),
-        'openrouter_key_set': bool(os.environ.get('VITE_OPENROUTER_API_KEY')),
-        'env_file_exists': os.path.exists('.env'),
-    })
+@app.route("/health", methods=["GET"])
+def health():
+    return {"status": "ok"}
 
 
 if __name__ == '__main__':
