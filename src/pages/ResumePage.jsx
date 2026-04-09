@@ -17,7 +17,7 @@ export default function ResumePage() {
     formData.append('file', file)
     
     try {
-      const baseUrl = import.meta.env.MODE === 'development'
+      const baseUrl = import.meta.env.MODE === 'development'  
         ? ''
         : import.meta.env.VITE_API_BASE_URL || ''
       const res = await fetch(`${baseUrl}/parse-resume`, {
