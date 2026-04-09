@@ -171,7 +171,6 @@ def chat():
         response = run_agent(
             user_message=data['message'],
             conversation_history=data.get('history', []),
-            openrouter_key=data.get('openrouter_key'),
             resume_context=data.get('resume_context'),
         )
         return jsonify({'response': response, 'status': 'success'})

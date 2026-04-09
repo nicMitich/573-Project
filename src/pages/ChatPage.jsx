@@ -124,10 +124,6 @@ The user has uploaded their resume. Here is the parsed content:
           message: messageWithContext,
           resume_context: resumeContext, // kept for backends that do read it
           history,
-          // Pass openrouter key if available (used by LangGraph agent backend)
-          ...(typeof import.meta !== "undefined" && import.meta.env?.VITE_OPENROUTER_API_KEY
-            ? { openrouter_key: import.meta.env.VITE_OPENROUTER_API_KEY }
-            : {}),
         }),
       })
 
