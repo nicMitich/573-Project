@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerAI — Your Personal Job Board Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── CSS Variables ─── */
+    :root {
+      --bg:        #270C41;
+      --text:      #EBDCC6;
+      --accent:    #D6B588;
+      --card-bg:   rgba(255,255,255,0.04);
+      --card-border: rgba(214,181,136,0.18);
+      --card-hover: rgba(214,181,136,0.10);
+      --input-bg:  rgba(255,255,255,0.06);
+      --muted:     rgba(235,220,198,0.5);
+      --toggle-track: rgba(214,181,136,0.25);
+      --shadow:    rgba(0,0,0,0.5);
+    }
+    [data-theme="light"] {
+      --bg:        #EBDCC6;
+      --text:      #270C41;
+      --accent:    #8312ED;
+      --card-bg:   rgba(39,12,65,0.05);
+      --card-border: rgba(131,18,237,0.18);
+      --card-hover: rgba(131,18,237,0.08);
+      --input-bg:  rgba(39,12,65,0.06);
+      --muted:     rgba(39,12,65,0.5);
+      --toggle-track: rgba(131,18,237,0.2);
+      --shadow:    rgba(39,12,65,0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      transition: background 0.4s, color 0.4s;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ─── Animated Corner Lines ─── */
+    .corner-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .corner-lines svg {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+    }
+    .corner-lines svg.tl { top: 0; left: 0; }
+    .corner-lines svg.tr { top: 0; right: 0; transform: scaleX(-1); }
+    .corner-lines svg.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+    .corner-lines svg.br { bottom: 0; right: 0; transform: scale(-1); }
+
+    .corner-lines line {
+      stroke: var(--accent);
+      stroke-width: 1px;
+      animation: lineFade 4s ease-in-out infinite;
+    }
+    .corner-lines line:nth-child(1) { animation-delay: 0s; }
+    .corner-lines line:nth-child(2) { animation-delay: 0.5s; }
+    .corner-lines line:nth-child(3) { animation-delay: 1.0s; }
+    .corner-lines line:nth-child(4) { animation-delay: 1.5s; }
+
+    @keyframes lineFade {
+      0%, 100% { opacity: 0.06; }
+      50%       { opacity: 0.4; }
+    }
+
+    /* ─── Toggle ─── */
+    .theme-toggle {
+      position: absolute;
+      top: 22px;
+      right: 28px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .toggle-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .toggle-track {
+      width: 52px;
+      height: 28px;
+      background: var(--toggle-track);
+      border: 1.5px solid var(--accent);
+      border-radius: 999px;
+      position: relative;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .toggle-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      transition: transform 0.3s cubic-bezier(.4,0,.2,1), background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+    [data-theme="light"] .toggle-thumb {
+      transform: translateX(24px);
+    }
+
+    /* ─── Page container ─── */
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+    }
+    .page.hidden { display: none; }
+
+    /* ─── Landing ─── */
+    .landing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 24px 60px;
+      min-height: 100vh;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 16px;
+      animation: fadeUp 0.7s ease both;
+    }
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+    .hero h1 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    .you-can {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 28px 0 10px;
+      letter-spacing: 0.01em;
+      animation: fadeUp 0.7s 0.15s ease both;
+    }
+    .you-can strong { color: var(--accent); font-weight: 600; }
+
+    /* ─── Cards ─── */
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 1020px;
+      margin: 10px 0 0;
+      animation: fadeUp 0.7s 0.25s ease both;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+      transition: background 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+      position: relative;
+    }
+    .card:hover {
+      background: var(--card-hover);
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px var(--shadow);
+    }
+    .card.selected {
+      border-color: var(--accent);
+      background: var(--card-hover);
+      box-shadow: 0 0 0 2px var(--accent), 0 16px 40px var(--shadow);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 4px;
+    }
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .card p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-select-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .card-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--accent);
+      border-radius: 5px;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .card-checkbox.checked {
+      background: var(--accent);
+    }
+    .card-checkbox.checked::after {
+      content: '✓';
+      color: var(--bg);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .card-select-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ─── Upload Panel ─── */
+    .upload-panel {
+      width: 100%;
+      max-width: 1020px;
+      margin-top: 20px;
+      animation: fadeUp 0.4s ease both;
+    }
+    .upload-panel.hidden { display: none; }
+
+    .upload-box {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 36px;
+    }
+    .upload-box h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .upload-box p.sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .upload-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .upload-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: 1.5px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .upload-btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    #resume-file-input { display: none; }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      display: none;
+    }
+    .status-badge.success {
+      background: rgba(134,239,172,0.12);
+      color: #86efac;
+      border: 1px solid rgba(134,239,172,0.3);
+      display: inline-flex;
+    }
+    .status-badge.error {
+      background: rgba(252,165,165,0.12);
+      color: #fca5a5;
+      border: 1px solid rgba(252,165,165,0.3);
+      display: inline-flex;
+    }
+
+    .divider-or {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 22px 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .divider-or::before, .divider-or::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    .gen-resume-link {
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      padding: 0;
+    }
+    .gen-resume-link:hover { opacity: 0.75; }
+
+    .continue-btn {
+      margin-top: 22px;
+      padding: 13px 36px;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      display: none;
+    }
+    .continue-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .continue-btn.visible { display: inline-block; }
+
+    /* ─── Chat Page ─── */
+    .chat-page {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      padding: 0;
+    }
+
+    .chat-topbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--card-border);
+      background: var(--bg);
+      flex-shrink: 0;
+    }
+    .chat-topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .back-btn {
+      background: none;
+      border: 1.5px solid var(--card-border);
+      border-radius: 999px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .back-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .chat-topbar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .chat-topbar-center {
+      display: flex;
+      justify-content: center;
+    }
+    .chat-topbar-mode {
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 5px 14px;
+      white-space: nowrap;
+    }
+    .chat-topbar-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+    /* Hide the landing toggle when chat page is active */
+    #page-chat:not(.hidden) ~ #theme-toggle,
+    body.chat-active #theme-toggle { display: none; }
+
+    /* Topbar toggle — no label, just the pill */
+    .topbar-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .topbar-toggle .toggle-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: none; /* hide label in topbar — track+thumb only */
+    }
+    .topbar-toggle .toggle-track {
+      width: 44px;
+      height: 24px;
+      background: var(--toggle-track);
+      border: 1.5px solid var(--accent);
+      border-radius: 999px;
+      position: relative;
+    }
+    .topbar-toggle .toggle-thumb {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+    [data-theme="light"] .topbar-toggle .toggle-thumb {
+      transform: translateX(20px);
+    }
+
+    .chat-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      max-width: 820px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 24px 0;
+      min-height: 0;
+    }
+
+    .chat-window {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-bottom: 12px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--card-border) transparent;
+    }
+
+    .message {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+    }
+    .message.user { flex-direction: row-reverse; }
+
+    .avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .avatar.bot-avatar {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .avatar.user-avatar {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      color: var(--text);
+    }
+
+    .bubble {
+      max-width: 72%;
+      padding: 12px 16px;
+      border-radius: 18px;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+    .message.bot .bubble {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-bottom-left-radius: 4px;
+      color: var(--text);
+    }
+    .message.user .bubble {
+      background: var(--accent);
+      color: var(--bg);
+      border-bottom-right-radius: 4px;
+      font-weight: 500;
+    }
+
+    .input-area {
+      padding: 16px 0 24px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+      flex-shrink: 0;
+    }
+    .chat-input {
+      flex: 1;
+      padding: 13px 18px;
+      border-radius: 20px;
+      border: 1.5px solid var(--card-border);
+      background: var(--input-bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      resize: none;
+      overflow-y: hidden;
+      line-height: 1.5;
+      min-height: 48px;
+      max-height: 180px;
+      display: block;
+    }
+    .chat-input::placeholder { color: var(--muted); }
+    .chat-input:focus { border-color: var(--accent); }
+
+    .send-btn {
+      padding: 13px 24px;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.12s;
+    }
+    .send-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    /* ─── Animations ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.96) translateY(8px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .bubble { animation: popIn 0.25s ease both; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 750px) {
+      .cards-row { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Corner accent lines -->
+<div class="corner-lines">
+  <svg class="tl" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="60"  x2="60"  y2="0"/>
+    <line x1="0" y1="110" x2="110" y2="0"/>
+    <line x1="0" y1="160" x2="160" y2="0"/>
+    <line x1="0" y1="210" x2="210" y2="0"/>
+  </svg>
+  <svg class="tr" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="60"  x2="60"  y2="0"/>
+    <line x1="0" y1="110" x2="110" y2="0"/>
+    <line x1="0" y1="160" x2="160" y2="0"/>
+    <line x1="0" y1="210" x2="210" y2="0"/>
+  </svg>
+  <svg class="bl" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="60"  x2="60"  y2="0"/>
+    <line x1="0" y1="110" x2="110" y2="0"/>
+    <line x1="0" y1="160" x2="160" y2="0"/>
+    <line x1="0" y1="210" x2="210" y2="0"/>
+  </svg>
+  <svg class="br" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="60"  x2="60"  y2="0"/>
+    <line x1="0" y1="110" x2="110" y2="0"/>
+    <line x1="0" y1="160" x2="160" y2="0"/>
+    <line x1="0" y1="210" x2="210" y2="0"/>
+  </svg>
+</div>
+
+<!-- Theme toggle -->
+<div class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">
+  <span class="toggle-label" id="toggle-label">Dark</span>
+  <div class="toggle-track">
+    <div class="toggle-thumb" id="toggle-thumb">🌙</div>
+  </div>
+</div>
+
+<!-- ══════════ LANDING PAGE ══════════ -->
+<div class="page" id="page-landing">
+  <div class="landing">
+
+    <div class="hero">
+      <p class="hero-eyebrow">✦ Your Personal Job Board AI</p>
+      <h1>Welcome, <span>let's build<br/>your future.</span></h1>
+      <p>Upload your resume and let AI match you with opportunities, sharpen your skills, and craft the perfect application.</p>
+    </div>
+
+    <p class="you-can">You'll be able to — <strong>choose one to get started:</strong></p>
+
+    <!-- Three feature cards -->
+    <div class="cards-row" id="cards-row">
+
+      <div class="card" id="card-0" data-idx="0">
+        <div class="card-icon">🎯</div>
+        <h3>Job Compatibility</h3>
+        <p>Upload your resume and we'll match you with your top 10 most compatible open roles based on your actual skills and experience.</p>
+        <div class="card-select-row">
+          <div class="card-checkbox" id="cb-0"></div>
+          <span class="card-select-label">Select this</span>
+        </div>
+      </div>
+
+      <div class="card" id="card-1" data-idx="1">
+        <div class="card-icon">📈</div>
+        <h3>Long-Term Skill Growth</h3>
+        <p>Get personalized recommendations on what to learn, add, or change in your profile to land your dream role within your target timeline.</p>
+        <div class="card-select-row">
+          <div class="card-checkbox" id="cb-1"></div>
+          <span class="card-select-label">Select this</span>
+        </div>
+      </div>
+
+      <div class="card" id="card-2" data-idx="2">
+        <div class="card-icon">📄</div>
+        <h3>Resume Enhancer</h3>
+        <p>Have AI review your resume line-by-line and suggest impactful rewrites, stronger action verbs, and missing keywords for ATS systems.</p>
+        <div class="card-select-row">
+          <div class="card-checkbox" id="cb-2"></div>
+          <span class="card-select-label">Select this</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Upload panel (shown after card selection) -->
+    <div class="upload-panel hidden" id="upload-panel">
+      <div class="upload-box">
+        <h4 id="upload-panel-title">Upload your resume</h4>
+        <p class="sub">We'll parse it and use it to personalize your experience. Supported formats: PDF, DOCX, TXT.</p>
+
+        <div class="upload-row">
+          <button class="upload-btn" onclick="document.getElementById('resume-file-input').click()">
+            📎 Choose File
+          </button>
+          <input type="file" id="resume-file-input" accept=".pdf,.doc,.docx,.txt" />
+          <span class="status-badge" id="status-badge"></span>
+        </div>
+
+        <div class="divider-or">or</div>
+
+        <button class="gen-resume-link" id="gen-resume-btn">
+          I don't have a resume — help me generate one →
+        </button>
+
+        <br/>
+        <button class="continue-btn" id="continue-btn">
+          Continue →
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ CHAT PAGE ══════════ -->
+<div class="page hidden" id="page-chat">
+  <div class="chat-page">
+
+    <div class="chat-topbar">
+      <div class="chat-topbar-left">
+        <button class="back-btn" id="back-btn">← Back</button>
+        <span class="chat-topbar-title" id="chat-topbar-title">AI Job Assistant</span>
+      </div>
+      <div class="chat-topbar-center">
+        <span class="chat-topbar-mode" id="chat-topbar-mode">Job Compatibility</span>
+      </div>
+      <div class="chat-topbar-right">
+        <div class="topbar-toggle" id="topbar-toggle" title="Toggle light/dark mode">
+          <span class="toggle-label" id="topbar-toggle-label">Dark</span>
+          <div class="toggle-track">
+            <div class="toggle-thumb" id="topbar-toggle-thumb">🌙</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-body">
+      <div class="chat-window" id="chat-window">
+        <div class="message bot">
+          <div class="avatar bot-avatar">AI</div>
+          <div class="bubble" id="bot-greeting">Hi! I've received your resume. How can I help you today?</div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <textarea class="chat-input" id="chat-input" placeholder="Ask anything about your career…" autocomplete="off" rows="1"></textarea>
+        <button class="send-btn" id="send-btn">Send</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // ─── Theme ───
+  const html = document.documentElement;
+  const toggleEl = document.getElementById('theme-toggle');
+  const toggleThumb = document.getElementById('toggle-thumb');
+  const toggleLabel = document.getElementById('toggle-label');
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    sessionStorage.setItem('theme', theme);
+    const isDark = theme === 'dark';
+    const emoji = isDark ? '🌙' : '☀️';
+    const label = isDark ? 'Dark' : 'Light';
+    toggleThumb.textContent = emoji;
+    toggleLabel.textContent = label;
+    // sync topbar toggle too
+    const tt = document.getElementById('topbar-toggle-thumb');
+    const tl = document.getElementById('topbar-toggle-label');
+    if (tt) tt.textContent = emoji;
+    if (tl) tl.textContent = label;
+  }
+
+  // Restore from session
+  const savedTheme = sessionStorage.getItem('theme') || 'dark';
+  applyTheme(savedTheme);
+
+  toggleEl.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // Topbar toggle (chat page) — syncs with main toggle
+  document.getElementById('topbar-toggle').addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // ─── Card Selection ───
+  const cards = ['card-0','card-1','card-2'];
+  const cbs   = ['cb-0','cb-1','cb-2'];
+  let selectedCard = sessionStorage.getItem('selectedCard') ?? null;
+  if (selectedCard !== null) selectedCard = parseInt(selectedCard);
+
+  const CARD_PROMPTS = [
+    "I've uploaded my resume. Please match me with the top 10 most compatible job roles based on my skills and experience.",
+    "I've uploaded my resume. Based on my current skills and experience, what should I learn or improve to reach my dream role?",
+    "I've uploaded my resume. Please review it thoroughly and suggest improvements — rewrites, stronger language, ATS keywords, etc."
+  ];
+  const CARD_NAMES = [
+    "Job Compatibility",
+    "Skill Growth",
+    "Resume Enhancer"
+  ];
+
+  function updateCardUI() {
+    cards.forEach((id, i) => {
+      const card = document.getElementById(id);
+      const cb   = document.getElementById(cbs[i]);
+      if (i === selectedCard) {
+        card.classList.add('selected');
+        cb.classList.add('checked');
+      } else {
+        card.classList.remove('selected');
+        cb.classList.remove('checked');
+      }
+    });
+
+    const panel = document.getElementById('upload-panel');
+    if (selectedCard !== null) {
+      panel.classList.remove('hidden');
+      document.getElementById('upload-panel-title').textContent =
+        selectedCard === 2
+          ? 'Upload your resume for review'
+          : selectedCard === 1
+          ? 'Upload your resume for skill analysis'
+          : 'Upload your resume for job matching';
+    } else {
+      panel.classList.add('hidden');
+    }
+
+    // Restore continue button if resume was already uploaded
+    if (selectedCard !== null && sessionStorage.getItem('resumeParsed') === 'true') {
+      showSuccess();
+    }
+  }
+
+  cards.forEach((id, i) => {
+    document.getElementById(id).addEventListener('click', () => {
+      if (selectedCard === i) {
+        // deselect
+        selectedCard = null;
+        sessionStorage.removeItem('selectedCard');
+      } else {
+        selectedCard = i;
+        sessionStorage.setItem('selectedCard', i);
+      }
+      updateCardUI();
+    });
+    document.getElementById(cbs[i]).addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (selectedCard === i) {
+        selectedCard = null;
+        sessionStorage.removeItem('selectedCard');
+      } else {
+        selectedCard = i;
+        sessionStorage.setItem('selectedCard', i);
+      }
+      updateCardUI();
+    });
+  });
+
+  updateCardUI();
+
+  // ─── File Upload / Parse ───
+  const fileInput = document.getElementById('resume-file-input');
+  const statusBadge = document.getElementById('status-badge');
+  const continueBtn = document.getElementById('continue-btn');
+
+  function showSuccess() {
+    statusBadge.className = 'status-badge success';
+    statusBadge.textContent = '✓ Parsed successfully!';
+    continueBtn.classList.add('visible');
+  }
+  function showError(msg) {
+    statusBadge.className = 'status-badge error';
+    statusBadge.textContent = '✗ ' + (msg || 'Could not parse. Please try again.');
+    continueBtn.classList.remove('visible');
+  }
+
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    // Validate type
+    const allowed = ['.pdf','.doc','.docx','.txt'];
+    const ext = '.' + file.name.split('.').pop().toLowerCase();
+    if (!allowed.includes(ext)) {
+      showError('Unsupported file type. Use PDF, DOCX, or TXT.');
+      sessionStorage.removeItem('resumeParsed');
+      return;
+    }
+
+    // Simulate parse (replace with real backend call)
+    statusBadge.className = 'status-badge success';
+    statusBadge.textContent = '⏳ Parsing…';
+
+    // Read file content and store it
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      sessionStorage.setItem('resumeFileName', file.name);
+      // If txt, store text; for PDF/DOCX store filename as placeholder
+      if (ext === '.txt') {
+        sessionStorage.setItem('resumeText', e.target.result);
+      } else {
+        sessionStorage.setItem('resumeText', `[Resume: ${file.name}]`);
+      }
+      sessionStorage.setItem('resumeParsed', 'true');
+      setTimeout(showSuccess, 600); // slight delay for UX feel
+    };
+    reader.onerror = () => {
+      showError();
+      sessionStorage.removeItem('resumeParsed');
+    };
+    reader.readAsText(file);
+  });
+
+  // ─── Generate resume → chat with build-resume prompt ───
+  document.getElementById('gen-resume-btn').addEventListener('click', () => {
+    const cardIdx = selectedCard ?? 0;
+    // Save a flag so chat knows user is generating, not uploading
+    sessionStorage.setItem('resumeFileName', 'generated resume');
+    sessionStorage.setItem('resumeText', '');
+    sessionStorage.setItem('resumeParsed', 'true');
+    sessionStorage.setItem('generateMode', 'true');
+    sessionStorage.setItem('selectedCard', cardIdx);
+    goToChat(true); // pass flag for generate mode
+  });
+
+  // ─── Continue → Chat ───
+  continueBtn.addEventListener('click', () => {
+    if (selectedCard === null) return;
+    sessionStorage.setItem('selectedCard', selectedCard);
+    goToChat();
+  });
+
+  // ─── Textarea auto-expand ───
+  const chatInputEl = document.getElementById('chat-input');
+  function autoResize() {
+    chatInputEl.style.height = 'auto';
+    chatInputEl.style.height = Math.min(chatInputEl.scrollHeight, 180) + 'px';
+  }
+  chatInputEl.addEventListener('input', autoResize);
+
+  // ─── Page Navigation ───
+  function goToChat(generateMode) {
+    document.getElementById('page-landing').classList.add('hidden');
+    document.getElementById('page-chat').classList.remove('hidden');
+    document.body.classList.add('chat-active');
+
+    const isGenMode = generateMode || sessionStorage.getItem('generateMode') === 'true';
+    const cardIdx = parseInt(sessionStorage.getItem('selectedCard') ?? '0');
+    const modeName = CARD_NAMES[cardIdx] ?? 'Assistant';
+
+    const GEN_PROMPTS = [
+      "I don't have a resume yet. Please help me build one from scratch for job matching — ask me questions about my experience, skills, and target roles.",
+      "I don't have a resume yet. Please help me create one focused on long-term skill growth — ask me about my background and where I want to be.",
+      "I don't have a resume yet. Please help me write a strong resume from scratch — start by asking about my work history and skills."
+    ];
+
+    const prompt = isGenMode ? GEN_PROMPTS[cardIdx] : CARD_PROMPTS[cardIdx];
+
+    document.getElementById('chat-topbar-mode').textContent = isGenMode ? modeName + ' · Building Resume' : modeName;
+    document.getElementById('chat-topbar-title').textContent = 'AI Job Assistant';
+
+    document.getElementById('chat-input').value = prompt;
+    autoResize();
+    document.getElementById('chat-input').focus();
+
+    document.getElementById('bot-greeting').textContent = isGenMode
+      ? "No resume? No problem! I'll help you build one. Feel free to edit the message below or just hit Send."
+      : `Hi! I've received ${sessionStorage.getItem('resumeFileName') || 'your resume'}. Feel free to edit the pre-filled message or just hit Send to get started.`;
+
+    sessionStorage.setItem('onChatPage', 'true');
+  }
+
+  function goToLanding() {
+    document.getElementById('page-chat').classList.add('hidden');
+    document.getElementById('page-landing').classList.remove('hidden');
+    document.body.classList.remove('chat-active');
+    sessionStorage.setItem('onChatPage', 'false');
+    sessionStorage.removeItem('generateMode');
+    updateCardUI();
+  }
+
+  document.getElementById('back-btn').addEventListener('click', goToLanding);
+
+  // Restore page state on reload
+  if (sessionStorage.getItem('onChatPage') === 'true' && sessionStorage.getItem('resumeParsed') === 'true') {
+    document.body.classList.add('chat-active');
+    goToChat();
+  }
+
+  // ─── Chat ───
+  const chatInput  = document.getElementById('chat-input');
+  const sendBtn    = document.getElementById('send-btn');
+  const chatWindow = document.getElementById('chat-window');
+
+  function appendMessage(text, role) {
+    const msg = document.createElement('div');
+    msg.className = `message ${role}`;
+    const avatarLabel = role === 'bot' ? 'AI' : 'You';
+    msg.innerHTML = `
+      <div class="avatar ${role}-avatar">${avatarLabel}</div>
+      <div class="bubble">${text}</div>
+    `;
+    chatWindow.appendChild(msg);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    chatInput.value = '';
+    chatInput.style.height = 'auto';
+    appendMessage(text, 'user');
+
+    // Placeholder bot response — wire to your backend here
+    const thinking = document.createElement('div');
+    thinking.className = 'message bot';
+    thinking.innerHTML = `<div class="avatar bot-avatar">AI</div><div class="bubble" style="opacity:0.5">Thinking…</div>`;
+    chatWindow.appendChild(thinking);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+
+    await new Promise(r => setTimeout(r, 900));
+    chatWindow.removeChild(thinking);
+    appendMessage("I'm analyzing your resume and will have a response for you shortly. (Connect me to your backend for live responses!)", 'bot');
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+  });
+</script>
+</body>
+</html>

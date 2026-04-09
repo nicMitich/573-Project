@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <div className="app">
-      {page !== "landing" && <Nav current={page} navigate={navigate} />}
+      {page !== "landing" && page !== "chat" && <Nav current={page} navigate={navigate} />}
       {pages[page]}
     </div>
   )
