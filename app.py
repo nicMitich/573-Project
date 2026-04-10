@@ -20,7 +20,8 @@ CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'https://573-project.vercel.app')
 origins = [o.strip() for o in CORS_ORIGINS.split(',') if o.strip()]
 
 # Apply CORS with configured origins; allow credentials for cookies if needed
-CORS(app, resources={r"/*": {"origins": origins}}, supports_credentials=True)
+#CORS(app, resources={r"/*": {"origins": origins}}, supports_credentials=True)
+CORS(app)
 
 # Neo4j connection configuration - uses environment variables for security
 NEO4J_URI = os.environ.get('NEO4J_URI')
@@ -198,6 +199,17 @@ def chat():
 def health():
     return {"status": "ok"}
 
+@app.after_request    # added this!
+def add_cors_headers(response):
+    origin = request.headers.get('Origin', '')
+    allowed = [o.strip() for o in os.environ.get('CORS_ORIGINS', '').split(',')]
+    if origin in allowed:
+        response.headers['Access-Control-Allow-Origin'] = origin
+        response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
+        response.headers['Access-Control-Allow-Methods'] = 'GET,POST,OPTIONS'
+        response.headers['Access-Control-Allow-Credentials'] = 'true'
+    return response
+    
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
