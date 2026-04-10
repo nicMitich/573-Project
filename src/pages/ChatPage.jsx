@@ -98,15 +98,6 @@ The user has uploaded their resume. Here is the parsed content:
         .filter((m, idx) => !(m.role === "assistant" && idx === 0))
         .map(msg => ({ role: msg.role, content: msg.content }))
 
-      // Determine if this is the first real user message (history has no prior user turns)
-      const isFirstMessage = history.filter(m => m.role === "user").length === 0
-
-      // For the first message, prepend resume context directly into the message body
-      // so the LangGraph agent receives it inline rather than as an ignored side field.
-      const messageWithContext = isFirstMessage && resumeContext !== "No resume has been uploaded."
-        ? `${resumeContext}\n\n---\n\n${text}`
-        : text
-
       const fetchWithRetry = async (url, options, retries = 2) => {
         try {
           return await fetch(url, options)
