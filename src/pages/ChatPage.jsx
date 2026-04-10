@@ -35,7 +35,7 @@ export default function ChatPage({ navigate }) {
   const textareaRef             = useRef(null)
 
   useEffect(() => {
-  fetch(`${API_BASE}/health`).catch(() => {})
+    fetch(`${API_BASE}/health`).catch(() => {})
   }, [])
 
   useEffect(() => {
@@ -85,15 +85,14 @@ The user has uploaded their resume. Here is the parsed content:
     if (!text || loading) return
 
     const userMsg = { role: "user", content: text }
-    const updated = [...messages, userMsg]
-    setMessages(updated)
+    setMessages(prev => [...prev, userMsg])
     setInput("")
     setLoading(true)
 
     try {
       const resumeContext = buildSystemContext()
 
-      // Build full history, skipping the initial greeting message
+      // Build history, skipping the initial greeting message
       const history = messages
         .filter((m, idx) => !(m.role === "assistant" && idx === 0))
         .map(msg => ({ role: msg.role, content: msg.content }))
@@ -103,7 +102,7 @@ The user has uploaded their resume. Here is the parsed content:
           return await fetch(url, options)
         } catch (err) {
           if (retries === 0) throw err
-          await new Promise(r => setTimeout(r, 2000)) // wait 2s
+          await new Promise(r => setTimeout(r, 2000))
           return fetchWithRetry(url, options, retries - 1)
         }
       }
@@ -112,8 +111,8 @@ The user has uploaded their resume. Here is the parsed content:
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: messageWithContext,
-          resume_context: resumeContext, // kept for backends that do read it
+          message: text,
+          resume_context: resumeContext,
           history,
         }),
       })
