@@ -11,11 +11,13 @@ load_dotenv()
 
 app = Flask(__name__)
 # Configure CORS from environment variable `CORS_ORIGINS` (comma-separated)
-CORS_ORIGINS = os.environ.get('CORS_ORIGINS', '')
-if CORS_ORIGINS:
-    origins = [o.strip() for o in CORS_ORIGINS.split(',') if o.strip()]
-else:
-    origins = "*"
+# CORS_ORIGINS = os.environ.get('CORS_ORIGINS', '')
+# if CORS_ORIGINS:
+#     origins = [o.strip() for o in CORS_ORIGINS.split(',') if o.strip()]
+# else:
+#     origins = "*"
+CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'https://573-project.vercel.app')
+origins = [o.strip() for o in CORS_ORIGINS.split(',') if o.strip()]
 
 # Apply CORS with configured origins; allow credentials for cookies if needed
 CORS(app, resources={r"/*": {"origins": origins}}, supports_credentials=True)
@@ -160,10 +162,12 @@ def parse():
         os.unlink(tmp_path)
 
 
-@app.route('/chat', methods=['POST', 'OPTIONS'])
+# @app.route('/chat', methods=['POST', 'OPTIONS'])
+# def chat():
+#     if request.method == 'OPTIONS':
+#         return '', 200
+@app.route('/chat', methods=['POST'])
 def chat():
-    if request.method == 'OPTIONS':
-        return '', 200
     try:
         data = request.get_json()
         if not data or 'message' not in data:
