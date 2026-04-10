@@ -168,10 +168,23 @@ def chat():
         data = request.get_json()
         if not data or 'message' not in data:
             return jsonify({'error': 'Missing message'}), 400
+        
+        # Properly serialize resume_context to JSON string if provided
+        resume_context = data.get('resume_context')
+        if resume_context:
+            import json
+            # If it's already a string, use it; otherwise serialize the dict
+            if isinstance(resume_context, str):
+                resume_context_str = resume_context
+            else:
+                resume_context_str = json.dumps(resume_context)
+        else:
+            resume_context_str = None
+        
         response = run_agent(
             user_message=data['message'],
             conversation_history=data.get('history', []),
-            resume_context=data.get('resume_context'),
+            resume_context=resume_context_str,
         )
         return jsonify({'response': response, 'status': 'success'})
     except Exception as e:

@@ -144,5 +144,6 @@ def parse_resume(file_path):
         'skills': extract_skills(text),
         'education': extract_education(text),
         'experience': extract_experience(text),
-        'projects': extract_projects(text)
+        'projects': extract_projects(text),
+        'raw_text': raw  # Include raw text for enhanced context in AI features
     }
