@@ -521,6 +521,8 @@ if OPENROUTER_API_KEY:
 
 _llm = None
 _llm_with_tools = None
+_llm_auto = None
+_llm_auto_with_tools = None
 
 def get_llm():
     global _llm, _llm_with_tools
@@ -528,7 +530,23 @@ def get_llm():
         _llm = ChatOpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
-            #model="nvidia/nemotron-3-super-120b-a12b:free",
+            model="nvidia/nemotron-3-super-120b-a12b:free",
+            temperature=0.3,
+            max_tokens=1000,
+            default_headers={
+                "HTTP-Referer": "https://573-project.vercel.app",
+                "X-Title": "Job Assistant"
+            }
+        )
+        _llm_with_tools = _llm.bind_tools([match_jobs_by_compatibility])
+    return _llm, _llm_with_tools
+
+def get_llm_auto():
+    global _llm_auto, _llm_auto_with_tools
+    if _llm_auto is None:
+        _llm_auto = ChatOpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=OPENROUTER_API_KEY,
             model="openrouter/auto",
             temperature=0.3,
             max_tokens=1000,
@@ -537,8 +555,8 @@ def get_llm():
                 "X-Title": "Job Assistant"
             }
         )
-        _llm_with_tools = _llm.bind_tools(tools)
-    return _llm, _llm_with_tools
+        _llm_auto_with_tools = _llm_auto.bind_tools([recommend_skill_growth, enhance_resume])
+    return _llm_auto, _llm_auto_with_tools
 
 # ============ SYSTEM PROMPT ============
 
@@ -589,16 +607,18 @@ def create_workflow():
 
     def agent_node(state):
         messages = state["messages"]
-
-        # FIX: Trim conversation history to the last N messages (plus the system prompt)
-        # to prevent unbounded token growth over long conversations.
         system_msgs = [m for m in messages if isinstance(m, SystemMessage)]
         non_system_msgs = [m for m in messages if not isinstance(m, SystemMessage)]
         trimmed = non_system_msgs[-MAX_HISTORY_MESSAGES:]
         messages = system_msgs + trimmed
 
-        #response = llm_with_tools.invoke(messages)
-        _, llm_with_tools = get_llm()
+        # Pick model based on last user message content
+        last_user = next((m.content.lower() for m in reversed(messages) if isinstance(m, HumanMessage)), "")
+        if any(k in last_user for k in ["skill", "learn", "growth", "enhance", "resume", "improve", "feedback"]):
+            _, llm_with_tools = get_llm_auto()
+        else:
+            _, llm_with_tools = get_llm()
+
         response = llm_with_tools.invoke(messages)
         return {"messages": [response]}
 
