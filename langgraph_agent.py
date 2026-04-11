@@ -434,7 +434,8 @@ def enhance_resume(
         )
 
         response = client.chat.completions.create(
-            model="nvidia/nemotron-3-super-120b-a12b:free",
+            #model="nvidia/nemotron-3-super-120b-a12b:free",
+            model="meta-llama/llama-3.3-70b-instruct:free",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=1000,
             extra_headers={
@@ -527,7 +528,8 @@ def get_llm():
         _llm = ChatOpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
-            model="nvidia/nemotron-3-super-120b-a12b:free",
+            #model="nvidia/nemotron-3-super-120b-a12b:free",
+            model="meta-llama/llama-3.3-70b-instruct:free",
             temperature=0.3,
             max_tokens=1000,
             default_headers={
