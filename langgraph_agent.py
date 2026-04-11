@@ -528,7 +528,8 @@ def get_llm():
         _llm = ChatOpenAI(
             base_url="https://openrouter.ai/api/v1",
             api_key=OPENROUTER_API_KEY,
-            model="nvidia/nemotron-3-super-120b-a12b:free",
+            #model="nvidia/nemotron-3-super-120b-a12b:free",
+            model="openrouter/auto",
             temperature=0.3,
             max_tokens=1000,
             default_headers={
