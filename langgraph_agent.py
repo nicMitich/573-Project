@@ -497,22 +497,46 @@ tools = [
 
 # ============ LLM SETUP ============
 
+# if OPENROUTER_API_KEY:
+#     os.environ["OPENAI_API_KEY"] = OPENROUTER_API_KEY
+#     os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
+
+# llm = ChatOpenAI(
+#     base_url="https://openrouter.ai/api/v1",
+#     api_key=OPENROUTER_API_KEY,
+#     model="nvidia/nemotron-3-super-120b-a12b:free",
+#     temperature=0.3,
+#     max_tokens=1000,
+#     default_headers={
+#         "HTTP-Referer": "https://573-project.vercel.app",
+#         "X-Title": "Job Assistant"
+#     }
+# )
+# llm_with_tools = llm.bind_tools(tools)
+
 if OPENROUTER_API_KEY:
     os.environ["OPENAI_API_KEY"] = OPENROUTER_API_KEY
     os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
 
-llm = ChatOpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
-    model="nvidia/nemotron-3-super-120b-a12b:free",
-    temperature=0.3,
-    max_tokens=1000,
-    default_headers={
-        "HTTP-Referer": "https://573-project.vercel.app",
-        "X-Title": "Job Assistant"
-    }
-)
-llm_with_tools = llm.bind_tools(tools)
+_llm = None
+_llm_with_tools = None
+
+def get_llm():
+    global _llm, _llm_with_tools
+    if _llm is None:
+        _llm = ChatOpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=OPENROUTER_API_KEY,
+            model="nvidia/nemotron-3-super-120b-a12b:free",
+            temperature=0.3,
+            max_tokens=1000,
+            default_headers={
+                "HTTP-Referer": "https://573-project.vercel.app",
+                "X-Title": "Job Assistant"
+            }
+        )
+        _llm_with_tools = _llm.bind_tools(tools)
+    return _llm, _llm_with_tools
 
 # ============ SYSTEM PROMPT ============
 
@@ -571,6 +595,8 @@ def create_workflow():
         trimmed = non_system_msgs[-MAX_HISTORY_MESSAGES:]
         messages = system_msgs + trimmed
 
+        #response = llm_with_tools.invoke(messages)
+        _, llm_with_tools = get_llm()
         response = llm_with_tools.invoke(messages)
         return {"messages": [response]}
 
