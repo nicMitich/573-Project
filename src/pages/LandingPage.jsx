@@ -35,6 +35,23 @@ export default function LandingPage({ navigate }) {
     sessionStorage.setItem("theme", theme)
   }, [theme])
 
+  useEffect(() => {   // added this to clear all resume session on fresh page load
+    const cameFromChat = sessionStorage.getItem("cameFromChat") === "true"
+    if (!cameFromChat) {
+      sessionStorage.removeItem("resumeParsed")
+      sessionStorage.removeItem("resumeFileName")
+      sessionStorage.removeItem("resumeData")
+      sessionStorage.removeItem("resumeText")
+      sessionStorage.removeItem("generatedResumeReady")
+      sessionStorage.removeItem("generatedResumeText")
+      sessionStorage.removeItem("generateMode")
+      setResumeParsed(false)
+      setStatus(null)
+    } else {
+      sessionStorage.removeItem("cameFromChat")
+    }
+  }, [])
+
   const toggleTheme = () => setTheme(t => t === "dark" ? "light" : "dark")
 
   const CARDS = [
@@ -156,7 +173,9 @@ export default function LandingPage({ navigate }) {
     sessionStorage.removeItem("resumeFileName")
     sessionStorage.removeItem("resumeText")
     sessionStorage.removeItem("resumeParsed")
+    sessionStorage.removeItem("resumeData")
     sessionStorage.removeItem("generatedResumeReady")
+    sessionStorage.removeItem("generatedResumeText")
     sessionStorage.setItem("generateMode", "true")
     sessionStorage.setItem("selectedCard", selectedCard ?? 0)
     navigate("chat")
