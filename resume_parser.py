@@ -5,7 +5,14 @@ from pdfminer.high_level import extract_text
 import docx
 from pdfminer.high_level import extract_text as extract_pdf_text
 
-nlp = spacy.load('en_core_web_sm')
+#nlp = spacy.load('en_core_web_sm')
+_nlp = None
+
+def get_nlp():
+    global _nlp
+    if _nlp is None:
+        _nlp = spacy.load('en_core_web_sm')
+    return _nlp
 
 SKILL_SET = {
     'python', 'java', 'c', 'c++', 'c#', 'go', 'rust', 'scala',
@@ -64,7 +71,8 @@ def extract_name(text):
             candidates.append(ln_clean)
     if candidates:
         return candidates[0]
-    doc = nlp("\n".join(top_lines))
+    #doc = nlp("\n".join(top_lines))
+    doc = get_nlp()("\n".join(top_lines))
     people = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
     return people[0] if people else None
 
@@ -144,5 +152,6 @@ def parse_resume(file_path):
         'skills': extract_skills(text),
         'education': extract_education(text),
         'experience': extract_experience(text),
-        'projects': extract_projects(text)
+        'projects': extract_projects(text),
+        'raw_text': raw  # Include raw text for enhanced context in AI features
     }

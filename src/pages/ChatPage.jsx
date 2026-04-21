@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 
+const API_BASE = "https://linkedin-assistant-dm1u.onrender.com"
+
 const CARD_NAMES = ["Job Compatibility", "Skill Growth", "Resume Enhancer"]
 
 const CARD_PROMPTS = [
@@ -15,13 +17,13 @@ const GEN_PROMPTS = [
 ]
 
 export default function ChatPage({ navigate }) {
-  const cardIdx     = parseInt(sessionStorage.getItem("selectedCard") ?? "0")
-  const isGenMode   = sessionStorage.getItem("generateMode") === "true"
-  const resumeName  = sessionStorage.getItem("resumeFileName") || "your resume"
+  const cardIdx    = parseInt(sessionStorage.getItem("selectedCard") ?? "0")
+  const isGenMode  = sessionStorage.getItem("generateMode") === "true"
+  const resumeName = sessionStorage.getItem("resumeFileName") || "your resume"
 
-  const modeName    = CARD_NAMES[cardIdx] ?? "Assistant"
-  const prePrompt   = isGenMode ? GEN_PROMPTS[cardIdx] : CARD_PROMPTS[cardIdx]
-  const greeting    = isGenMode
+  const modeName  = CARD_NAMES[cardIdx] ?? "Assistant"
+  const prePrompt = isGenMode ? GEN_PROMPTS[cardIdx] : CARD_PROMPTS[cardIdx]
+  const greeting  = isGenMode
     ? "No resume? No problem! I'll help you build one. Feel free to edit the message below or just hit Send."
     : `Hi! I've received ${resumeName}. Feel free to edit the pre-filled message or just hit Send to get started.`
 
@@ -32,18 +34,19 @@ export default function ChatPage({ navigate }) {
   const messagesEndRef          = useRef(null)
   const textareaRef             = useRef(null)
 
-  // Apply theme to <html> whenever it changes
+  useEffect(() => {
+    fetch(`${API_BASE}/health`).catch(() => {})
+  }, [])
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme)
     sessionStorage.setItem("theme", theme)
   }, [theme])
 
-  // Scroll to bottom on new messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages])
 
-  // Auto-resize textarea
   useEffect(() => {
     const el = textareaRef.current
     if (!el) return
@@ -67,68 +70,70 @@ export default function ChatPage({ navigate }) {
     setTheme(t => t === "dark" ? "light" : "dark")
   }
 
+  const buildSystemContext = () => {
+    const resumeRaw = sessionStorage.getItem("resumeData")
+    const resume = resumeRaw ? JSON.parse(resumeRaw) : null
+    if (!resume) return "No resume has been uploaded."
+    return `
+The user has uploaded their resume. Here is the parsed content:
+- Name: ${resume.name || "N/A"}
+- Email: ${resume.email || "N/A"}
+- Phone: ${resume.phone || "N/A"}
+- Skills: ${resume.skills?.join(", ") || "N/A"}
+- Education: ${resume.education?.join(" | ") || "N/A"}
+- Experience: ${resume.experience?.join(" | ") || "N/A"}
+- Projects: ${resume.projects?.join(" | ") || "N/A"}
+    `.trim()
+  }
+
   const sendMessage = async () => {
     const text = input.trim()
     if (!text || loading) return
 
     const userMsg = { role: "user", content: text }
-    const updated = [...messages, userMsg]
-    setMessages(updated)
+    setMessages(prev => [...prev, userMsg])
     setInput("")
     setLoading(true)
 
-    /*try {
-      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          models: ["openrouter/auto"],
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are a helpful job and career assistant. You help users with resume feedback, job searching, career advice, and interview preparation. Be concise and practical.",
-            },
-            ...updated,
-          ],
-        }),
-      })*/
-      try {
-        const resumeRaw = sessionStorage.getItem("resumeData")
-        const resume = resumeRaw ? JSON.parse(resumeRaw) : null
-        const resumeContext = resume ? `
-      The user has uploaded their resume. Here is the parsed content:
-      - Name: ${resume.name || "N/A"}
-      - Email: ${resume.email || "N/A"}
-      - Phone: ${resume.phone || "N/A"}
-      - Skills: ${resume.skills?.join(", ") || "N/A"}
-      - Education: ${resume.education?.join(" | ") || "N/A"}
-      - Experience: ${resume.experience?.join(" | ") || "N/A"}
-      - Projects: ${resume.projects?.join(" | ") || "N/A"}
-      ` : "No resume has been uploaded."
+    try {
+      const resumeContext = buildSystemContext()
 
-        const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            models: ["openrouter/auto"],
-            messages: [
-              {
-                role: "system",
-                content: `You are a helpful job and career assistant. You help users with resume feedback, job searching, career advice, and interview preparation. Be concise and practical.\n\n${resumeContext}`,
-              },
-              ...updated,
-            ],
-          }),
-        })
+      // Build history, skipping the initial greeting message
+      const history = messages
+        .filter((m, idx) => !(m.role === "assistant" && idx === 0))
+        .map(msg => ({ role: msg.role, content: msg.content }))
+
+      const fetchWithRetry = async (url, options, retries = 2) => {
+        try {
+          return await fetch(url, options)
+        } catch (err) {
+          if (retries === 0) throw err
+          await new Promise(r => setTimeout(r, 2000))
+          return fetchWithRetry(url, options, retries - 1)
+        }
+      }
+
+      const res = await fetchWithRetry(`${API_BASE}/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: text,
+          resume_context: resumeContext,
+          history,
+        }),
+      })
+
+      if (!res.ok) {
+        const errorText = await res.text()
+        throw new Error(`API returned ${res.status}: ${errorText}`)
+      }
+
       const data = await res.json()
-      const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response."
+      console.log("API response:", data)
+
+      if (data.error) throw new Error(data.error)
+
+      const reply = data.response || "Sorry, I couldn't get a response."
       setMessages(prev => [...prev, { role: "assistant", content: reply }])
 
       if (isGenMode) {
@@ -150,7 +155,10 @@ export default function ChatPage({ navigate }) {
 
     } catch (err) {
       console.error(err)
-      setMessages(prev => [...prev, { role: "assistant", content: "Error: Failed to reach the API. Check your key and try again." }])
+      setMessages(prev => [...prev, {
+        role: "assistant",
+        content: `Error: ${err.message || "Failed to reach the API. Please try again."}`,
+      }])
     } finally {
       setLoading(false)
     }

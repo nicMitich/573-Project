@@ -4,17 +4,30 @@ import tempfile, os
 from dotenv import load_dotenv
 from resume_parser import parse_resume
 from neo4j import GraphDatabase
+from langgraph_agent import run_agent
 
 # Load environment variables from .env file
 load_dotenv()
 
 app = Flask(__name__)
+# Configure CORS from environment variable `CORS_ORIGINS` (comma-separated)
+# CORS_ORIGINS = os.environ.get('CORS_ORIGINS', '')
+# if CORS_ORIGINS:
+#     origins = [o.strip() for o in CORS_ORIGINS.split(',') if o.strip()]
+# else:
+#     origins = "*"
+CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'https://573-project.vercel.app')
+origins = [o.strip() for o in CORS_ORIGINS.split(',') if o.strip()]
+
+# Apply CORS with configured origins; allow credentials for cookies if needed
+#CORS(app, resources={r"/*": {"origins": origins}}, supports_credentials=True)
 CORS(app)
 
 # Neo4j connection configuration - uses environment variables for security
 NEO4J_URI = os.environ.get('NEO4J_URI')
 NEO4J_USER = os.environ.get('NEO4J_USER')
 NEO4J_PASSWORD = os.environ.get('NEO4J_PASSWORD')
+
 
 def get_neo4j_driver():
     """Create and return a Neo4j driver instance"""
@@ -23,6 +36,15 @@ def get_neo4j_driver():
 @app.route('/')
 def index():
     return jsonify({'status': 'resume parser API is running'})
+
+
+@app.route('/_debug_routes', methods=['GET'])
+def debug_routes():
+    """Return a JSON list of registered URL rules for debugging."""
+    rules = []
+    for rule in app.url_map.iter_rules():
+        rules.append({'rule': str(rule), 'methods': sorted(list(rule.methods))})
+    return jsonify({'routes': rules})
 
 @app.route('/neo4j/connect', methods=['GET'])
 def test_neo4j_connection():
@@ -139,6 +161,55 @@ def parse():
         return jsonify(result)
     finally:
         os.unlink(tmp_path)
+
+
+# @app.route('/chat', methods=['POST', 'OPTIONS'])
+# def chat():
+#     if request.method == 'OPTIONS':
+#         return '', 200
+@app.route('/chat', methods=['POST'])
+def chat():
+    try:
+        data = request.get_json()
+        if not data or 'message' not in data:
+            return jsonify({'error': 'Missing message'}), 400
+        
+        # Properly serialize resume_context to JSON string if provided
+        resume_context = data.get('resume_context')
+        if resume_context:
+            import json
+            # If it's already a string, use it; otherwise serialize the dict
+            if isinstance(resume_context, str):
+                resume_context_str = resume_context
+            else:
+                resume_context_str = json.dumps(resume_context)
+        else:
+            resume_context_str = None
+        
+        response = run_agent(
+            user_message=data['message'],
+            conversation_history=data.get('history', []),
+            resume_context=resume_context_str,
+        )
+        return jsonify({'response': response, 'status': 'success'})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route("/health", methods=["GET"])
+def health():
+    return {"status": "ok"}
+
+@app.after_request    # added this!
+def add_cors_headers(response):
+    origin = request.headers.get('Origin', '')
+    allowed = [o.strip() for o in os.environ.get('CORS_ORIGINS', '').split(',')]
+    if origin in allowed:
+        response.headers['Access-Control-Allow-Origin'] = origin
+        response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
+        response.headers['Access-Control-Allow-Methods'] = 'GET,POST,OPTIONS'
+        response.headers['Access-Control-Allow-Credentials'] = 'true'
+    return response
+    
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))

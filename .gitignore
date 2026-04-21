@@ -33,3 +33,4 @@ dist-ssr
 
 #Ritz's nonsense
 graph_extract.py
+scraper_push.py

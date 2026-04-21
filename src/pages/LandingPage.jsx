@@ -10,8 +10,7 @@ export default function LandingPage({ navigate }) {
   //const [resumeParsed, setResumeParsed] = useState(false)
   const [resumeParsed, setResumeParsed] = useState(
   () => sessionStorage.getItem("resumeParsed") === "true" && 
-        sessionStorage.getItem("cameFromChat") === "true" &&
-        sessionStorage.getItem("generatedResumeReady") !== "false"
+        sessionStorage.getItem("cameFromChat") === "true"
   )
   //const [status, setStatus] = useState(null) // null | "parsing" | "success" | "error"
   // const [status, setStatus] = useState(
@@ -117,6 +116,13 @@ export default function LandingPage({ navigate }) {
       setResumeParsed(false)
       return
     }
+
+    // Clear any previously stored resume data before parsing new file
+    sessionStorage.removeItem("resumeData")
+    sessionStorage.removeItem("resumeFileName")
+    sessionStorage.removeItem("resumeParsed")
+    sessionStorage.removeItem("cameFromChat")
+    setResumeParsed(false)
 
     setStatus("parsing")
     setStatusMsg("Parsing…")
