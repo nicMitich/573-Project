@@ -31,6 +31,7 @@ export default function ChatPage({ navigate }) {
   const [messages, setMessages] = useState([{ role: "assistant", content: greeting }])
   const [input, setInput]       = useState(prePrompt)
   const [loading, setLoading]   = useState(false)
+  const [generatedResume, setGeneratedResume] = useState(null)
   const messagesEndRef          = useRef(null)
   const textareaRef             = useRef(null)
 
@@ -150,6 +151,7 @@ The user has uploaded their resume. Here is the parsed content:
           sessionStorage.setItem("resumeParsed", "true")
           sessionStorage.setItem("generatedResumeReady", "true")
           sessionStorage.setItem("resumeData", JSON.stringify({ raw_text: reply }))
+          setGeneratedResume(reply)
         }
       }
 
@@ -169,6 +171,24 @@ The user has uploaded their resume. Here is the parsed content:
       e.preventDefault()
       sendMessage()
     }
+  }
+
+  // added this function to allow downloading the generated resume as a text file, since PDF generation can be complex and may not render well across all browsers
+
+  const downloadPDF = () => {
+    if (!generatedResume) return
+    const clean = generatedResume
+      .replace(/#{1,3} /g, "")
+      .replace(/\*\*(.*?)\*\*/g, "$1")
+      .replace(/\*(.*?)\*/g, "$1")
+      .replace(/---/g, "──────────────────────")
+    const blob = new Blob([clean], { type: "text/plain" })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement("a")
+    a.href = url
+    a.download = "Generated_Resume.txt"
+    a.click()
+    URL.revokeObjectURL(url)
   }
 
   return (
@@ -226,6 +246,23 @@ The user has uploaded their resume. Here is the parsed content:
           )}
           <div ref={messagesEndRef} />
         </div>
+        {generatedResume && (
+          <div style={{ textAlign: "center", padding: "8px 0 4px" }}>
+            <button onClick={downloadPDF} style={{
+              background: "var(--lp-accent)",
+              color: "var(--lp-bg)",
+              border: "none",
+              borderRadius: 999,
+              padding: "10px 24px",
+              fontFamily: "inherit",
+              fontSize: "0.88rem",
+              fontWeight: 700,
+              cursor: "pointer",
+            }}>
+              ⬇️ Download Resume as TXT
+            </button>
+          </div>
+        )}
 
         <div style={s.inputArea}>
           <textarea
