@@ -145,7 +145,36 @@ The user has uploaded their resume. Here is the parsed content:
         ]
         const replyLower = reply.toLowerCase()
         const isComplete = completionPhrases.some(p => replyLower.includes(p))
+        
         if (isComplete) {
+          
+          const lines = reply.split("\n")
+          const nameMatch = reply.match(/^#\s+(.+)$/m)
+          const emailMatch = reply.match(/[\w.+-]+@[\w-]+\.[a-z]{2,}/i)
+          const phoneMatch = reply.match(/(\+?[\d\s().-]{7,})/)?.[0]
+
+          const extractSection = (label) => {
+            const idx = lines.findIndex(l => l.toLowerCase().includes(label.toLowerCase()))
+            if (idx === -1) return []
+            const result = []
+            for (let i = idx + 1; i < lines.length; i++) {
+              if (lines[i].startsWith("##")) break
+              if (lines[i].trim()) result.push(lines[i].replace(/^[-*]\s*/, "").trim())
+            }
+            return result
+          }
+
+          const structured = {
+            name: nameMatch?.[1]?.replace(/[#*]/g, "").trim() || "N/A",
+            email: emailMatch?.[0] || "N/A",
+            phone: phoneMatch || "N/A",
+            skills: extractSection("skills"),
+            experience: extractSection("experience"),
+            education: extractSection("education"),
+            projects: extractSection("projects"),
+            raw_text: reply,
+          }
+
           sessionStorage.setItem("generatedResumeText", reply)
           sessionStorage.setItem("resumeFileName", "Generated Resume")
           sessionStorage.setItem("resumeParsed", "true")
