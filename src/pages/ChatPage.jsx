@@ -141,13 +141,19 @@ The user has uploaded their resume. Here is the parsed content:
         const completionPhrases = [
           "here is your resume", "here's your resume", "your resume is ready",
           "i've generated your resume", "resume is complete", "here's the resume",
-          "here is the resume i've", "your generated resume"
+          "here is the resume i've", "your generated resume",
+          "here's your polished resume", "here is your polished resume",
+          "here's your complete resume", "polished resume based on",
+          "resume draft", "here's the resume i've", "your resume draft",
+          "based on what you shared", "here's your professional resume",
+          "here is your professional resume", "your resume is complete",
+          "# your resume", "# sarva", "## education", "## experience"
         ]
         const replyLower = reply.toLowerCase()
         const isComplete = completionPhrases.some(p => replyLower.includes(p))
         
         if (isComplete) {
-          
+
           const lines = reply.split("\n")
           const nameMatch = reply.match(/^#\s+(.+)$/m)
           const emailMatch = reply.match(/[\w.+-]+@[\w-]+\.[a-z]{2,}/i)
