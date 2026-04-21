@@ -52,8 +52,14 @@ export default function ChatPage({ navigate }) {
   }, [input])
 
   const handleBack = () => {
+    if (sessionStorage.getItem("generatedResumeReady") !== "true") {
+      sessionStorage.removeItem("generatedResumeText")
+      sessionStorage.removeItem("resumeFileName")
+      sessionStorage.removeItem("resumeParsed")
+      sessionStorage.removeItem("generatedResumeReady")
+    }
     sessionStorage.removeItem("generateMode")
-    sessionStorage.setItem("cameFromChat", "true")  // added this
+    sessionStorage.setItem("cameFromChat", "true")
     navigate("landing")
   }
 
@@ -124,6 +130,24 @@ export default function ChatPage({ navigate }) {
       const data = await res.json()
       const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response."
       setMessages(prev => [...prev, { role: "assistant", content: reply }])
+
+      if (isGenMode) {
+        const completionPhrases = [
+          "here is your resume", "here's your resume", "your resume is ready",
+          "i've generated your resume", "resume is complete", "here's the resume",
+          "here is the resume i've", "your generated resume"
+        ]
+        const replyLower = reply.toLowerCase()
+        const isComplete = completionPhrases.some(p => replyLower.includes(p))
+        if (isComplete) {
+          sessionStorage.setItem("generatedResumeText", reply)
+          sessionStorage.setItem("resumeFileName", "Generated Resume")
+          sessionStorage.setItem("resumeParsed", "true")
+          sessionStorage.setItem("generatedResumeReady", "true")
+          sessionStorage.setItem("resumeData", JSON.stringify({ raw_text: reply }))
+        }
+      }
+
     } catch (err) {
       console.error(err)
       setMessages(prev => [...prev, { role: "assistant", content: "Error: Failed to reach the API. Check your key and try again." }])

@@ -10,13 +10,24 @@ export default function LandingPage({ navigate }) {
   //const [resumeParsed, setResumeParsed] = useState(false)
   const [resumeParsed, setResumeParsed] = useState(
   () => sessionStorage.getItem("resumeParsed") === "true" && 
-        sessionStorage.getItem("cameFromChat") === "true"
+        sessionStorage.getItem("cameFromChat") === "true" &&
+        sessionStorage.getItem("generatedResumeReady") !== "false"
   )
   //const [status, setStatus] = useState(null) // null | "parsing" | "success" | "error"
-  const [status, setStatus] = useState(
-  () => sessionStorage.getItem("cameFromChat") === "true" && 
-        sessionStorage.getItem("resumeParsed") === "true" ? "saved" : null
-  )
+  // const [status, setStatus] = useState(
+  // () => sessionStorage.getItem("cameFromChat") === "true" && 
+  //       sessionStorage.getItem("resumeParsed") === "true" ? "saved" : null
+  //     )
+
+  const [status, setStatus] = useState(() => {
+    const cameFromChat = sessionStorage.getItem("cameFromChat") === "true"
+    const parsed = sessionStorage.getItem("resumeParsed") === "true"
+    const wasGenMode = sessionStorage.getItem("generateMode") === "true"
+    const genReady = sessionStorage.getItem("generatedResumeReady") === "true"
+    if (cameFromChat && parsed && (!wasGenMode || genReady)) return "saved"
+    return null
+  })
+
   const [statusMsg, setStatusMsg] = useState("")
 
   // Apply theme to <html>
@@ -136,9 +147,10 @@ export default function LandingPage({ navigate }) {
   }
 
   const handleGenerate = () => {
-    sessionStorage.setItem("resumeFileName", "generated resume")
-    sessionStorage.setItem("resumeText", "")
-    sessionStorage.setItem("resumeParsed", "true")
+    sessionStorage.removeItem("resumeFileName")
+    sessionStorage.removeItem("resumeText")
+    sessionStorage.removeItem("resumeParsed")
+    sessionStorage.removeItem("generatedResumeReady")
     sessionStorage.setItem("generateMode", "true")
     sessionStorage.setItem("selectedCard", selectedCard ?? 0)
     navigate("chat")
